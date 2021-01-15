@@ -1,4 +1,6 @@
 [[ug_introduction_section]]
 == Introduction
 
-Tell us about the GeoPOS standard, the Users Guide, and what it is for.
+The GeoPose Reviewers Guide is a resource for professionals who seek to understand the key concepts beneath GeoPose and the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
+
+It is provided to support professionals who need to understand it or are reviewing the GeoPose draft standard but do not wish to implement it. 
