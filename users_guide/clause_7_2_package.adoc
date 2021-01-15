@@ -1,0 +1,34 @@
+[[ug-model-first-package-section]]
+=== Appearance
+
+[[ug-first-package-synopsis-section]]
+==== Synopsis
+
+This is a short write-up on what this package is about.
+
+[[ug-first-package-concepts-section]]
+==== Key Concepts
+
+[[appearance-concept]]
+<<Appearance-section,*Appearance*>>: An Appearance is a collection of surface data, i.e. observable properties for surface geometry objects in the form of textures and material. +
+A type of <<abstract-appearance-concept,AbstractAppearance>>.
+
+NOTE: This is a smaller package so a separate "discussion" link is not necessary. 
+
+[[ug-first-package-discussion-section]]
+==== Discussion
+
+This is the informative text that most users will be looking for. Remember that hyperlinks are important. For example, each time a class name is used you can include a link back to the definition of that class (ex. <<abstract-city-object-concept,City Object>>)
+
+The beauty of hypermedia is that users can quickly get the additional data they may need to understand your writing.
+
+[[ug-first-package-uml-section]]
+==== UML Model
+
+The UML model goes here.
+
+[[ug-first-package-examples-section]]
+==== Examples
+
+
+
