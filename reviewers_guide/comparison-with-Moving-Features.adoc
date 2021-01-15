@@ -1,0 +1,23 @@
+[[rg-comparison-with-moving-features-section]]
+== Comparison of GeoPose and Moving Features
+
+ISO 19141:2008 defines a method to describe the geometry of a feature that moves as a rigid body. Such movement has the following characteristics:
+
+* The feature moves within any domain composed of spatial objects as specified in ISO 19107.
+* The feature may move along a planned route, but it may deviate from the planned route.
+* Motion may be influenced by physical forces, such as orbital, gravitational, or inertial forces.
+** Motion of a feature may influence or be influenced by other features, for example:
+* The moving feature might follow a predefined route (e.g. road), perhaps part of a network, and might change routes at known points (e.g. bus stops, waypoints).
+* Two or more moving features may be “pulled” together or pushed apart (e.g. an airplane will be refuelled during flight, a predator detects and tracks a prey, refugee groups join forces).
+* Two or more moving features may be constrained to maintain a given spatial relationship for some period (e.g. tractor and trailer, convoy).
+
+The ISO 19141:2008 schema specifies mechanisms to describe motion consisting of translation and/or rotation of the feature, but not including deformation of the feature.
+
+Here need to insert FIGURE 15 entitled Global and Local Axes of the spec to illustrate.
+
+Global axes = Outer frame
+Local axes = Inner frame
+
+OGC Moving Features JSON contains the temporal changes of the orientation of 3D object.
+
+"orientations": The "orientations" member is optional and represents rotational motion of the base representation of a member named "base". It allows a JSON null value or an empty array if and only if the "base" member has a JSON null value. When the temporal geometry has the base representation, its value is a JSON array as a sequence of JSON objects which have two members of "scales" and "angles", having the same number of elements of the "datetimes" value. The "scales" member has a JSON array value of numbers along the 𝑋, 𝑌, and 𝑍 axis in order as three scale factors, and the "angles" member has a JSON array value of numbers along the 𝑋, 𝑌, and 𝑍 axis in order as Euler angles in degree. A pair of "scales" and "angles" generates a transform matrix of the base representation at each time of the elements in "datetimes". The transformation matrix at each time poses the base representation from the right-handed local engineering coordinate reference system to a geographical Cartesian coordinate system. This standard attaches to the Universal Transverse Mercator (UTM) system.
