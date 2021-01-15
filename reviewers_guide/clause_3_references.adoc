@@ -1,6 +1,6 @@
 [[ug_references_section]]
 == References
-The following documents contain provisions that, through reference in this text, constitute provisions of this Users Guide. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the document referred to applies.
+The following documents contain provisions that, through reference in this text, constitute provisions of this Reviewers Guide. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the document referred to applies.
 
 * [[rfc2045,RFC 2045]] IETF: RFC 2045 & 2046, Multipurpose Internet Mail Extensions (MIME). (November 1996),
 * [[rfc3986,RFC 3986]] IETF: RFC 3986, Uniform Resource Identifier (URI): Generic Syntax. (January 2005)

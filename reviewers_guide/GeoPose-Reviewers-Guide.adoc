@@ -42,7 +42,7 @@
 |*Warning*
 |===
 
-This document provides Engineering Guidance on the use of the OGC <name of standard> Standard. This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. Further, Engineering Guidance should not be referenced as required or mandatory technology in procurements.
+This document provides Engineering Guidance on the use of the OGC GeoPose Standard. This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. Further, Engineering Guidance should not be referenced as required or mandatory technology in procurements.
 
 [width = "50%", grid = "none"]
 |===
@@ -95,7 +95,7 @@ Foundation concepts are basic concepts which are important for the use of the st
 ////
 
 [[ug-geopos-foundations-section]]
-== GeoPOS Foundations
+== GeoPose Foundations
 
 include::clause_6_foundations.adoc[]
 
@@ -107,18 +107,18 @@ include::clause_6_2_foundation-concept.adoc[]
 This section should mirror the normative sections of the standard. External links should resolve here. The goal is to provide a landing zone with access to incrementally more detail as the user navigates deeper into the Users Guide.
 ////
 
-[[ug-geopos-model-section]]
-== GeoPOS Model
+[[ug-geopose-model-section]]
+== GeoPose Model
 
 include::clause_7_1_package.adoc[]
 
-include::clause_7_2_package.adoc[] 
+include::clause_7_2_package.adoc[]
 
 ////
 This section contains normative content from the standard which would be useful to users of this Users Guide. The sole purpose of this is to make life easier for the user. In this case it is the data dictionary for the Standard.
 ////
 
-include::clause_8_data-dictionary.adoc[]
+include::clause_8_placeholder.adoc[]
 
 ////
 Commonly used annexes
@@ -129,4 +129,3 @@ include::annex-history.adoc[]
 include::annex-glossary.adoc[]
 
 include::annex-bibliography.adoc[]
-
