@@ -17,7 +17,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <yyyy-mm-dd>
+|Publication Date:   <2021-01-15>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/{standard}/{m.n}
 |Internal reference number of this OGC(R) document:    YY-nnnrx
 |Version: n.n
