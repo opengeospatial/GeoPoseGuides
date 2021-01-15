@@ -1,7 +1,12 @@
 [[rg-landscape-standard-section]]
 == Standards that Use or Generate GeoPose
 
-In this section of the reviewer's guide, we list the standards that use or generate a GeoPose.
+In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that use or generate a GeoPose.
+
+Company: Space Data Standards (not a company...)
+URL: http://spacedatastandards.org/
+Text about Space Data Standards will go here.
+
 
 From BuildingSMARTS IFC4 BIM standard there is the concept of an "IFc Site". It lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
 http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
