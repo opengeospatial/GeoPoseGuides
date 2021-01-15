@@ -1,0 +1,14 @@
+[[rg-landscape-proprietary-section]]
+== Proprietary Software that Use or Generate GeoPose
+
+In this section of the reviewer's guide, we list the proprietary solutions that use or generate a GeoPose.
+
+Each solution will have a table with its features and functions.
+
+Company: Space Data Standards (not a company...)
+URL: http://spacedatastandards.org/
+Text about Space Data Standards will go here.
+
+Company Name:Deeyook
+URL: https://www.deeyook.com/
+Deeyook's location technology is a patented wireless-based, firmware solution that is self-learning, ubiquitous, ultra-precise (~10 cm), passive and low power, allowing absolute indoor and outdoor position determination.

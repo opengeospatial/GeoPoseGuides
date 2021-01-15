@@ -1,0 +1,8 @@
+[[rg-landscape-standard-section]]
+== Standards that Use or Generate GeoPose
+
+In this section of the reviewer's guide, we list the standards that use or generate a GeoPose.
+
+From BuildingSMARTS IFC4 BIM standard there is the concept of an "IFc Site". It lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
+http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
+For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
