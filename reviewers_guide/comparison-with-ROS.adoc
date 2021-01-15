@@ -1,0 +1,26 @@
+[[rg-comparison-with-moving-ROS-section]]
+== Comparison of GeoPose and Robotic Operating System (ROS)
+
+Robotics industry will use/need GeoPose. There is a widely used protocol that was defined over 10 years ago (2010).
+This section compares GeoPose with the ROS Rep
+https://www.ros.org/reps/rep-0105.html
+
+The frame/pose graphs but ROS insists on axis alignment and does not seem to account for orientation.
+
+INSERT Figure ECEF_ENU_Longitude_Latitude_relationships_in_ROS Here
+
+The data type of GeoPose in ROS is defined here http://docs.ros.org/jade/api/geographic_msgs/html/msg/GeoPose.html
+
+As a summary of REP 103 (which is an informational document, so not yet an internal (or international?) "standard"), ROS specifies multiple preferred frame conventions; body-attached (default), LTP-ENU (default geographic), LTP-NED and camera-attached frames, which respectively are:
+{+X:forward, +Y:left, +Z:up}
+{+X:east, +Y:north, +Z:up}
+{+X:north, +Y:east, +Z:down}
+{+X:right, +Y:down, +Z:forward}
+They account for rotation in several ways, using:
+
+quaternions (no singularities) or
+rotation matrix (no singularities) or
+fixed axis roll (X), pitch (Y), yaw (Z) which are also used for angular velocities or
+Euler angles yaw (Z), pitch (Y), and roll (X), which are "generally discouraged due to having 24 'valid' conventions with different domains using different conventions by default".
+
+Notice: using LTP-ENU as the default geographic frame, yaw is zero when pointing east.
