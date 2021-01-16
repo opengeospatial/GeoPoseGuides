@@ -5,9 +5,16 @@ In this section of the reviewer's guide, we list the Standards Development Organ
 
 The table to be used in this section has not yet been discussed and decided upon.
 
+Within the table, we need links to the standards themselves. The link needs to be a human readable (in another column)
+
+1. References (definitive reference) is a citation
+
+Alos, must create a table dedicated to IEEE Standards. What are the IEEE standards?
+
+
 Here are notes about two standards that have not yet been put into the table.
 
-This URL is a convenient place to view many space data standards 
+This URL is a convenient place to view many space data standards
 URL: http://spacedatastandards.org/
 
 
