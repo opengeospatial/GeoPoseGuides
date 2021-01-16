@@ -26,6 +26,42 @@ If you have information to contribute to this section, or have recommendations a
 .. Quaternion?
 .. Fields?
 
+In an outreach campaign (some other form of communication to the world, saying that GeoPose is under development, intersects with many software) we can list things we are seeking feedback about (see above questions). If you are the owner/controlling technology of interest/touching, we’d like answers to these questions. Would e-mail replies be the goal/suffice?
+
+Could be a form in which the company would complete fields. Open-ended in case we don’t know what the right question is to ask.
+
+Instead of question #1 above, they should look for the information in their own systems and supply it to us! Add another question: is there anything else we should know?
+
+Question #3 should be “Does your solution use a static spatial reference system just as GeoJSON does with WGS84? “
+
+Question #4: Global Position (e.g., Lat, Long) or Local Position
+
+Orientation (e.g., Yaw pitch roll, quarternions, Euler Angles, etc)
+
+How does your system encode data about position and orientation of things that have pose: objects, cameras, sensors, etc?
+
+These are supplemental “hints”
+
+Is the pose generated in a geospatially-referenced frame?
+
+Mikel: What is your forward (up) vector?
+
+Is the data stored in an array?
+
+Make sure to specify the order.
+
+Anything else we should be aware of:
+
+Eliminate question #5 (it is encompassed in the above)
+
+Some of these companies are OGC members. We could reach out to the technical representative and ask them who to ask, or if they can answer the questions.
+
+
+Company Name: Epic games
+Unreal Engine
+URL: https://www.unrealengine.com/
+
+
 Company Name:Deeyook
 URL: https://www.deeyook.com/
 Deeyook's location technology is a patented wireless-based, firmware solution that is self-learning, ubiquitous, ultra-precise (~10 cm), passive and low power, allowing absolute indoor and outdoor position determination.
