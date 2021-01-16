@@ -1,4 +1,4 @@
-[[ug_usage_section]]
+[[rg_usage_section]]
 == How To Use This Resource
 
 The GeoPose Reviewers Guide is not intended to be read from start to finish. Rather, it is a resource structured to provide quick answers to questions which a reviewer may have about the GeoPose Standard.

@@ -1,0 +1,16 @@
+[[implementation-targets-section]]
+== GeoPose Implementation Targets
+
+The GeoPose standard defines in normative sections, the implementation targets. The implementation targets in this section will be described and in tables.
+
+[[data-dictionary-package-diagram,Figure {counter:figure-num}]]
+.CityGML UML Packages
+/// image::../standard/figures/CityGMLPackageDiagram.png[align="center"]
+
+[[data-dictionary-ISO]]
+/// include::../standard/data-dictionaries/ISO-Classes.adoc[]
+
+[[data-dictionary-core]]
+/// include::../standard/data-dictionaries/Core.adoc[]
+
+NOTE: CityGML exported a data dictionary from its' UML model as a normative representation of the standard. It's included in the Users Guide as a quick reference.

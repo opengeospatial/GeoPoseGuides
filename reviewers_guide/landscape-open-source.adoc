@@ -1,0 +1,10 @@
+[[rg-landscape-proprietary-section]]
+== Open Source Libraries and Software that Use or Generate GeoPose
+
+In this section of the reviewer's guide, we list the open source libraries and software solutions that use or generate a GeoPose.
+
+We compile, in a structured format, the features and functions of each solution we identify.
+
+Since there are new libraries and software being introduced from time to time, this section will be maintained/updated to the best of the ability of the SWG.
+
+If you have information to contribute to this section, or have recommendations and questions, please create an issue in this repo.
