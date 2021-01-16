@@ -4,8 +4,8 @@ In this repo, members of the OGC GeoPose SWG are developing the GeoPose reviewer
 
 The documents provide engineering guidance of different kinds to two audiences:
 * Professionals who, for the purpose of providing detailed feedback and input to the SWG, seek to understand:
-** the key concepts underlying GeoPose and
-** the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
+**the key concepts underlying GeoPose and
+**the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
 
 * Users, which is an umbrella term to include people from highly diverse backgrounds, such as:
 ** Implementers seeking to include/integrate GeoPose in their products and services,
