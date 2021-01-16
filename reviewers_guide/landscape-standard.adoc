@@ -3,11 +3,121 @@
 
 In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that use or generate a GeoPose.
 
-Company: Space Data Standards (not a company...)
+The table to be used in this section has not yet been discussed and decided upon.
+
+Here are notes about two standards that have not yet been put into the table.
+
+This URL is a convenient place to view many space data standards 
 URL: http://spacedatastandards.org/
-Text about Space Data Standards will go here.
 
 
 From BuildingSMARTS IFC4 BIM standard there is the concept of an "IFc Site". It lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
 http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
 For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
+
+
+__OGC Standards__
+|===
+|*Standard* |*Relevant Section* |*Quote the Text*
+
+|Moving Features
+|Cell in column 2
+|Cell in column 3
+
+|Sensor Web Enablement (SWE)
+|Cell in column 2
+|Cell in column 3
+
+|CityGML
+|Cell in column 2
+|Cell in column 3
+
+|IndoorGML
+|Cell in column 2
+|Cell in column 3
+
+|CDB (Common DataBase)
+|Cell in column 2
+|Cell in column 3
+
+|KML (??)
+|Cell in column 2
+|Cell in column 3
+|===
+
+__Khronos Group__
+|===
+|*Standard* |*Relevant Section* |*Quote the Text*
+
+|glTF
+|Cell in column 2
+|Cell in column 3
+
+|OpenXR
+|link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor[Extension for Microsoft Spatial Anchors]
+|This extension allows an application to create a spatial anchor, an arbitrary freespace point in the user’s physical environment that will then be tracked by the runtime. The runtime should then adjust the position and orientation of that anchor’s origin over time as needed, independently of all other spaces and anchors, to ensure that it maintains its original mapping to the real world.
+
+|OpenVX
+|Cell in column 2
+|Cell in column 3
+
+|OpenKCam
+|Cell in column 2
+|Cell in column 3
+|===
+
+__W3C__
+|===
+|*Standard* |*Relevant Section* |*Quote the Text*
+
+|Geolocation API
+|Cell in column 2
+|Cell in column 3
+
+|Browser Sensor Interfaces
+|Cell in column 2
+|Cell in column 3
+
+|Immersive Web WebXR Device API
+|link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
+|An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
+|===
+
+__Motion Imagery Standards Board (MISB)__
+|===
+|*Standard* |*Relevant Section* |*Quote the Text*
+
+|MISB ST 0601
+|Cell in column 2
+|Cell in column 3
+
+|MISB ST 0801.5
+|Cell in column 2
+|Cell in column 3
+|===
+
+__ASTM__
+|===
+|*Standard* |*Relevant Section* |*Quote the Text*
+
+|E57
+|link:http://libe57.org/features.html[defines fifteen features that cover the core capabilities of the E57 format]
+|Cell in column 3
+
+|===
+
+There are also specifications (standards) that are developed for and used by industries/domains.
+
+Space
+The Observation Geometry System NASA uses for Space Science Missions is called SPICE.
+A tutorial presentation about SPICE is available link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf[here].
+
+__NASA__
+|===
+|*Standard* |*Relevant Section* |*Quote the Text*
+
+|SPICE
+|link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/21_fk.pdf[Frame Kernel]
+|Cell in column 3
+
+|===

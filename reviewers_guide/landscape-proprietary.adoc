@@ -1,7 +1,7 @@
 [[rg-landscape-proprietary-section]]
 == Proprietary Software that Use or Generate GeoPose
 
-In this section of the reviewer's guide, we list the proprietary solutions that use or generate a GeoPose.
+This section of the reviewer's guide captures approaches and any relevant information we have about commercial software that uses or generates pose of a digital object or a device (the device is the surrogate for the user in AR).
 
 We compile, in a structured format, the features and functions of each solution we identify.
 
@@ -9,6 +9,211 @@ Since new proprietary software offerings are being introduced to address the req
 
 If you have information to contribute to this section, or have recommendations and questions, please create an issue in this repo.
 
+
+.We seek to answer the following questions
+. Can the proprietary solution expose or is there any documentation about a service that provides that which we define as GeoPose (coordinates, orientation)? +
+. If the solution generates or uses pose, is the pose geospatially-anchored or use an internally-defined (local) Frame of Reference? +
+. For those that have geospatial +
+.. Is Spatial Reference System (SRS) variable (in fields) or static defined once across the entire platform? +
+.. Use of WGS84? GeoJSON?
+. What are the naming conventions in use by this solution
+.. Lat/Long,
+.. North, East,
+.. XYZ,
+.. Yaw Pitch Roll
+. What is the data model and how is it instantiated?
+.. Do they store pose data in an array?
+.. Quaternion?
+.. Fields?
+
 Company Name:Deeyook
 URL: https://www.deeyook.com/
 Deeyook's location technology is a patented wireless-based, firmware solution that is self-learning, ubiquitous, ultra-precise (~10 cm), passive and low power, allowing absolute indoor and outdoor position determination.
+
+|===
+|*Company* |*Product Name* |*Local and/or Geospatial Pose* |*SRS Variable or Static* |*Naming Conventions* |*Data Model Details*
+
+|6D.ai
+|Cell in column 2
+|local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Autodesk
+|Cell in column 2
+|local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Autodesk
+|Cell in column 2
+|local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Bentley
+|Context Capture
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Ecere
+|link:http://ecere.ca/gnosis/[GNOSIS]
+|Geospatial Pose
+|Static WGS84 ellipsoid latitude, longitude, altitude
+|latitude, longitude, altitude + an orientation (quaternion, or yaw, pitch, roll)
+|The orientation of the camera or of geo-anchored objects are specified relative to a plane tangent to Earth at the geospatial position.
+i.e. yaw is relative to North around 'up' axis, pitch is relative to the horizon around the sideways axis and roll is relative to 'up' around the forward axis.
+
+|Esri
+|ArcGIS Runtime, ArcGISARView (built on SceneView)
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Esri
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Facebook
+|Scape.io
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Google
+|Visual Positioning Service
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Google
+|Maps
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Google
+|Chrome?
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|HERE Technologies
+|Visual Positioning Service Proof of Concept with Verizon
+|Cell in column 3
+|sub-meter accuracy using an image or video. Proprietary 3D positioning algorithms from HERE analyze images or videos for accurate positioning. https://t.her.is/2GjHvCf
+|Cell in column 5
+|Cell in column 6
+
+|Immersal
+|Cell in column 2
+|local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Lyft
+|BlueVision
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Microsoft
+|Azure Spatial Anchors
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Niantic
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|PTC
+|Vuforia
+|local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Open Robotics
+|link:http://docs.ros.org/jade/api/geographic_msgs/html/msg/GeoPose.html[Robotic Operating System (ROS)].
+|GeoSpatial "GeoPoint" is position, using the WGS 84 reference ellipsoid
+|geometry_msgs/Quaternion orientation
+|Orientation uses the East-North-Up (ENU) frame of reference
+|Cell in column 6
+
+|SPAR3D
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Sturfee
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Trimble
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Uber
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Verses
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|vGIS
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Visometry
+|Vision Lib
+|Local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Visualix
+|Cell in column 2
+|Local
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|===
