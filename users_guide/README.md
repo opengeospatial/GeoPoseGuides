@@ -2,13 +2,12 @@
 
 ## Content
 
-This folder contains the text for the User Guide
+This folder contains all files for the GeoPose User Guide
 
-* bp.adoc - the main Best Practice document with references to all sections
+* GeoPose-Users-Guide.adoc - the main User Guide document with references to all sections
 * remaining adocs - each section of the Best Practice document is in a separate document: follow directions in each document to populate
-* figures - figures go here
-* images - Image files for graphics go here. Image files for figures go in the "figures" directory. Only place in here images not used in figures (e.g., as parts of tables, as logos, etc.)
-* requirements - (OPTIONAL) directory for requirements and requirement classes to be referenced in clause_7_normative_text.adoc
+* figures - figures used in the GeoPose-Users-Guide.adoc
+* images - images used in the GeoPose-Users-Guide.adoc go here. Image files for figures go in the "figures" directory. Only place in here images not used in figures (e.g., as parts of tables, as logos, etc.)
 * code - (OPTIONAL)sample code to accompany the Best Practice, if desired
 * abstract_tests - (OPTIONAL)the Abstract Test Suite comprising one test for every requirement, optional
 * UML - UML diagrams, if applicable
@@ -16,7 +15,7 @@ This folder contains the text for the User Guide
 ## Building
 
 To produce the HTML of the Best Practice run `asciidoctor --safe -a data-uri -o
-<Best Practice name>.html bp.adoc`
+GeoPose-Users-Guide.html GeoPose-Users-Guide.adoc`
 
 To produce the PDF of the Best Practice run `asciidoctor-pdf --safe -o
-<Best Practice name>.pdf bp.adoc`
+GeoPose-Users-Guide.html GeoPose-Users-Guide.adoc`
