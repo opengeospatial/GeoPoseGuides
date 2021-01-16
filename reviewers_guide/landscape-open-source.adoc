@@ -1,10 +1,26 @@
 [[rg-landscape-proprietary-section]]
 == Open Source Libraries and Software that Use or Generate GeoPose
 
-In this section of the reviewer's guide, we list the open source libraries and software solutions that use or generate a GeoPose.
+There are Open Source projects that are or could be relevant to GeoPose.
 
 We compile, in a structured format, the features and functions of each solution we identify.
 
 Since there are new libraries and software being introduced from time to time, this section will be maintained/updated to the best of the ability of the SWG.
 
 If you have information to contribute to this section, or have recommendations and questions, please create an issue in this repo.
+
+The names and links to these projects, and their relevance to GeoPose are captured below.
+
+Camera Positioning Standard, proposed by Fantasmo, project page link:https://www.camerapositioning.io/[here].
+
+Border Go, published by Norkart, project page link:https://github.com/kartverket/BorderGo/tree/master/BorderGo[here].
+
+In addition, there are peer-reviewed journal papers that can be used as inspiration.
+
+For example, link:http://users.cis.fiu.edu/~yangz/to_read/2009_ISMAR/05336489.pdf[Global Pose Estimation using Multi-Sensor Fusion for Outdoor Augmented Reality], published in the ISMAR 2009 proceedings
+
+Mathieu Bredif (IGN) has proposed these as potentially relevant
+link:http://www.itowns-project.org/itowns/docs/#api/Geographic/OrientationUtils[iTowns project web page about orientation]
+link:https://github.com/iTowns/itowns/blob/master/src/Utils/OrientationUtils.js[iTwons GitHub about orientation]
+
+Cesium https://cesium.com/ Open Source 3d Globe platform (both for web and other platforms).
