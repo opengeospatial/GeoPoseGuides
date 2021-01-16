@@ -1,4 +1,4 @@
-[[ug_references_section]]
+[[rg_references_section]]
 == References
 The following documents contain provisions that, through reference in this text, constitute provisions of this Reviewers Guide. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the document referred to applies.
 

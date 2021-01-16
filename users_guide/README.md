@@ -1,8 +1,8 @@
-# Best Practice template
+# GeoPose User Guide README
 
 ## Content
 
-This folder contains the text for the Best Practice
+This folder contains the text for the User Guide
 
 * bp.adoc - the main Best Practice document with references to all sections
 * remaining adocs - each section of the Best Practice document is in a separate document: follow directions in each document to populate

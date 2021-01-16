@@ -1,4 +1,4 @@
-[[ug-model-core-section]]
+[[rg-model-core-section]]
 === Core
 
 |===
@@ -26,7 +26,7 @@ The CityGML Core module defines the basic concepts and components of city models
 [[ug-key-concepts-section]]
 ==== Key Concepts
 
-The following is a summary of the key concepts described by the Core Module. This is not an exaustive listing of all of the Core concepts. Rather, it is an introduction those concepts which are essentiall for understanding the role of the Core Module in the CityGML Conceptual Model. 
+The following is a summary of the key concepts described by the Core Module. This is not an exaustive listing of all of the Core concepts. Rather, it is an introduction those concepts which are essentiall for understanding the role of the Core Module in the CityGML Conceptual Model.
 
 [[city-model-concept]]
 <<CityModel-section,*CityModel*>>: (<<ug-city-model-section,Discussion>>) The CityModel class is the root class of every CityGML conceptual model. It's primary purpose is to aggregate CityModelMembers.
@@ -73,7 +73,7 @@ The ISO classes explicitly used in the CityGML UML model are introduced in <<iso
 [[ug-iso-geometry-section]]
 *Geometry*
 
-The most common geometry concept found in the CityGML 3.0 Standard is the concept of <<ug-gm_multiprimitive-section,multi-primitives>>. These are homogeneous collections of <<ug-gm_primitive-section,GM_Primitives>> which are aggregated to form a more compex geometry. 
+The most common geometry concept found in the CityGML 3.0 Standard is the concept of <<ug-gm_multiprimitive-section,multi-primitives>>. These are homogeneous collections of <<ug-gm_primitive-section,GM_Primitives>> which are aggregated to form a more compex geometry.
 
 <<ug-gm_composite-section,GM_Composites>> are another form of <<ug-gm_primitive-section,GM_Primitive>> collection. These differ from <<ug-gm_multiprimitive-section,GM_MultiPrimitive>> in that the collection can be heterogeneous. It should be  noted that none of the classes in the CityGML 3.0 Standard are decended from <<ug-gm_composite-section,GM_Composites>>. However, the terms "CompositeCurve", "CompositeSurface", and "CompositeSolid" do appear in the text. The `composit` concept can also be seen in the assocation between spaces and surfaces. Therefore, an explanation of `composits` has been included for completeness.
 
@@ -137,16 +137,16 @@ image::figures/GM_CompositeSurface.png[align="center"]
 
 GM_OrientableSurface consists of a surface and an orientation inherited from GM_OrientablePrimitive. If the orientation is "+", then the GM_OrientableSurface is a GM_Surface. If the orientation is "-", then the GM_OrientableSurface is a reference to a GM_Surface with an upNormal that reverses the direction for this GM_OrientableSurface, the sense of "the top of the surface" (see 6.4.33.2).
 
-  GM_OrientableSurface: 
-  {Orientation = "+" implies primitive = self}; 
+  GM_OrientableSurface:
+  {Orientation = "+" implies primitive = self};
   {(Orientation = "-" and TransfiniteSet::contains(p : DirectPosition)) implies (primitive.upNormal(p) = - self.upNormal(p))};
 
-[[ug-gm_composite-curve-section]]  
+[[ug-gm_composite-curve-section]]
 ===== GM_CompositeCurve
 
 A GM_CompositeCurve is a list of geometric curves such that the each geometric curve in the set terminates at the start point of the subsequent curve in the list
 
-The `generator` is a GM_OrientableCurve. 
+The `generator` is a GM_OrientableCurve.
 
 A GM_CompositCurve is also a subclass of GM_OrientatableCurve. One of the few examples of multiple inheritance.
 
@@ -163,12 +163,12 @@ GM_OrientableCurve consists of a curve and an orientation inherited from GM_Orie
   {Orientation = "+" implies primitive = self}; +
   {Orientation = "-" implies primitive.parameterization(length()-s) = parameterization(s)};
 
-[[ug-gm_composite-solid-section]]  
+[[ug-gm_composite-solid-section]]
 ===== GM_CompositeSolid
 
 A GM_CompositeSolid is a set of geometric solids adjoining one another along common boundary geometric surfaces.
 
-The `generator` is a <<ug-gm_solid-section,GM_Solid>>. 
+The `generator` is a <<ug-gm_solid-section,GM_Solid>>.
 
 A GM_CompositSolid is also a subclass of <<ug-gm_solid-section,GM_Solid>>. One of the few examples of multiple inheritance.
 

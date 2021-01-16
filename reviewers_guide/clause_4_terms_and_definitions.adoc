@@ -1,4 +1,4 @@
-[[ug_terms-and-definitions_section]]
+[[rg_terms-and-definitions_section]]
 == Terms and Definitions
 
 For the purposes of this document, the following additional terms and definitions apply.
@@ -35,7 +35,7 @@ model that defines concepts of a universe of discourse +
 {blank}[ISO 19101-1:2014, 4.1.5]
 
 [[conceptual-schema-definition]]
-*conceptual schema* 
+*conceptual schema*
 
 . formal description of a <<conceptual-model-definition,conceptual model>> +
 {blank}[ISO 19101-1:2014, 4.1.6]

@@ -1,4 +1,6 @@
 [[ug_introduction_section]]
 == Introduction
 
-Tell us about the GeoPOS standard, the Users Guide, and what it is for.
+The GeoPose users guide contains key concepts, suggestions for how users can get started with and insights for understanding the choices that have been made by the SWG during the preparation of the GeoPose standard.
+
+Here provide a sentence about each section.
