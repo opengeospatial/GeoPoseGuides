@@ -120,6 +120,8 @@ This section contains normative content from the standard which would be useful 
 
 include::clause_8_placeholder.adoc[]
 
+include::comparison-with-Moving-Features.adoc[]
+
 ////
 Commonly used annexes
 ////
