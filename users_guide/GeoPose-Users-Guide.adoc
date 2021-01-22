@@ -112,13 +112,13 @@ This section should mirror the normative sections of the standard. External link
 
 include::clause_7_1_package.adoc[]
 
-include::clause_7_2_package.adoc[] 
+include::clause_7_2_package.adoc[]
 
 ////
 This section contains normative content from the standard which would be useful to users of this Users Guide. The sole purpose of this is to make life easier for the user. In this case it is the data dictionary for the Standard.
 ////
 
-include::clause_8_data-dictionary.adoc[]
+include::clause_8_implementation-targets.adoc[]
 
 ////
 Commonly used annexes
@@ -129,4 +129,3 @@ include::annex-history.adoc[]
 include::annex-glossary.adoc[]
 
 include::annex-bibliography.adoc[]
-

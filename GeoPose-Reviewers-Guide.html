@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <title>OGC (add title text)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -47,7 +47,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -62,10 +62,8 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
@@ -105,19 +103,22 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -182,7 +183,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -205,7 +206,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -215,7 +216,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
@@ -261,21 +262,20 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
 table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
@@ -284,7 +284,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -313,6 +313,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -385,7 +386,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -412,6 +413,7 @@ thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -517,7 +519,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <div class="paragraph">
-<p>This document provides Engineering Guidance on the use of the OGC &lt;name of standard&gt; Standard. This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. Further, Engineering Guidance should not be referenced as required or mandatory technology in procurements.</p>
+<p>This document provides Engineering Guidance on the use of the OGC GeoPose Standard. This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. Further, Engineering Guidance should not be referenced as required or mandatory technology in procurements.</p>
 </div>
 <table class="tableblock frame-all grid-none" style="width: 50%;">
 <colgroup>
@@ -564,25 +566,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#ug_introduction_section">1. Introduction</a></li>
-<li><a href="#ug_usage_section">2. How To Use This Resource</a></li>
-<li><a href="#ug_scope_section">3. Scope</a></li>
-<li><a href="#ug_references_section">4. References</a></li>
-<li><a href="#ug_terms-and-definitions_section">5. Terms and Definitions</a></li>
+<li><a href="#rg_introduction_section">1. Introduction</a></li>
+<li><a href="#rg_usage_section">2. How To Use This Resource</a></li>
+<li><a href="#rg_scope_section">3. Scope</a></li>
+<li><a href="#rg_references_section">4. References</a></li>
+<li><a href="#rg_terms-and-definitions_section">5. Terms and Definitions</a></li>
 <li><a href="#conventions-section">6. Conventions</a>
 <ul class="sectlevel2">
 <li><a href="#_identifiers">6.1. Identifiers</a></li>
 </ul>
 </li>
-<li><a href="#ug-geopos-foundations-section">7. GeoPOS Foundations</a>
+<li><a href="#ug-geopos-foundations-section">7. GeoPose Foundations</a>
 <ul class="sectlevel2">
-<li><a href="#ug-first-concept-name-section">7.1. Concept Name</a></li>
-<li><a href="#ug-second-concept-name-section">7.2. Concept Name</a></li>
+<li><a href="#rg-first-concept-name-section">7.1. Concept Name</a></li>
+<li><a href="#rg-second-concept-name-section">7.2. Concept Name</a></li>
 </ul>
 </li>
-<li><a href="#ug-geopos-model-section">8. GeoPOS Model</a>
+<li><a href="#ug-geopose-model-section">8. GeoPose Model</a>
 <ul class="sectlevel2">
-<li><a href="#ug-model-core-section">8.1. Core</a>
+<li><a href="#rg-model-core-section">8.1. Core</a>
 <ul class="sectlevel3">
 <li><a href="#ug-key-concepts-section">8.1.1. Key Concepts</a></li>
 <li><a href="#ug-iso-dependencies-section">8.1.2. ISO Dependencies</a></li>
@@ -592,18 +594,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#ug-core-uml-section">8.1.6. CityGML Core UML Model</a></li>
 </ul>
 </li>
-<li><a href="#ug-model-first-package-section">8.2. Appearance</a>
+<li><a href="#rg-model-first-package-section">8.2. Appearance</a>
 <ul class="sectlevel3">
-<li><a href="#ug-first-package-synopsis-section">8.2.1. Synopsis</a></li>
-<li><a href="#ug-first-package-concepts-section">8.2.2. Key Concepts</a></li>
-<li><a href="#ug-first-package-discussion-section">8.2.3. Discussion</a></li>
-<li><a href="#ug-first-package-uml-section">8.2.4. UML Model</a></li>
-<li><a href="#ug-first-package-examples-section">8.2.5. Examples</a></li>
+<li><a href="#rg-first-package-synopsis-section">8.2.1. Synopsis</a></li>
+<li><a href="#rg-first-package-concepts-section">8.2.2. Key Concepts</a></li>
+<li><a href="#rg-first-package-discussion-section">8.2.3. Discussion</a></li>
+<li><a href="#rg-first-package-uml-section">8.2.4. UML Model</a></li>
+<li><a href="#rg-first-package-examples-section">8.2.5. Examples</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#data-dictionary-section">9. CityGML Data Dictionary</a></li>
+<li><a href="#data-placeholder-section">9. Placeholder</a></li>
+<li><a href="#rg-comparison-with-moving-features-section">10. Comparison of GeoPose and Moving Features</a></li>
 <li><a href="#_revision_history">Annex A: Revision History</a></li>
 <li><a href="#glossary">Annex B: Glossary</a>
 <ul class="sectlevel2">
@@ -672,38 +675,29 @@ Attention is drawn to the possibility that some of the elements of this document
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug_introduction_section"><a class="anchor" href="#ug_introduction_section"></a>1. Introduction</h2>
+<h2 id="rg_introduction_section"><a class="anchor" href="#rg_introduction_section"></a>1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Tell us about the GeoPOS standard, the Users Guide, and what it is for.</p>
+<p>The GeoPose Reviewers Guide is a resource for professionals who seek to understand the key concepts beneath GeoPose and the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.</p>
+</div>
+<div class="paragraph">
+<p>It is provided to support professionals who need to understand it or are reviewing the GeoPose draft standard but do not wish to implement it.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug_usage_section"><a class="anchor" href="#ug_usage_section"></a>2. How To Use This Resource</h2>
+<h2 id="rg_usage_section"><a class="anchor" href="#rg_usage_section"></a>2. How To Use This Resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Users Guide to the GeoPOS Conceptual Model Standard is not intended to be read from start to finnish. Rather, it is a resource structured to provide quick answers to questions which an implementer may have about the GeoPOS Standard.</p>
+<p>The GeoPose Reviewers Guide is not intended to be read from start to finish. Rather, it is a resource structured to provide quick answers to questions which a reviewer may have about the GeoPose Standard.</p>
 </div>
 <div class="paragraph">
-<p>The GeoPOS Standard includes hyperlinks which can be used to navigate directly to relevant sections of the Users Guide.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This is a rough draft. A more refined writeup will be avaliable at a latter date.
-</td>
-</tr>
-</table>
+<p>The GeoPose Reviewers Guide contains hyperlinks which can be used to navigate directly to relevant sections of the guide.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug_scope_section"><a class="anchor" href="#ug_scope_section"></a>3. Scope</h2>
+<h2 id="rg_scope_section"><a class="anchor" href="#rg_scope_section"></a>3. Scope</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -722,10 +716,10 @@ This is a rough draft. A more refined writeup will be avaliable at a latter date
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug_references_section"><a class="anchor" href="#ug_references_section"></a>4. References</h2>
+<h2 id="rg_references_section"><a class="anchor" href="#rg_references_section"></a>4. References</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following documents contain provisions that, through reference in this text, constitute provisions of this Users Guide. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the document referred to applies.</p>
+<p>The following documents contain provisions that, through reference in this text, constitute provisions of this Reviewers Guide. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the document referred to applies.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -758,7 +752,7 @@ Each reference has an anchor. That allows users to jump to this citation from an
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug_terms-and-definitions_section"><a class="anchor" href="#ug_terms-and-definitions_section"></a>5. Terms and Definitions</h2>
+<h2 id="rg_terms-and-definitions_section"><a class="anchor" href="#rg_terms-and-definitions_section"></a>5. Terms and Definitions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
@@ -845,22 +839,22 @@ Notice that each definition has an anchor. Anchor text would also be a good idea
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug-geopos-foundations-section"><a class="anchor" href="#ug-geopos-foundations-section"></a>7. GeoPOS Foundations</h2>
+<h2 id="ug-geopos-foundations-section"><a class="anchor" href="#ug-geopos-foundations-section"></a>7. GeoPose Foundations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section in introductory text for the foundational concepts which will be discussed.</p>
+<p>This section is for introductory text for the foundational concepts which will be discussed.</p>
 </div>
 <div class="paragraph">
 <p>This file may be omitted if you have nothing to say.</p>
 </div>
 <div class="sect2">
-<h3 id="ug-first-concept-name-section"><a class="anchor" href="#ug-first-concept-name-section"></a>7.1. Concept Name</h3>
+<h3 id="rg-first-concept-name-section"><a class="anchor" href="#rg-first-concept-name-section"></a>7.1. Concept Name</h3>
 <div class="paragraph">
-<p>Describe your concept here. Write to the developer, this is not a disertation.</p>
+<p>Describe your concept here. Write to the developer, this is not a dissertation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ug-second-concept-name-section"><a class="anchor" href="#ug-second-concept-name-section"></a>7.2. Concept Name</h3>
+<h3 id="rg-second-concept-name-section"><a class="anchor" href="#rg-second-concept-name-section"></a>7.2. Concept Name</h3>
 <div class="paragraph">
 <p>Describe your concept here.</p>
 </div>
@@ -871,10 +865,10 @@ Notice that each definition has an anchor. Anchor text would also be a good idea
 </div>
 </div>
 <div class="sect1">
-<h2 id="ug-geopos-model-section"><a class="anchor" href="#ug-geopos-model-section"></a>8. GeoPOS Model</h2>
+<h2 id="ug-geopose-model-section"><a class="anchor" href="#ug-geopose-model-section"></a>8. GeoPose Model</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="ug-model-core-section"><a class="anchor" href="#ug-model-core-section"></a>8.1. Core</h3>
+<h3 id="rg-model-core-section"><a class="anchor" href="#rg-model-core-section"></a>8.1. Core</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -1232,15 +1226,15 @@ This section provides informative text in support of your standard. Most standar
 </div>
 </div>
 <div class="sect2">
-<h3 id="ug-model-first-package-section"><a class="anchor" href="#ug-model-first-package-section"></a>8.2. Appearance</h3>
+<h3 id="rg-model-first-package-section"><a class="anchor" href="#rg-model-first-package-section"></a>8.2. Appearance</h3>
 <div class="sect3">
-<h4 id="ug-first-package-synopsis-section"><a class="anchor" href="#ug-first-package-synopsis-section"></a>8.2.1. Synopsis</h4>
+<h4 id="rg-first-package-synopsis-section"><a class="anchor" href="#rg-first-package-synopsis-section"></a>8.2.1. Synopsis</h4>
 <div class="paragraph">
 <p>This is a short write-up on what this package is about.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ug-first-package-concepts-section"><a class="anchor" href="#ug-first-package-concepts-section"></a>8.2.2. Key Concepts</h4>
+<h4 id="rg-first-package-concepts-section"><a class="anchor" href="#rg-first-package-concepts-section"></a>8.2.2. Key Concepts</h4>
 <div id="appearance-concept" class="paragraph">
 <p><a href="#Appearance-section"><strong>Appearance</strong></a>: An Appearance is a collection of surface data, i.e. observable properties for surface geometry objects in the form of textures and material.<br>
 A type of <a href="#abstract-appearance-concept">AbstractAppearance</a>.</p>
@@ -1259,7 +1253,7 @@ This is a smaller package so a separate "discussion" link is not necessary.
 </div>
 </div>
 <div class="sect3">
-<h4 id="ug-first-package-discussion-section"><a class="anchor" href="#ug-first-package-discussion-section"></a>8.2.3. Discussion</h4>
+<h4 id="rg-first-package-discussion-section"><a class="anchor" href="#rg-first-package-discussion-section"></a>8.2.3. Discussion</h4>
 <div class="paragraph">
 <p>This is the informative text that most users will be looking for. Remember that hyperlinks are important. For example, each time a class name is used you can include a link back to the definition of that class (ex. <a href="#abstract-city-object-concept">City Object</a>)</p>
 </div>
@@ -1268,45 +1262,76 @@ This is a smaller package so a separate "discussion" link is not necessary.
 </div>
 </div>
 <div class="sect3">
-<h4 id="ug-first-package-uml-section"><a class="anchor" href="#ug-first-package-uml-section"></a>8.2.4. UML Model</h4>
+<h4 id="rg-first-package-uml-section"><a class="anchor" href="#rg-first-package-uml-section"></a>8.2.4. UML Model</h4>
 <div class="paragraph">
 <p>The UML model goes here.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ug-first-package-examples-section"><a class="anchor" href="#ug-first-package-examples-section"></a>8.2.5. Examples</h4>
+<h4 id="rg-first-package-examples-section"><a class="anchor" href="#rg-first-package-examples-section"></a>8.2.5. Examples</h4>
 
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="data-dictionary-section"><a class="anchor" href="#data-dictionary-section"></a>9. CityGML Data Dictionary</h2>
+<h2 id="data-placeholder-section"><a class="anchor" href="#data-placeholder-section"></a>9. Placeholder</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The CityGML UML model is the normative definition of the CityGML Conceptual Model. The Data Dictionary tables in this section were software generated from the UML model. As such, this section provides a normative representation of the CityGML Conceptual Model.</p>
+<p>This is a section which can be used for any purpose not covered in an earlier section</p>
 </div>
-<div id="data-dictionary-package-diagram" class="paragraph">
-<div class="title">CityGML UML Packages</div>
-<p>/// image::../standard/figures/CityGMLPackageDiagram.png[align="center"]</p>
 </div>
-<div id="data-dictionary-ISO" class="paragraph">
-<p>/// include::../standard/data-dictionaries/ISO-Classes.adoc[]</p>
 </div>
-<div id="data-dictionary-core" class="paragraph">
-<p>/// include::../standard/data-dictionaries/Core.adoc[]</p>
+<div class="sect1">
+<h2 id="rg-comparison-with-moving-features-section"><a class="anchor" href="#rg-comparison-with-moving-features-section"></a>10. Comparison of GeoPose and Moving Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ISO 19141:2008 defines a method to describe the geometry of a feature that moves as a rigid body. Such movement has the following characteristics:</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-CityGML exported a data dictionary from its' UML model as a normative representation of the standard. It&#8217;s included in the Users Guide as a quick reference.
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>The feature moves within any domain composed of spatial objects as specified in ISO 19107.</p>
+</li>
+<li>
+<p>The feature may move along a planned route, but it may deviate from the planned route.</p>
+</li>
+<li>
+<p>Motion may be influenced by physical forces, such as orbital, gravitational, or inertial forces.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Motion of a feature may influence or be influenced by other features, for example:</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The moving feature might follow a predefined route (e.g. road), perhaps part of a network, and might change routes at known points (e.g. bus stops, waypoints).</p>
+</li>
+<li>
+<p>Two or more moving features may be “pulled” together or pushed apart (e.g. an airplane will be refuelled during flight, a predator detects and tracks a prey, refugee groups join forces).</p>
+</li>
+<li>
+<p>Two or more moving features may be constrained to maintain a given spatial relationship for some period (e.g. tractor and trailer, convoy).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The ISO 19141:2008 schema specifies mechanisms to describe motion consisting of translation and/or rotation of the feature, but not including deformation of the feature.</p>
+</div>
+<div class="paragraph">
+<p>Here need to insert FIGURE 15 entitled Global and Local Axes of the spec to illustrate.</p>
+</div>
+<div class="paragraph">
+<p>Global axes = Outer frame
+Local axes = Inner frame</p>
+</div>
+<div class="paragraph">
+<p>OGC Moving Features JSON contains the temporal changes of the orientation of 3D object.</p>
+</div>
+<div class="paragraph">
+<p>"orientations": The "orientations" member is optional and represents rotational motion of the base representation of a member named "base". It allows a JSON null value or an empty array if and only if the "base" member has a JSON null value. When the temporal geometry has the base representation, its value is a JSON array as a sequence of JSON objects which have two members of "scales" and "angles", having the same number of elements of the "datetimes" value. The "scales" member has a JSON array value of numbers along the 𝑋, 𝑌, and 𝑍 axis in order as three scale factors, and the "angles" member has a JSON array value of numbers along the 𝑋, 𝑌, and 𝑍 axis in order as Euler angles in degree. A pair of "scales" and "angles" generates a transform matrix of the base representation at each time of the elements in "datetimes". The transformation matrix at each time poses the base representation from the right-handed local engineering coordinate reference system to a geographical Cartesian coordinate system. This standard attaches to the Universal Transverse Mercator (UTM) system.</p>
 </div>
 </div>
 </div>
@@ -1845,7 +1870,7 @@ Volume is the measure of the physical space of any 3-D geometric object.<br>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-01-15 16:48:54 UTC
+Last updated 2021-01-22 18:46:33 +0100
 </div>
 </div>
 </body>
