@@ -95,7 +95,7 @@ Foundation concepts are basic concepts which are important for the use of the st
 ////
 
 [[ug-geopos-foundations-section]]
-== GeoPOS Foundations
+== GeoPose Foundations
 
 include::clause_6_foundations.adoc[]
 
@@ -108,7 +108,7 @@ This section should mirror the normative sections of the standard. External link
 ////
 
 [[ug-geopos-model-section]]
-== GeoPOS Model
+== GeoPose Model
 
 include::clause_7_1_package.adoc[]
 
