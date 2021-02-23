@@ -1,4 +1,4 @@
-:Title: OGC (add title text)
+:Title: OGC GeoPose Reviewers Guide
 :titletext: {Title}
 :doctype: book
 :encoding: utf-8
@@ -33,7 +33,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) <year> Open Geospatial Consortium
+|Copyright (C) 2021 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
@@ -42,7 +42,7 @@
 |*Warning*
 |===
 
-This document provides Engineering Guidance on the use of the OGC GeoPose Standard. This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. Further, Engineering Guidance should not be referenced as required or mandatory technology in procurements.
+This document provides guidance for reviewers of the OGC GeoPose Standard. This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. In addition to this guide, developers, implementers and reviewers may wish to study the OGC GeoPose Users Guide. The guidance provided in this document is not to be referenced as required or mandatory technology in procurements.
 
 [width = "50%", grid = "none"]
 |===
