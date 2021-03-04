@@ -6,7 +6,7 @@
 
 The following are keywords to be used by search engines and document catalogues.
 
-GeoPose, ogcdoc, OGC document,  
+GeoPose, ogcdoc, OGC document, Geospatially-anchored position and orientation, pose, reviewers
 
 [big]*iii.   Preface*
 

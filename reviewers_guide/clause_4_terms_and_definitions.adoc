@@ -3,6 +3,18 @@
 
 For the purposes of this document, the following additional terms and definitions apply.
 
+For GeoPose, specifically, there is a visual glossary of frequently used terms. To consult the visual GeoPose glossary, visit the GeoPose wiki.
+
+[NOTE]
+====
+How to integrate the Visual Glossary into the guide?
+====
+
+[NOTE]
+====
+Which of these boilerplate terms/definitions do we want to keep in the GeoPose Reviewer's Guide?
+====
+
 [[d2d-data-definition]]
 *2D data* +
 geometry of features is represented in a two-dimensional space +
