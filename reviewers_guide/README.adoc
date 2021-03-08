@@ -1,5 +1,8 @@
 # GeoPose Reviewers Guide
 
+The GeoPose Reviewers Guide will follow https://github.com/opengeospatial/GeoPoseGuides/blob/main/reviewers_guide/Reviewers_Guide_Outline.adoc[this outline].
+
+
 ## Content
 
 This folder contains the text for the GeoPose Reviewers Guide. It provides engineering guidance.

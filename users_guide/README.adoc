@@ -1,4 +1,6 @@
-# GeoPose User Guide README
+# GeoPose Users Guide README
+
+The GeoPose Users Guide will follow https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/Users_Guide_Outline.adoc[this outline].
 
 ## Content
 
