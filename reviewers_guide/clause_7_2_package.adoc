@@ -1,31 +1,10 @@
-[[rg-model-first-package-section]]
-=== Appearance
+[[rg-logical-model-section]]
 
-[[rg-first-package-synopsis-section]]
-==== Synopsis
+=== Logical Model
+The conceptual model describes a (non-normative) domain of discourse for terms used in defining a precise Logical Model (normative) expressed as a Unified Modelling Language (UML) [ref] class diagram.
 
-This is a short write-up on what this package is about.
+The scope of the Logical Model is a subset of the scope of the Conceptual Model. The scope of the implementation targets is a subset of the scope of the Logical Model.
 
-[[rg-first-package-concepts-section]]
-==== Key Concepts
+The Implementation Targets are mutually independent implementations of subsets of the Logical Model.
 
-[[appearance-concept]]
-<<Appearance-section,*Appearance*>>: An Appearance is a collection of surface data, i.e. observable properties for surface geometry objects in the form of textures and material. +
-A type of <<abstract-appearance-concept,AbstractAppearance>>.
-
-NOTE: This is a smaller package so a separate "discussion" link is not necessary.
-
-[[rg-first-package-discussion-section]]
-==== Discussion
-
-This is the informative text that most users will be looking for. Remember that hyperlinks are important. For example, each time a class name is used you can include a link back to the definition of that class (ex. <<abstract-city-object-concept,City Object>>)
-
-The beauty of hypermedia is that users can quickly get the additional data they may need to understand your writing.
-
-[[rg-first-package-uml-section]]
-==== UML Model
-
-The UML model goes here.
-
-[[rg-first-package-examples-section]]
-==== Examples
+In the standard, the Implementation Targets are expressed in Extended Backus-Naur Form where all terminal symbols reference attributes of classes in the Logical Model.
