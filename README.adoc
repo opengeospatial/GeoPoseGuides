@@ -1,0 +1,19 @@
+# GeoPoseGuides
+
+In this repo, members of the OGC GeoPose SWG are developing the GeoPose reviewers and users guides.
+
+The GeoPose Reviewers Guide will provide engineering guidance, including explanations of key concepts, to professionals who, for the purpose of providing detailed feedback and input to the SWG, seek to understand:
+
+. the technical underpinnings and goals of GeoPose and
+. the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
+
+The GeoPose Users Guide will provide engineering guidance, including explanations of key concepts, to users who will develop and work directly with GeoPose-enabled products and services.
+
+For this guide, the term "users" will mean people with software engineering skills from highly diverse backgrounds, including but not limited to:
+
+. Implementers seeking to understand use of GeoPose and to include/integrate GeoPose in their diverse products and services,
+. Scientists and other R&D professionals who will use GeoPose for their projects,
+. Data miners that will use GeoPose to filter data sets, and
+. Data publishers who will include GeoPose in their offerings.
+
+If you wish to contribute to the guides, or have recommendations and questions, please create an issue in this relevant repo.

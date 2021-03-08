@@ -1,0 +1,24 @@
+# Outline of GeoPose Users Guide
+
+1. Introduction
+
+A.  What is GeoPose?
+B. Target audiences for this guide
+C. How to use this guide
+.. Use Cases – explain what will be used throughout the document to illustrate What? How? Why?
+D. Acknowledgements
+
+2. Key Concepts (from the visual glossary)
+
+A. Position
+B. Orientation
+C. Other...
+
+
+3. Basic data types in the same package (why those data types)
+
+4. Assumptions and constraints (scope of GeoPose)
+5. How to use GeoPose?
+6. Implementation Targets
+7. GeoPose in Action (code snippets)
+8. Troubleshooting Guide

@@ -1,0 +1,25 @@
+# Outline of GeoPose Reviewers Guide
+
+1. Introduction
+
+A.  What is GeoPose?
+B. Target audiences for this guide
+C. How to use this guide
+.. Use Cases – explain what will be used throughout the document to illustrate What? How? Why?
+D. Acknowledgements
+
+2. Key Concepts (from the visual glossary)
+
+A. Position
+B. Orientation
+C. Other...
+
+
+3. Comparing/contrasting GeoPose
+
+A. Other standards targeting different layers <- Josh’s talk in Aug webinar
+B. Other standards that can refer to GeoPose <- tables
+C. Open Source libraries <-tables
+D. Proprietary solutions <- survey
+
+4. How to provide feedback to GeoPose SWG
