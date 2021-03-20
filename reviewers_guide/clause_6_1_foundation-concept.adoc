@@ -1,4 +1,4 @@
 [[rg-first-concept-name-section]]
-=== Concept Name
+### Concept Name
 
 Describe your concept here. Write to the developer, this is not a dissertation.

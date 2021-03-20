@@ -1,8 +1,10 @@
 [[rg_introduction_section]]
-== Introduction
+# Introduction
 
-GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth’s surface (Geo) or within other astronomical coordinate systems. 
+## What is GeoPose?
+NOTE: this is a placeholder until we have an agreed upon, final set of statements.
 
-The GeoPose Reviewers Guide is a resource for professionals who seek to understand the key concepts used in GeoPose and the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
+GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth’s surface (Geo) or within other astronomical coordinate systems.
 
-It is provided to support professionals who need to understand GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
+## Target audience
+The GeoPose Reviewers Guide is a resource for //should we say what type of?// professionals who seek to understand the key concepts used in GeoPose and the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
