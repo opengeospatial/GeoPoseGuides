@@ -1,5 +1,5 @@
 [[rg-second-concept-name-section]]
-=== Concept Name
+### Concept Name
 
 Describe your concept here.
 
