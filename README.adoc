@@ -4,7 +4,7 @@ In this repo, members of the OGC GeoPose SWG are developing the GeoPose reviewer
 
 The GeoPose Reviewers Guide will provide engineering guidance, including explanations of key concepts, to professionals who, for the purpose of providing detailed feedback and input to the SWG, seek to understand:
 
-. the technical underpinnings and goals of GeoPose and
+. the technical underpinnings and goals of GeoPose and,
 . the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
 
 The GeoPose Users Guide will provide engineering guidance, including explanations of key concepts, to users who will develop and work directly with GeoPose-enabled products and services.
