@@ -55,7 +55,7 @@ To summarize, there are a number of very useful, rigorous, well-developed standa
 
 We know that pose is essential for combining physical and digital entities in visual scenes so that they can be experienced by a service or a user, particularly if you really want to cast a wide, even global net for appropriate entities, wherever the scene and observer may happen to be located. Geocentric (earth-based) location and orientation are the basis for all these integrations.  OGC GeoPose provides that usable common ground, both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
 
-
+=======
 The table to be used in this section has not yet been discussed and decided upon.
 
 Within the table, we need links to the standards themselves. The link needs to be a human readable (in another column)
