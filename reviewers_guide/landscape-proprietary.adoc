@@ -1,7 +1,7 @@
 [[rg-landscape-proprietary-section]]
 == Proprietary Software that Use or Generate GeoPose
 
-This section of the reviewer's guide captures approaches and any relevant information we have about commercial software that uses or generates pose of a digital object or a device (the device is the surrogate for the user in AR).
+This section of the reviewer's guide captures approaches and any relevant information we have about commercial software that uses or generates pose of a digital object [or maybe also physical objects?] or a device (the device is the surrogate for the user in AR).
 
 We compile, in a structured format, the features and functions of each solution we identify.
 
