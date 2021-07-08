@@ -1,27 +1,15 @@
 [[rg-landscape-standard-section]]
-== Standards that Could Use or Generate GeoPose
+== Standards that Could Reference GeoPose in Normative Clauses
 
-In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that could, in the future, use or generate a GeoPose.
+In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that specify <<refer to the GeoPose implementation targets in the draft spec>>[a GeoPose implementation target] as a data format. As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any implementation target.
 
 NOTE: Most of this is based on a transcript of Josh’s remarks during Aug 27 webinar. The https://youtu.be/Oo--VAB28BM[archive of that webinar is here].
 
-# Why is another standard needed?
+The key question this section will answer is where and how GeoPose fits into the landscape of positioning standards. By examining some of the existing standards in detail, we will identify the gaps which GeoPose is designed to fill.
 
-The key question this section will answer is where and how GeoPose fits into the landscape of positioning standards. There are many existing and emerging standards for location and orientation information. Many emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to make a few. These existing standards cover different scales, for different purposes,
+There are many existing and emerging standards for location and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the location and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
 
-Different information environment, sometimes graphical, sometimes GIS.
-
-So, there are already many positioning standards from which to draw. There is good practice in commercial and other domains for expressing the location and orientation of entities in all these fields. The OGC has a number of positioning and location standards. Some also express orientation and they do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales.
-
-Some standards deal with fixed infrastructure (such as CDB), or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
-
-There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
-
-So, why do we need GeoPose? Where does it fit?
-
-By examining some of the existing standards in detail, we will identify the gaps which GeoPose aims to fill.
-
-It's valuable to begin with the view of a hierarchy or perhaps pipeline of interoperability needs. Starting from the real world, there are conceptual and actual data pipelines that lead to what you can see in information and graphics systems and back into or with the real world again.
+There is a pipeline of interoperability needs. Starting from the real world, there are conceptual and actual data pipelines that lead to what you can see in information and graphics systems and back into or with the real world again.
 
 For this to happen, a number of the critical standards define how those pipelines are developed and interoperate or fit together.
 
@@ -29,7 +17,7 @@ There is a sense that there is a Web capability, that leads to a 2D camera frame
 
 In order to establish this data flow, there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address that correctly. OpenXR focuses on that stage of the pipeline.
 
-On the other side, the OGC has been working on how sensor systems measure these changes in location and orientation. How do you model the camera that’s capturing all the things that the camera is pointing at, where they are, how the camera transforms them into this local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses this need.
+On the other side, the OGC has been working on how sensor systems measure these changes in location and orientation. How do you model the camera that’s capturing all the things that the sensor (e.g., camera) is pointing at, where they are, how the camera transforms them into this local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses this need.
 
 Each of these stages or environment need to exchange data between themselves. How do you get the location and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in.
 GeoPose provides the connection. This is important for both integration and mediation, aspects of data interoperability. Anything might be positioned where it could be of concern or of interest in this pipeline.
@@ -77,6 +65,12 @@ For orientation they refer to the concept of "true north": "The world coordinate
 
 
 __OGC Standards__
+
+The OGC has a number of positioning and location standards. Some also express orientation and they do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales.
+
+
+Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
+
 |===
 |*Standard* |*Relevant Section* |*Quote the Text*
 
@@ -104,6 +98,10 @@ __OGC Standards__
 |Cell in column 2
 |Cell in column 3
 |===
+
+Other SDOs
+There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
+
 
 __Khronos Group__
 |===
