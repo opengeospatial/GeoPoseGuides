@@ -9,9 +9,7 @@ The key question this section will answer is where and how GeoPose fits into the
 
 There are many existing and emerging standards for location and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the location and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
 
-There is a pipeline of interoperability needs. Starting from the real world, there are conceptual and actual data pipelines that lead to what you can see in information and graphics systems and back into or with the real world again.
-
-For this to happen, a number of the critical standards define how those pipelines are developed and interoperate or fit together.
+There is a pipeline of interoperability needs. There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
 
 There is a sense that there is a Web capability, that leads to a 2D camera frame. There is a need for a standard to get the information from the Web into that camera frame in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
 
