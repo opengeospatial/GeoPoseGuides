@@ -2,9 +2,19 @@
 # Introduction
 
 ## What is GeoPose?
-NOTE: this is a placeholder until we have an agreed upon, final set of statements.
 
+When a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a geographically-anchored pose. All physical world objects inherently have a geographically-anchored pose. Digital objects may be assigned/attributed a geographically-anchored pose (for example, in a scene or on a stage).
+
+Shortest version:
+OGC GeoPose defines encodings for theposition and orientation of a real or a digital objectin a machine-readable form in real world coordinates, a geographically-anchored pose.
+
+## The Standard
+The GeoPose standard defines data structures for the interoperable exchange of the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo). It specifies:
+
+. a basic form with no configuration options for common use cases,
+. an advanced form with more flexibility for more complex applications, and
+. composite GeoPose structures to support time series, chain and graph structures.
 GeoPose 1.0 is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (poses) within reference frames anchored to the earth’s surface (Geo) or within other astronomical coordinate systems.
 
 ## Target audience
-The GeoPose Reviewers Guide is a resource for //should we say what type of?// professionals who seek to understand the key concepts used in GeoPose and the landscape of options which currently exist as alternatives or adjacent to the GeoPose standard.
+The GeoPose Reviewers Guide is a resource for those who seek to understand the key concepts used in GeoPose, the requirements it meets and the data structures it specifies.
