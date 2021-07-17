@@ -1,6 +1,9 @@
 [[rg_introduction_section]]
 # Introduction
 
+## Why is another standard needed?
+Parked here to see if we want to answer this question here or the standards landscape scan. 
+
 ## What is GeoPose?
 
 When a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a geographically-anchored pose. All physical world objects inherently have a geographically-anchored pose. Digital objects may be assigned/attributed a geographically-anchored pose (for example, in a scene or on a stage).

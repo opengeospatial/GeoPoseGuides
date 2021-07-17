@@ -9,15 +9,19 @@ The key question this section will answer is where and how GeoPose fits into the
 
 There are many existing and emerging standards for location and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the location and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
 
-There is a pipeline of interoperability needs. There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
+= Pipeline of interoperability needs
+There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
 
-There is a sense that there is a Web capability, that leads to a 2D camera frame. There is a need for a standard to get the information from the Web into that camera frame in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
+On the Web, information is displayed on a plane. There is a need for a standard to get the information from the Web into that display plane in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
 
-In order to establish this data flow, there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address that correctly. OpenXR focuses on that stage of the pipeline.
+In order to establish this data flow, there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address that correctly. Khronos OpenXR focuses on that stage of the pipeline.
 
-On the other side, the OGC has been working on how sensor systems measure these changes in location and orientation. How do you model the camera that’s capturing all the things that the sensor (e.g., camera) is pointing at, where they are, how the camera transforms them into this local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses this need.
+On the other side, the OGC has been working on how sensor systems measure these changes in location and orientation. How does a system model the sensor that’s capturing all the data about the features (e.g., objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses these needs.
 
-Each of these stages or environment need to exchange data between themselves. How do you get the location and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in.
+Each of these stages in the pipeline need to exchange data between themselves. How do you get the location and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in.
+
+= GeoPose 
+
 GeoPose provides the connection. This is important for both integration and mediation, aspects of data interoperability. Anything might be positioned where it could be of concern or of interest in this pipeline.
 
 The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable locations and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.
