@@ -5,7 +5,7 @@ In this section of the reviewer's guide, we list the Standards Development Organ
 
 NOTE: Most of this is based on a transcript of Josh’s remarks during Aug 27 webinar. The https://youtu.be/Oo--VAB28BM[archive of that webinar is here].
 
-The key question this section will answer is where and how GeoPose fits into the landscape of positioning standards. By examining some of the existing standards in detail, we will identify the gaps which GeoPose is designed to fill.
+The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose is designed to fill.
 
 There are many existing and emerging standards for location and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the location and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
 
@@ -18,24 +18,25 @@ In order to establish this data flow, there is a need in real graphics systems t
 
 On the other side, the OGC has been working on how sensor systems measure these changes in location and orientation. How does a system model the sensor that’s capturing all the data about the features (e.g., objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses these needs.
 
-Each of these stages in the pipeline need to exchange data between themselves. How do you get the location and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in.
+Each of these stages in the pipeline need to exchange data between themselves. How do you get the location and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
 
-= GeoPose 
-
-GeoPose provides the connection. This is important for both integration and mediation, aspects of data interoperability. Anything might be positioned where it could be of concern or of interest in this pipeline.
-
+= GeoPose in Context
 The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable locations and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.
 
-OGC Moving Features is also a very useful standard to consider and was taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. It tries to accomplish this in as efficient a manner as possible so that the data can be incorporated into analytical and visual applications.
+OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
 
-There is quite a lot of compatibility between Moving Features, which is an existing and evolving standard, and GeoPose which is in its initial phase of deployment. They have distinct roles. MF focuses on a local, municipal scale, and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose can play.
+OGC Moving Features and GeoPose have distinct roles and are complementary. Moving Features is focused on a local, municipal scale, and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose plays.
 
-There is another OGC standard that deals with how to work with sensors and getting useful observations out of them. On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
+The OGC Sensor Web Enablement suite of standards deals with how to work with sensors and getting useful observations out of them.
 
-If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary  to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
+image::images/landscape-standard-ef0fe.png
+On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
+
+If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
+
+///ENDED HERE///
 
 Turning to some of the other environments of position and orientation.
-
 
 Khronos OpenXR also deals with poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces: view, local and stage. OpenXR specifies the model which graphics hardware can deal with and this model is then to be implemented in those devices. Within a particular graphical system, it is effective. But bringing a pose from anything from anywhere is where GeoPose comes in
 
