@@ -3,8 +3,6 @@
 
 In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that specify <<refer to the GeoPose implementation targets in the draft spec>>[a GeoPose implementation target] as a data format. As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any implementation target.
 
-NOTE: Most of this is based on a transcript of Josh’s remarks during Aug 27 webinar. The https://youtu.be/Oo--VAB28BM[archive of that webinar is here].
-
 The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose is designed to fill.
 
 There are many existing and emerging standards for location and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the location and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
@@ -34,76 +32,78 @@ On the right of this figure is a schematic showing the workflows that are enable
 
 If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
 
-///ENDED HERE///
+Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user, particularly if entities are being brought into a scene from very different source contexts, and regardless of where they are in space.
 
-Turning to some of the other environments of position and orientation.
+Khronos OpenXR handles poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces (view, local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system, it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.
 
-Khronos OpenXR also deals with poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces: view, local and stage. OpenXR specifies the model which graphics hardware can deal with and this model is then to be implemented in those devices. Within a particular graphical system, it is effective. But bringing a pose from anything from anywhere is where GeoPose comes in
+GeoPose can also relate the frame of reference of a Web browser window to a virtual world or the real world.
 
-In the web and the web browser end of things, poses need to move from Web content (pages and resources) to various hardware devices that are web enabled, such as heads-up browsers. This has the problem “what is the content that is compatible with this and what information should be processed through the user’s equipment to bring anything from anywhere on the web, which represents anything from anywhere in the world, or which can be placed into the the user’s world from virtual entity definitions.
+Geocentric (earth-based) location and orientation are the basis for all these integrations. OGC GeoPose provides that usable common ground, both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
 
-To summarize, there are a number of very useful, rigorous, well-developed standards for position and orientation. What they lack is a means for 6DOF information to flow between them in a manner that is independent of graphical system, applications scene, frame of reference, and technology. GeoPose will offer the portability (interoperability) of information across all these domains and systems.
-
-We know that pose is essential for combining physical and digital entities in visual scenes so that they can be experienced by a service or a user, particularly if you really want to cast a wide, even global net for appropriate entities, wherever the scene and observer may happen to be located. Geocentric (earth-based) location and orientation are the basis for all these integrations.  OGC GeoPose provides that usable common ground, both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
+To summarize, there are a number of well-developed standards for position and orientation. What these lack is a means for position and orientation information to be passed between them in a manner that is independent of graphical system, applications scene, frame of reference, and technology. OGC GeoPose offers portability of information between all these domains and systems.
 
 =======
 The table to be used in this section has not yet been discussed and decided upon.
 
 Within the table, we need links to the standards themselves. The link needs to be a human readable (in another column)
 
-1. References (definitive reference) is a citation
-
-Also, must create a table dedicated to IEEE Standards. What are the IEEE standards?
-
-
-Here are notes about two standards that have not yet been put into the table.
-
-This URL is a convenient place to view many space data standards
-URL: http://spacedatastandards.org/
-
-
-From BuildingSMARTS IFC4 BIM standard there is the concept of an "IFc Site". It lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
-http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
-For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
-
-
 __OGC Standards__
 
-The OGC has a number of positioning and location standards. Some also express orientation and they do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales.
+The OGC has many positioning and location standards, some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing position and orientation.
 
-
+/// put in table
 Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
+///
 
 |===
-|*Standard* |*Relevant Section* |*Quote the Text*
+|*Standard* |*Graphical Frame of Reference* |*Local Spatial CRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 
 |Moving Features
 |Cell in column 2
 |Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
 
 |Sensor Web Enablement (SWE)
 |Cell in column 2
 |Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
 
 |CityGML
 |Cell in column 2
 |Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
 
 |IndoorGML
 |Cell in column 2
 |Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
 
 |CDB (Common DataBase)
 |Cell in column 2
 |Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
 
 |KML (??)
 |Cell in column 2
 |Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
 |===
 
-Other SDOs
-There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
+= Other SDOs
+
+There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
 
 
 __Khronos Group__
@@ -126,6 +126,7 @@ __Khronos Group__
 |Cell in column 2
 |Cell in column 3
 |===
+
 
 __W3C__
 |===
@@ -182,3 +183,19 @@ __NASA__
 |Cell in column 3
 
 |===
+
+
+Also, must create a table dedicated to IEEE Standards. What are the IEEE standards?
+
+What about ISO standards
+
+
+Here are notes about two standards that have not yet been put into the table.
+
+This URL is a convenient place to view many space data standards
+URL: http://spacedatastandards.org/
+
+
+From BuildingSMARTS IFC4 BIM standard there is the concept of an "IFc Site". It lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
+http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
+For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
