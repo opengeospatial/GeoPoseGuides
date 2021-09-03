@@ -3,4 +3,6 @@
 
 The GeoPose Reviewers Guide is not intended to be read from start to finish. Rather, it is a resource structured to provide quick answers to questions which a reviewer may have about the GeoPose Standard. It is provided to support professionals who need to understand GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
 
+In addition, this guide can provide insights to professionals considering adopting GeoPose for their projects and products.
+
 The GeoPose Reviewers Guide contains hyperlinks which can be used to navigate directly to relevant sections of the guide as well as to sections of the https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[draft GeoPose specification] and the https://github.com/opengeospatial/GeoPoseGuides/blob/working-draft/GeoPose-Users-Guide.pdf[GeoPose User Guide].

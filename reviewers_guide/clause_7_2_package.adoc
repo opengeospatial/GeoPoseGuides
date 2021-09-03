@@ -1,10 +1,10 @@
 [[rg-logical-model-section]]
 
 === Logical Model
-The conceptual model describes a (non-normative) domain of discourse for terms used in defining a precise Logical Model (normative) expressed as a Unified Modelling Language (UML) [ref] class diagram.
+While the Conceptual Model outlines the component terms and relationships in the standard, the Logical Model precisely models  the classes and their relationships.
+
+The Conceptual Model describes a (non-normative) domain of discourse for terms used in defining a precise Logical Model (normative) expressed as a Unified Modelling Language (UML) [ref] class diagram.
 
 The scope of the Logical Model is a subset of the scope of the Conceptual Model. The scope of the implementation targets is a subset of the scope of the Logical Model.
 
 The Implementation Targets are mutually independent implementations of subsets of the Logical Model.
-
-In the standard, the Implementation Targets are expressed in Extended Backus-Naur Form where all terminal symbols reference attributes of classes in the Logical Model.
