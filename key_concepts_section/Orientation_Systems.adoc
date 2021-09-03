@@ -1,26 +1,38 @@
 ## Orientation Systems
-[options="header"]
+
 |===
-| Term | Representation | Definition
-| **Euler Angles** | image:../users_guide/figures/glossary/EulerAngles.png[Euler Angles]
-https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/EulerAngles.blend[EulerAngles.blend] | **"The Euler angles are three angles introduced by Leonhard Euler to describe the orientation of a rigid body with respect to a fixed coordinate system."** link:https://en.wikipedia.org/wiki/Euler_angles[(from Wikipedia)]
+
+| [[def_euler_angles]] **Euler Angles** +
+image:../users_guide/figures/glossary/EulerAngles.png[Euler Angles,320,320] +
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/EulerAngles.blend[EulerAngles.blend] | **"The Euler angles are three angles introduced by Leonhard Euler to describe the orientation of a rigid body with respect to a fixed coordinate system."** link:https://en.wikipedia.org/wiki/Euler_angles[(from Wikipedia)]
 
 The angles are generally specified in degrees (in a similar way to longitude/latitude values in Global Positioning Systems), although the internal operations on computers are almost always performed in radians, one axis after another. Usually, the application order of rotation transformations is the inverse of the specification (the Z angle is applied first, then the Y on, and finally, the X one), but it might vary depending on the use case or the hand rule employed.
 
 It is important to note that, since the rotation operations are applied globally and linked together by the application order, if two axes are driven into a parallel configuration, it can generate a link:https://en.wikipedia.org/wiki/Gimbal_lock[Gimbal Lock], resulting in the loss of one degree of freedom. This is usually not a problem when defining simple, discontinuous orientations, but when the use case involves overlapping or interpolating between multiple Euler angles, the result can be negatively affected.
-| **Aircraft Principal Axes** | image:../users_guide/figures/glossary/AircraftPrincipledAxes.png[Aircraft Principled Axes]
-https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/AircraftPrincipledAxes.blend[AircraftPrincipledAxes.blend] | **"Aircraft Principal Axes define the relative (local) rotation of an object, using a plane flying in the +X axis as a reference."**
+
+
+| [[def_aircraft_principled_axes]] **Aircraft Principal Axes** +
+image:../users_guide/figures/glossary/AircraftPrincipledAxes.png[Aircraft Principal Axes,320,320] +
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/AircraftPrincipledAxes.blend[AircraftPrincipledAxes.blend] | **"Aircraft Principal Axes define the relative (local) rotation of an object, using a plane flying in the +X axis as a reference."**
 
 This system defines the orientation of an object as a combination of rotations along the three axes of an aircraft: yaw (or normal) axis, pitch (or transverse) axis and roll (or longitudinal) axis. These axes have a direct correspondence with the X, Y and Z axis of the (right-handed) Euler system and are defined with the same units. However, since these axes are applied locally (i.e., rotating the coordinate system of the object at each step), the order of application becomes irrelevant.
 
 The Aircraft Principled Axes system has the advantage of being very intuitive (once the users fully understand what axis is related to the terms yaw, pitch and roll) and of not being susceptible to https://en.wikipedia.org/wiki/Gimbal_lock[Gimbal Lock] issues. On the other hand, this orientation system often requires additional computational power to generate the intermediate rotation matrices (one for each axis with a value different from 0) and, while the image of an airplane can be projected onto other vehicles, it might be difficult to do so with other static elements (e.g., it doesn't make sense to define the "roll angle" of buildings or any other static structures).
-| **Quaternions** | image:../users_guide/figures/glossary/Quaternions.png[Quaternions]
+
+
+| [[def_quaternions]] *Quaternions** +
+image:../users_guide/figures/glossary/Quaternions.png[Quaternions,320,320] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Quaternion.blend[Quaternion.blend] | **"In computer graphics, a Quaternion is 4D complex number that is used to specify orientations in a 3D space."**
 
 In essence, a Quaternion is a mathematical construct with 3 imaginary components (i, j and k) and one real component. When it is used to describe 3D orientations, each imaginary component describes the dimension of a *unitary* vector in a particular axis of the space (i, j and k are assigned to the X, Y and Z axis, respectively) whereas the real component expresses *half* of the rotation around that unitary vector, expressed in radians. However, to ensure that the resulting axial vector is unitary (i.e., its length equals one), a quaternion has to follow the fundamental formula i^2 = j^2 = k^2 = i⋅j⋅k = -1.
 
 Due to their mathematical construction and the possibility to interpolate them both link:https://en.wikipedia.org/wiki/Linear_interpolation[linearly] and https://en.wikipedia.org/wiki/Slerp[spherically], most 3D engines use Quaternions internally to orientate and animate compound objects. However, the complex nature and the interdependence between imaginary components, make Quaternions very difficult for most human beings to understand and use, so they are rarely employed in user interfaces or human-readable documents.
-| **Look-At System** | image:../users_guide/figures/glossary/LookAtSystem.png[LookAtSystem]
+
+
+| [[def_lookat_systems]] **Look-At Systems** +
+image:../users_guide/figures/glossary/LookAtSystem.png[Look-At Systems,320,320] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/LookAtSystem.blend[LookAtSystem.blend] |  **"A Look-At system enables the definition of orientation relative to another object or position vector."**
 
 Similar to Quaternions, Look-At systems use a vector (obtained from the difference of the target position minus the current position) to determine the orientation of an object. After normalizing the vector, it is possible to use its components to create a quaternion and apply the same mathematical operations. However, to properly determine the rotation angle around the axial vector (the real component of a quaternion), it is necessary to also provide an "up" vector to serve as a pivot.
+
+|===
