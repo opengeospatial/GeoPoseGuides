@@ -21,6 +21,6 @@ For example, link:http://users.cis.fiu.edu/~yangz/to_read/2009_ISMAR/05336489.pd
 
 Mathieu Bredif (IGN) has proposed these as potentially relevant
 link:http://www.itowns-project.org/itowns/docs/#api/Geographic/OrientationUtils[iTowns project web page about orientation]
-link:https://github.com/iTowns/itowns/blob/master/src/Utils/OrientationUtils.js[iTwons GitHub about orientation]
+link:https://github.com/iTowns/itowns/blob/master/src/Utils/OrientationUtils.js[iTowns GitHub about orientation]
 
 Cesium https://cesium.com/ Open Source 3d Globe platform (both for web and other platforms).

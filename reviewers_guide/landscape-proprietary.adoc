@@ -1,16 +1,13 @@
 [[rg-landscape-proprietary-section]]
-== Proprietary Software that Use or Generate GeoPose
+== Software that Use or Generate Geospatially-anchored Position and Orientation
 
-This section of the reviewer's guide captures approaches and any relevant information we have about commercial software that uses or generates pose of a digital object [or maybe also physical objects?] or a device (the device is the surrogate for the user in AR).
+This section of the reviewer's guide captures information about commercial software and open source software and libraries that use or generate geospatially-anchored poses. It illustrates the diverse ways that geospatially-anchored poses are stored and represented.
 
-We compile, in a structured format, the features and functions of each solution we identify.
+The exercise shows the high potential to increase interoperability between a wide range of existing solutions when a developer chooses to implement the OGC GeoPose standard.
 
-Since new proprietary software offerings are being introduced to address the requirements of use cases covered by GeoPose, this section will be maintained/updated to the best of the ability of the SWG.
+The table below documents, in a structured format, the features and functions of solutions identified at the time of publication of this guide.
 
-If you have information to contribute to this section, or have recommendations and questions, please create an issue in this repo.
-
-
-
+Since new software is being introduced to address the requirements of use cases covered by GeoPose, this section could be maintained/updated periodically. If you have information to contribute to this section, or have recommendations and questions, please create an issue in https://github.com/opengeospatial/GeoPoseGuides/issues[this repo].
 
 |===
 |*Company* |*Product Name* |*Local and/or Geospatial Pose* |*SRS Variable or Static* |*Naming Conventions* |*Data Model Details*

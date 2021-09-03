@@ -1,6 +1,8 @@
 [[rg_scope_section]]
 # Scope
 
-The GeoPose Reviewers Guide introduces the reviewer to the key concepts used in GeoPose. It then provides background about the use cases, requirements and the choices of implementation targets made in the GeoPose SWG during standard development.
+The GeoPose Reviewers Guide introduces the reviewer to the key concepts used in GeoPose. It then provides pointers to the use cases and requirements.
+
+The choices of implementation targets made in the GeoPose SWG during standard development are also in scope for the present guide.
 
 Finally, it explains how GeoPose fits in the landscape of geospatial computing. It compares GeoPose with approaches that have been taken in other standards, in open source projects and libraries, and in commercial products for encoding geospatially-anchored position and orientation in 6 degrees of freedom.
