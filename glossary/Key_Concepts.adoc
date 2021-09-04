@@ -2,7 +2,7 @@
 
 |===
 | [[def_frame]] **(Reference) Frame** +
-image:../users_guide/figures/glossary/Frame.png[Frame, width=256, pdfwidth=5cm] +
+image:../users_guide/figures/glossary/Frame.png[Frame, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Frame.blend[Frame.blend] | **As defined in link:https://www.iso.org/obp/ui/#iso:std:iso:19111:ed-3:v1:en[ISO 19111], a reference Frame is a parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system.**
 
 Another, more practical definition link:https://en.wikipedia.org/wiki/Frame_of_reference[from Wikipedia] is: _"In physics, a (reference) frame consists of an abstract coordinate system and the set of physical reference points that uniquely fix (locate and orient) the coordinate system and standardize measurements within that frame."_
@@ -10,7 +10,7 @@ Another, more practical definition link:https://en.wikipedia.org/wiki/Frame_of_r
 A Reference Frame can be visualized as a subspace with its own link:https://en.wikipedia.org/wiki/Coordinate_system[coordinate system] (represented with an arrow for each axis and a 2D grid to facilitate measurements) and a point of origin (represented as a sphere at the point where the arrows intersect). Generally, to simplify calculations, the associated coordinate systems are Cartesian in nature, but in the case of https://en.wikipedia.org/wiki/Non-Euclidean_geometry[non-euclidean spaces], they require more advanced definitions (like the https://en.wikipedia.org/wiki/Geographic_coordinate_system[geographical coordinate systems] used in global positioning systems).
 
 | [[def_pose]] **Pose** +
-image:../users_guide/figures/glossary/Pose.png[Pose, width=256, pdfwidth=5cm] +
+image:../users_guide/figures/glossary/Pose.png[Pose, pdfwidth=5cm] +
 https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Pose.blend[Pose.blend] 
 | **"A Pose determines the position and orientation of an object (or group of objects) relative to a coordinate system.”**
 
@@ -20,7 +20,7 @@ From the point of view of computer graphics, however, a Pose can be seen as a si
 
 
 | [[def_pose_chain]] **Pose Chain** +
-image:../users_guide/figures/glossary/SceneGraph.png[Pose Chain, width=256, pdfwidth=5cm] +
+image:../users_guide/figures/glossary/SceneGraph.png[Pose Chain, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/SceneGraph.blend[SceneGraph.blend] 
 | 
 
@@ -32,7 +32,7 @@ Scene Graphs are often represented with connectors between the origin points of 
 
 
 | [[def_geopose]] **GeoPose** +
-image:../users_guide/figures/glossary/GeoPose.png[GeoPose, width=256, pdfwidth=5cm] +
+image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend] 
 | **"A GeoPose is a fixed *Pose* related to an astronomical object (by default, Earth) via a Topocentric <<Frame,Reference Frame>>."**
 
