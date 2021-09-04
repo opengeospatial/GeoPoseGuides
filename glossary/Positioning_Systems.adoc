@@ -3,7 +3,7 @@
 |===
 
 | [[def_local_systems]] **Local Systems** +
-image:../users_guide/figures/glossary/LocalPositioning.png[Local Positioning,320,320] +
+image:../users_guide/figures/glossary/LocalPositioning.png[Local Positioning, width=256, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/LocalPositioning.blend[LocalPositioning.blend] | **"A Local Positioning System defines the location of objects relative to a *Frame* based on link:https://en.wikipedia.org/wiki/Euclidean_space[Euclidean spaces]."**
 
 These frames are often defined with an arbitrary point of origin depending on the nature of the subspace to represent. When working with physical spaces or virtual 3D scenes, the point of origin is generally situated in the center of the space (to avoid the limitations of link:https://en.wikipedia.org/wiki/Single-precision_floating-point_format[single-precision floating-point numbers]). However, when operating within 2D spaces with clear boundaries, like screens or documents, the point of origin is normally placed in the top-left corner (due to the graphic systems based on the left-to-right, top-to-bottom writing direction used in most western countries). Needless to say, this makes the transformations between the different frames (i.e., determining what 3D object has the user selected on a 2D screen) a very cumbersome process.
@@ -12,7 +12,7 @@ In recent years, advancements in link:https://en.wikipedia.org/wiki/Indoor_posit
 
 
 | [[def_global_systems]] **Global Systems** +
-image:../users_guide/figures/glossary/GlobalPositioning.png[Global Positioning,320,320] +
+image:../users_guide/figures/glossary/GlobalPositioning.png[Global Positioning, width=256, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GlobalPositioning.blend[GlobalPositioning.blend] | **"A Global Positioning System defines the location of objects relative to a *Frame* based on link:https://en.wikipedia.org/wiki/Spherical_geometry[spherical spaces], generally associated with the planet Earth."**
 
 As its name implies, a Global Positioning System is defined by a spherical object that establishes the properties of a *Frame* itself (even if the astronomical body is not a perfect sphere). The resulting subspace is delimited in the two horizontal dimensions of the surface of a sphere (*longitude* should only have values between -180 and 180 degrees, whereas the *latitude* values should be within a -90 to 90 degrees) and partially delimited in the vertical dimension (*altitude* values should never be lower than the negative value of the radius of the sphere). As for the point of origin of this subspace, for practical reasons, it is generally placed on an arbitrary point alongside the equator of the sphere (thus, also defining an offset value for the altitude values).
@@ -21,7 +21,7 @@ Traditionally, determining the position of an object on the surface of the Earth
 
 
 | [[def_universal_systems]] **Universal Systems** +
-image:../users_guide/figures/glossary/UniversalPositioning.png[Universal Positioning,320,320] +
+image:../users_guide/figures/glossary/UniversalPositioning.png[Universal Positioning, width=256, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/UniversalPositioning.blend[UniversalPositioning.blend] | **"A Universal Positioning System defines the location of objects relative to an Inertial Frame based on link:https://en.wikipedia.org/wiki/Minkowski_space[Minkowski spaces]."**
 
 These systems aim to provide a more precise and truly unique positioning for objects relative to an inertial point in the physical Universe (generally, the barycenter of the Solar System). However, since the Minkowski spaces are defined by the rules of link:https://en.wikipedia.org/wiki/Special_relativy[Special Relativity], the very subspaces are "curved" by link:https://en.wikipedia.org/wiki/Lorentz_transformation[Lorentz Transformations] and any traversal is limited by the link:https://en.wikipedia.org/wiki/Speed_of_light[Speed of Light].
