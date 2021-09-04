@@ -2,7 +2,7 @@
 
 |===
 | [[def_animation]] **Animation** +
-image:../users_guide/figures/glossary/Animation.png[Animation, width=256, pdfwidth=5cm] + 
+image:../users_guide/figures/glossary/Animation.png[Animation, pdfwidth=5cm] + 
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Animation.blend[Animation.blend] | **"Animation is a method to create the illusion of movement through a collection of still images."**
 
 In computer graphics, animation is generally simulated by modifying the properties of an object (including its position, rotation, scale, material colors, etc.) over a period of time (or timeline). Since complex deformations require a large number of physics calculations, most animation systems either operate with properties independently (i.e, separating position, orientation and scale) or define skeleton-based systems to alter the geometry of the object in a controllable way. In recent years, however, many 3D engines incorporate procedural subsystems to simulate advanced animations (such as explosions, wind systems, collision deformations, etc) in real-time, with relatively high degree of precision.
@@ -11,7 +11,7 @@ Internally, each change in properties is stored into an "animation key", and whe
 
 
 | [[def_motion]] **Motion** +
-image:../users_guide/figures/glossary/Motion.png[Motion, width=256, pdfwidth=5cm] + 
+image:../users_guide/figures/glossary/Motion.png[Motion, pdfwidth=5cm] + 
 https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Motion.blend[Motion.blend] | **"A Motion is a type of Animation that only defines the movement (position+orientation keys) of objects."**
 
 In many use cases, it is possible to simplify complex animations by segmenting an object (generally, using a skeleton structure) and reducing the types of keys to just position and orientation (creating animation curves known as Motion Paths). This idea of only taking into consideration the movement of different parts of an object is the basis of link:https://en.wikipedia.org/wiki/Motion_capture[motion capture] techniques; a series of technologies that, nowadays, can even https://en.wikipedia.org/wiki/Facial_motion_capture[record subtle facial expressions of human beings].
@@ -22,7 +22,7 @@ It is important to note that a motion between two poses also generates a directi
 
 
 | [[def_trajectory]] **Trajectory** +
-image:../users_guide/figures/glossary/Trajectory.png[Trajectory, width=256, pdfwidth=5cm] + 
+image:../users_guide/figures/glossary/Trajectory.png[Trajectory, pdfwidth=5cm] + 
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Trajectory.blend[Trajectory.blend] | **"A trajectory is a precalculated Motion Path that attempts to describe the future movement of an object."**
 
 While motion paths describe the actual movements over time, in many use cases it is imperative to also be able to predict the future movement of an object (e.g., to avoid collisions or reach a location/orbit with a very specific speed and orientation). These special motion paths are called *Trajectories* and are usually calculated by simply taking into consideration the inertia of an object.
@@ -31,7 +31,7 @@ This is especially important for objects placed in a stable trajectories relativ
 
 
 | [[def_gesture]] **Gesture** +
-image:../users_guide/figures/glossary/Gesture.png[Gesture, width=256, pdfwidth=5cm] +
+image:../users_guide/figures/glossary/Gesture.png[Gesture, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Gesture.blend[Gesture.blend] | **"A Gesture is a *Pose* or *Motion* used to convey a non-vocal message."**
 
 Gestures are a form of communication that involve the positioning/movement of a part of the body in a predetermined way to express a particular concept. And although this type of communication is used by many living beings, humans have used them to develop complete sign languages or to serve as a method of identification. Some basic gestures even allow people to overcome linguistic barriers and create a culture around specific gestures.
