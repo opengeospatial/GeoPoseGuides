@@ -1,4 +1,4 @@
-## Animation
+## Time Related Concepts
 
 |===
 | [[def_animation]] **Animation** +
