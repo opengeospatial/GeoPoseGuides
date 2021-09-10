@@ -1,5 +1,7 @@
 ## Key Concepts
 
+To be able to comprehend more advanced terms in the next, it is necessary to have a good understanding of the theoretical foundations they are based on. The following list of terms aims to cover as much of this conceptual base as possible while offering examples of how they are actually employed in different fields.
+
 |===
 | [[def_frame]] **(Reference) Frame** +
 image:../users_guide/figures/glossary/Frame.png[Frame, pdfwidth=5cm] +
@@ -22,13 +24,11 @@ From the point of view of computer graphics, however, a Pose can be seen as a si
 | [[def_pose_chain]] **Pose Chain** +
 image:../users_guide/figures/glossary/SceneGraph.png[Pose Chain, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/SceneGraph.blend[SceneGraph.blend] 
-| 
+| **“A Pose Chain is a sequence of Poses that is used to determine the position and orientation of objects across multiple Frames.”** 
 
-*TODO: Change from "Scene Graph" to "Pose Chain"*
+When dealing with multiple reference <<def_frame, Frames>> (specially, when they are of different types), it is necessary to perform several complex transformation operations to convert between the different link:https://www.w3.org/2015/spatial/wiki/Coordinate_Reference_Systems[Coordinate Reference Systems]. To facilitate this time-consuming process and ensuring that the operations are applied in the right order, the different poses are often organized into one-dimensional sequences of <<def_pose, Poses>> called "Chains". 
 
-**“A Pose Chain represents a.”** 
-
-Scene Graphs are often represented with connectors between the origin points of the Transforms of each object in the scene. And ore often than not, Scene Graphs have a tree structure that facilitates the identification of the different parts of the scene. However, this hierarchical organization can introduce problems when an object has to change parents (e.g., when the person in the illustration grabs the teapot from the table), because the 3D engine has to remove all the Transform operations of the old branch and apply all of the others for the new branch.
+In many applications, where a large number of entities have similar Pose Chains, it is common to reorganize this structure into a Graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In Computer Graphics, this concept is the basis of the "Scene Graph", in which the Transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the Pose of each entity of the graph is calculated in a link:https://en.wikipedia.org/wiki/Depth-first_search[depth-first] manner that minimizes the number of required calculations.
 
 
 | [[def_geopose]] **GeoPose** +
@@ -36,7 +36,9 @@ image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend] 
 | **"A GeoPose is a fixed *Pose* related to an astronomical object (by default, Earth) via a Topocentric <<Frame,Reference Frame>>."**
 
-A GeoPose facilitates the generation of a *Transform* (and the associated transformation matrix) to properly place and orient modes in a *Scene Graph* (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
+The goal behind the standardization of GeoPose is to stablish a single mechanism to pose entities relative to geographical (ellipsoidal) <<def_frame, Frame>>), greatly simplifying the determination of the position and orientation of entities relative to a astronomical object (and, consequently, relative to each other).
+
+In practical terms, a GeoPose facilitates the application of a transformation operations to properly position and orientate modes in a <<def_pose_chain, Scene Graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
 
 | [[def_bc_location]] **Location**
 | **"Not to be confused with the term Position, a location is a distinctive region of a space."**
