@@ -1,6 +1,6 @@
 ## Key Concepts
 
-To be able to comprehend more advanced terms in the next, it is necessary to have a good understanding of the theoretical foundations they are based on. The following list of terms aims to cover as much of this conceptual base as possible while offering examples of how they are actually employed in different fields.
+To be able to comprehend more advanced terms in the next, it is necessary to have a good understanding of the theoretical foundations they are based on. The following list of terms aims to cover as much of this conceptual base as possible while offering examples of how they are actually employed in different scientific fields and industry sectors.
 
 |===
 | [[def_frame]] **(Reference) Frame** +
@@ -36,7 +36,7 @@ image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend] 
 | **"A GeoPose is a fixed *Pose* related to an astronomical object (by default, Earth) via a Topocentric <<Frame,Reference Frame>>."**
 
-The goal behind the standardization of GeoPose is to stablish a single mechanism to pose entities relative to geographical (ellipsoidal) <<def_frame, Frame>>), greatly simplifying the determination of the position and orientation of entities relative to a astronomical object (and, consequently, relative to each other).
+The goal behind the standardization of GeoPose is to stablish a single mechanism to pose entities relative to geographical (ellipsoidal) <<def_frame, Frame>>, greatly simplifying the determination of the position and orientation of entities relative to a astronomical object (and, consequently, relative to each other).
 
 In practical terms, a GeoPose facilitates the application of a transformation operations to properly position and orientate modes in a <<def_pose_chain, Scene Graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
 
