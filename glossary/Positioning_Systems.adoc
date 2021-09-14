@@ -1,5 +1,12 @@
 ## Positioning Systems
 
+The position of an object is a single point in space relative to the origin point of the reference frame. This point is usually placed in the center of mass of the object and provides a simple way to perform other spatial calculations (i.e., distances between objects, travel time, collision detection/avoidance, etc.). 
+
+The objective of positioning systems is to provide a position vector (that is often converted into a translation matrix) as precise as possible withing a reference frame. Nevertheless, due to technological limitations and physical-world factors, these vectors are often accompanied with an (in)accuracy value, to be able to establish a uncertainty threshold for different tasks.
+
+Note: As stated before, it is important to not confuse the concept of position with location. While it is posible to define a position using a known location (e.g., "This building is in Tokyo"), this practice often results in imprecise information.
+
+
 |===
 
 | [[def_local_systems]] **Local Systems** +

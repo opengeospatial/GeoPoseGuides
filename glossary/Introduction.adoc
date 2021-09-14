@@ -1,9 +1,5 @@
 # Introduction
 
-This glossary aims to provide the communities at the intersection of computer graphics and geospatial principles with a visual language to better communicate the key concepts on which the GeoPose standard is based.
+This glossary was originally created to facilitate the communication between members of the GeoPose SWG (overcoming the small conceptual differences when using similar terms in different contexts). However, in its current form it is intended to become a complementary material to provide the readers of the guides with a better understanding of the conceptual foundations the standard is based on.
 
-Some of the concepts introduced in this section are abstract and their theoretical underpinnings apply across many domains.
-
-The practical applications of these concepts in GeoPose is the focus of the GeoPose Users Guide.
-
-The illustrations and 3D models associated with each concept can be reused in presentations or documentation for other audiences, however, to properly adapt these to other application formats, please contact Mikel Salazar before doing so.
+To achieve this goal, the (intentionally abstract) definition of each term is accompanied with a visual representation of the concept, a more general explanation and examples of how it is applied in many use cases. Additionally, the texts also include a large number of hyperlinks to connect the different concepts together and allow the reader to how they are employed in other standards and real-world applications.

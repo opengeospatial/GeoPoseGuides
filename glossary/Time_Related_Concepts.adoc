@@ -1,5 +1,9 @@
 ## Time-related Concepts
 
+While, by definition, a pose defines the position and orientation of an object at a particular point in time, there are many applications that require operating with temporal sequences of poses. However, properly operating in this dimension requires taking into consideration additional factors like (moment of) inertia, mass, changes in shape and, in extreme cases, even the variations in the Earth's gravity field.
+
+To get a hold on this complexity, the following list of terms is intended to offer a basic introduction to the topic.
+
 |===
 | [[def_animation]] **Animation** +
 image:../users_guide/figures/glossary/Animation.png[Animation, pdfwidth=5cm] + 

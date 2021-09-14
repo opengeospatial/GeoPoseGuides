@@ -34,9 +34,9 @@ In many applications, where a large number of entities have similar Pose Chains,
 | [[def_geopose]] **GeoPose** +
 image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend] 
-| **"A GeoPose is a fixed *Pose* related to an astronomical object (by default, Earth) via a Topocentric <<Frame,Reference Frame>>."**
+| **"A GeoPose is a <<def_pose, Pose>> in relation to a real-world object (by default, Earth), typically, via a Geographical <<Frame,Reference Frame>>."**
 
-The goal behind the standardization of GeoPose is to stablish a single mechanism to pose entities relative to geographical (ellipsoidal) <<def_frame, Frame>>, greatly simplifying the determination of the position and orientation of entities relative to a astronomical object (and, consequently, relative to each other).
+The goal of the standardization of GeoPose is to establish a single mechanism to encode the position and orientation of an real/virtual objects within a geographical (ellipsoidal) <<def_frame, Frame>>, greatly simplifying the determination of the pose of entities relative to an astronomical object and, consequently, relative to each other.
 
 In practical terms, a GeoPose facilitates the application of a transformation operations to properly position and orientate modes in a <<def_pose_chain, Scene Graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
 
