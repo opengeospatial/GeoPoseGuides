@@ -1,0 +1,5 @@
+# Introduction
+
+This glossary was originally created to facilitate the communication between members of the GeoPose SWG (overcoming the small conceptual differences when using similar terms in different contexts). However, in its current form it is intended to become a complementary material to provide the readers of the guides with a better understanding of the conceptual foundations the standard is based on.
+
+To achieve this goal, the (intentionally abstract) definition of each term is accompanied with a visual representation of the concept, a more general explanation and examples of how it is applied in many use cases. Additionally, the texts also include a large number of hyperlinks to connect the different concepts together and allow the reader to how they are employed in other standards and real-world applications.
