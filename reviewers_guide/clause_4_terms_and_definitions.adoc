@@ -7,7 +7,7 @@ For GeoPose, specifically, there is a visual glossary of frequently used terms. 
 
 [NOTE]
 ====
-How to integrate the Visual Glossary into the guide?
+Integrate the Visual Glossary here.
 ====
 
 [NOTE]
