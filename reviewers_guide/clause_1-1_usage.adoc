@@ -1,7 +1,7 @@
 [[rg_usage_section]]
 ## How To Use This Resource
 
-The GeoPose Reviewers Guide is not intended to be read from start to finish. Rather, it is a resource structured to provide quick answers to questions which a reviewer may have about the GeoPose Standard. It is provided to support professionals who need to understand GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
+The GeoPose Reviewers Guide is not intended to be read from start to finish. Rather, it is a resource structured to provide quick answers to questions which a reviewer may have about the OGC GeoPose standard. It is provided to support professionals who need to understand GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
 
 In addition, this guide can provide insights to professionals considering adopting GeoPose for their projects and products.
 

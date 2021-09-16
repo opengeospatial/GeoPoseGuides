@@ -1,6 +1,6 @@
 ## Key Concepts
 
-To be able to comprehend more advanced terms in the next, it is necessary to have a good understanding of the theoretical foundations they are based on. The following list of terms aims to cover as much of this conceptual base as possible while offering examples of how they are actually employed in different scientific fields and industry sectors.
+The following list of terms covers the conceptual underpinnings for the GeoPose standard while offering examples of how they are actually employed in different scientific fields and industry sectors.
 
 |===
 | [[def_frame]] **(Reference) Frame** +
@@ -13,7 +13,7 @@ A Reference Frame can be visualized as a subspace with its own link:https://en.w
 
 | [[def_pose]] **Pose** +
 image:../users_guide/figures/glossary/Pose.png[Pose, pdfwidth=5cm] +
-https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Pose.blend[Pose.blend] 
+https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Pose.blend[Pose.blend]
 | **"A Pose determines the position and orientation of an object (or group of objects) relative to a coordinate system.”**
 
 In Robotics and Human-Computer Interaction, this concept is often referred to as link:https://en.wikipedia.org/wiki/Six_degrees_of_freedom[Six Degrees of Freedom (6DoF)] and it is used to specify the position and orientation of an object with great precision (generally, by combining a *Local Positioning System* for the translation and an *Aircraft Principal Axes Orientation System* for the rotation). In this way, it is possible to define complex link:https://en.wikipedia.org/wiki/Kinematics[kinematic systems] that allow the creation of advanced link:https://en.wikipedia.org/wiki/Robotic_arm[robotic arms] and link:https://en.wikipedia.org/wiki/Powered_exoskeleton[exoskeletons].
@@ -23,17 +23,17 @@ From the point of view of computer graphics, however, a Pose can be seen as a si
 
 | [[def_pose_chain]] **Pose Chain** +
 image:../users_guide/figures/glossary/SceneGraph.png[Pose Chain, pdfwidth=5cm] +
-link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/SceneGraph.blend[SceneGraph.blend] 
-| **“A Pose Chain is a sequence of Poses that is used to determine the position and orientation of objects across multiple Frames.”** 
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/SceneGraph.blend[SceneGraph.blend]
+| **“A Pose Chain is a sequence of Poses that is used to determine the position and orientation of objects across multiple Frames.”**
 
-When dealing with multiple reference <<def_frame, Frames>> (specially, when they are of different types), it is necessary to perform several complex transformation operations to convert between the different link:https://www.w3.org/2015/spatial/wiki/Coordinate_Reference_Systems[Coordinate Reference Systems]. To facilitate this time-consuming process and ensuring that the operations are applied in the right order, the different poses are often organized into one-dimensional sequences of <<def_pose, Poses>> called "Chains". 
+When dealing with multiple reference <<def_frame, Frames>> (specially, when they are of different types), it is necessary to perform several complex transformation operations to convert between the different link:https://www.w3.org/2015/spatial/wiki/Coordinate_Reference_Systems[Coordinate Reference Systems]. To facilitate this time-consuming process and ensuring that the operations are applied in the right order, the different poses are often organized into one-dimensional sequences of <<def_pose, Poses>> called "Chains".
 
 In many applications, where a large number of entities have similar Pose Chains, it is common to reorganize this structure into a Graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In Computer Graphics, this concept is the basis of the "Scene Graph", in which the Transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the Pose of each entity of the graph is calculated in a link:https://en.wikipedia.org/wiki/Depth-first_search[depth-first] manner that minimizes the number of required calculations.
 
 
 | [[def_geopose]] **GeoPose** +
 image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
-link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend] 
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend]
 | **"A GeoPose is a <<def_pose, Pose>> in relation to a real-world object (by default, Earth), typically, via a Geographical <<Frame,Reference Frame>>."**
 
 The goal of the standardization of GeoPose is to establish a single mechanism to encode the position and orientation of an real/virtual objects within a geographical (ellipsoidal) <<def_frame, Frame>>, greatly simplifying the determination of the pose of entities relative to an astronomical object and, consequently, relative to each other.
