@@ -214,7 +214,7 @@ An exact integer value, with no fractional part. +
 
 [[IoT_definition]]
 *Internet of Things* +
-The network of physical objects--“things”--that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet. +  
+The network of physical objects--“things”--that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet. +
 {blank}https://en.wikipedia.org/wiki/Internet_of_things[Wikipedia]
 
 [[IO_IdentifiedObjectBase-section]]
@@ -319,7 +319,7 @@ Volume is the measure of the physical space of any 3-D geometric object. +
 * ISO {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} International Organization for Standardisation
 * ISO/TC211 {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} ISO Technical Committee 211
 * LOD {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Levels of Detail
-* MQTT  {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} 
+* MQTT  {nbsp}{nbsp}{nbsp}{nbsp}{nbsp}
 * NBIMS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} National Building Information Model Standard
 * OASIS {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Organisation for the Advancement of Structured Information Standards
 * OGC {nbsp}{nbsp}{nbsp}{nbsp}{nbsp} Open Geospatial Consortium

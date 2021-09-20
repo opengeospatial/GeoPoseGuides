@@ -1,0 +1,4 @@
+[[rg-standardization-targets-section]]
+== Standardization Targets
+
+NOTE: This is where we will explain the rationale for the eight standardization targets that were chosen.

@@ -76,10 +76,6 @@ include::clause_0_front_material.adoc[]
 
 include::clause_1_introduction.adoc[]
 
-////
-Exactly where the "how to use this guide" section is still undecided.
-////
-
 include::clause_1-1_usage.adoc[]
 
 include::clause_2_scope.adoc[]
@@ -88,46 +84,18 @@ include::clause_3_references.adoc[]
 
 include::clause_4_terms_and_definitions.adoc[]
 
-include::clause_5_conventions.adoc[]
+include::clause_5_geopose_glossary.adoc[]
 
-////
-Foundation concepts are basic concepts which are important for the use of the standard. The contents of this section are referrenced from within this Users Guide. Exterior links should not resolve in this section.
-////
+include::clause_6_1_Conceptual_Model.adoc[]
 
-[[ug-geopos-foundations-section]]
-== GeoPose Foundations
+include::clause_6_2_Logical_Model.adoc[]
 
-include::clause_6_foundations.adoc[]
+include::clause_6_3_standardization_targets.adoc[]
 
-include::clause_6_1_foundation-concept.adoc[]
+include::landscape-standard.adoc[]
 
-include::clause_6_2_foundation-concept.adoc[]
-
-////
-This section should mirror the normative sections of the standard. External links should resolve here. The goal is to provide a landing zone with access to incrementally more detail as the user navigates deeper into the Users Guide.
-////
-
-[[ug-geopose-model-section]]
-== GeoPose Model
-
-include::clause_7_1_package.adoc[]
-
-include::clause_7_2_package.adoc[]
-
-////
-This section contains normative content from the standard which would be useful to users of this Users Guide. The sole purpose of this is to make life easier for the user. In this case it is the data dictionary for the Standard.
-////
-
-include::clause_8_placeholder.adoc[]
-
-include::comparison-with-Moving-Features.adoc[]
-
-////
-Commonly used annexes
-////
+include::landscape-proprietary.adoc[]
 
 include::annex-history.adoc[]
-
-include::annex-glossary.adoc[]
 
 include::annex-bibliography.adoc[]

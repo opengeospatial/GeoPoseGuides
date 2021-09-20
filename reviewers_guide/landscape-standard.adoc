@@ -55,7 +55,7 @@ Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewha
 
 |Moving Features
 |?
-|?
+|Yes
 |Yes
 |Attribute
 |Yes

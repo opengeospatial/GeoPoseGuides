@@ -1,4 +1,0 @@
-[[data-placeholder-section]]
-== Placeholder
-
-This is a section which can be used for any purpose not covered in an earlier section

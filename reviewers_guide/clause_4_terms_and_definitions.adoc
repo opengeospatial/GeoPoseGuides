@@ -5,15 +5,15 @@ For the purposes of this document, the following additional terms and definition
 
 For GeoPose, specifically, there is a visual glossary of frequently used terms. To consult the visual GeoPose glossary, visit the GeoPose wiki.
 
-[NOTE]
-====
-Integrate the Visual Glossary here.
-====
 
 [NOTE]
 ====
 Which of these boilerplate terms/definitions do we want to keep in the GeoPose Reviewer's Guide?
 ====
+
+What is a reviewers guide?
+What is a users guide?
+What is a standard?
 
 [[d2d-data-definition]]
 *2D data* +
