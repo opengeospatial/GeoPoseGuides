@@ -2,15 +2,16 @@
 # Introduction
 
 ## What is GeoPose?
-There are two answers to this question: a conceptual answer and an answer that explains what the standard does. When a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a "geographically-anchored pose." All physical world objects inherently have a geographically-anchored pose. Digital objects may be associated with a geographically-anchored pose (for example, in a real-world overlay or on a stage).
+There are two answers to this question: a conceptual answer and an answer that explains what the standard provides.
+Conceptual Answer: When a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a "geographically-anchored pose." All physical world objects inherently have a geographically-anchored pose. Digital objects may be associated with a geographically-anchored pose (for example, in a real-world overlay or on a stage).
 
-The OGC GeoPose standard defines a conceptual data model and encodings for theposition and orientation of a real or a digital objectin a machine-readable form in real world coordinates, a geographically-anchored pose.
+What the Standard Provides: The OGC GeoPose standard defines a conceptual data model and encodings for theposition and orientation of a real or a digital objectin a machine-readable form in real world coordinates, a geographically-anchored pose.
 
 ## Why is Another Standard Needed?
-The <<rg-landscape-standard-section, **review of standards related to GeoPose**>> demonstrates that a new standard is required to facilitate the seamless interchange of position and orientation information.
+A new standard is required to facilitate the seamless interchange of position and orientation information between proprietary systems and any systems that implement to existing standards. The <<rg-landscape-standard-section, **review of standards related to GeoPose**>> demonstrates that there are many relevant specifications that could use GeoPose, however, do not provide the elements.
 
 ## The Standard
-The link:https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[**OGC GeoPose standard**] defines data structures for the interoperable exchange of the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo). It specifies:
+The draft link:https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[**OGC GeoPose standard**] defines data structures for the interoperable exchange of the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo). It specifies:
 
 . two basic forms with no configuration options for common use cases,
 . a set of advanced forms with more flexibility for more complex applications, and
