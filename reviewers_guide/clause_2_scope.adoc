@@ -1,8 +1,10 @@
 [[rg_scope_section]]
 # Reviewers Guide Scope
 
-The GeoPose Reviewers Guide introduces the reviewer to the <<vg-introduction-section, **key concepts used in GeoPose**>>. This guide can be used in conjunction with the OGC GeoPose https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf#use_case_summary[use cases] section of the standard. The SWG solicited use cases and chose five that have broadly applicable requirements.
+The GeoPose Reviewers Guide introduces the the <<vg-introduction-section, **key concepts used in GeoPose**>> to its <<rg-target-audiences-section, **target audiences**>>.
 
-The choices of https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf#standardization_targets[standardization targets] made in the GeoPose SWG during standard development are explained in <<rg-standardization-target-section, **this section**>> of the present guide.
+To identify broadly applicable requirements for GeoPose, the SWG solicited use cases and chose five that were agreed to be representative in nature. To understand the ways in which GeoPose can be used and how it meets requirements identified, this guide can be used in conjunction with the OGC GeoPose https://data.ogc.org/geopose-swg/pdf/geopose_standard.pdf#use_case_summary[use cases] section of the standard.
+
+The choices of https://data.ogc.org/geopose-swg/pdf/geopose_standard.pdf#standardization_targets [standardization targets] made in the GeoPose SWG during standard development are explained in <<rg-standardization-target-section, **this section**>> of the present guide.
 
 Finally, this guide explains how GeoPose fits in the landscape of geospatial computing. It compares GeoPose with approaches that have been <<rg-landscape-standard-section, **taken in other standards**>>, and in <<rg-landscape-proprietary-section, **open source projects and libraries, and commercial products**>> for encoding geospatially-anchored position and orientation with six degrees of freedom.
