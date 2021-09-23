@@ -185,6 +185,19 @@ __Motion Imagery Standards Board (MISB)__
 |?
 |===
 
+__BuildingSmart__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|IFCSite
+|Y
+|?
+|Y
+|No
+|?
+|===
+
+IfcSite and other IfCProducts permits topologic orientation, but not 6DOF.
+
 __ASTM__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
