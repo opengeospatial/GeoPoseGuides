@@ -11,7 +11,7 @@ What the Standard Provides: The OGC GeoPose standard defines a conceptual data m
 A new standard is required to facilitate the seamless interchange of position and orientation information between proprietary systems and any systems that implement to existing standards. The <<rg-landscape-standard-section, **review of standards related to GeoPose**>> demonstrates that there are many relevant specifications that could use GeoPose, however, do not provide the elements.
 
 ## The Standard
-The draft link:https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[**OGC GeoPose standard**] defines data structures for the interoperable exchange of the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo). It specifies:
+The draft link:https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[**OGC GeoPose 1.0 standard**] defines data structures for the interoperable exchange of the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo). It specifies:
 
 . two basic forms with no configuration options for common use cases,
 . a set of advanced forms with more flexibility for more complex applications, and

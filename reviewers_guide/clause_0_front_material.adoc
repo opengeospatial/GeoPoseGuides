@@ -1,21 +1,23 @@
 [big]*i.     Abstract*
 
-<Insert Abstract Text here>
+link:link:https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[GeoPose 1.0] is an OGC Implementation Standard for exchanging the location and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies two Basic forms with no configuration options for common use cases, an Advanced form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
+
+The GeoPose Reviewers Guide is a public resource structured to provide quick answers to questions which a reviewer may have about the https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification]. It is provided to support professionals who need to understand OGC GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
 
 [big]*ii.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
-GeoPose, ogcdoc, OGC document, Geospatially-anchored position and orientation, pose, reviewers
+GeoPose, ogcdoc, OGC document, OGC Implementation Standard, Geospatially-anchored position and orientation, pose, reviewers
 
 [big]*iii.   Preface*
 
 [NOTE]
 ====
-Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work. >
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+This version of reviewers guide is limited in scope to the draft implementation specification for GeoPose 1.0. Content of this document will be updated when relevant information and feedback to the OGC GeoPose 1.0 specification is provided and the standard finalized. The Open Geospatial Consortium shall not be held responsible for the accuracy or completeness of this reviewers guide.
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+
 ====
 [big]*iv.    Submitting organizations*
 
