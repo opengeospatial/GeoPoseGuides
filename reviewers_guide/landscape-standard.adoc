@@ -57,43 +57,52 @@ Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewha
 |?
 |Yes
 |Yes
-|Attribute
+|Attributes of temporal geometry
 |Yes
 
 |Sensor Web Enablement (SWE)
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |CityGML
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|Y
+|Y
+|Y
+|Y
+|Y
 
 |IndoorGML
 |Cell in column 2
-|Cell in column 3
-|Cell in column 4
+|Y
+|Y
 |Cell in column 5
 |Cell in column 6
 
 |CDB (Common DataBase)
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |KML
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
+
+|3DTiles
+|Y
+|Y
+|Y
+|x,y,z+normal
+|Y
+
+3D Tiles is basically a binary, encapsulated glTF with georeferencing
 |===
 
 = Other SDOs
@@ -106,25 +115,25 @@ __Khronos Group__
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 
 |glTF
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |OpenXR
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |OpenVX
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |===
 
@@ -135,25 +144,25 @@ __W3C__
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 
 |Geolocation API
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |Browser Sensor Interfaces
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |Immersive Web WebXR Device API
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 |===
 link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
 |An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
@@ -162,18 +171,18 @@ __Motion Imagery Standards Board (MISB)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |MISB ST 0601
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 
 |MISB ST 0801.5
-|Cell in column 2
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
+|?
 |===
 
 __ASTM__
@@ -181,10 +190,10 @@ __ASTM__
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |E57
 |link:http://libe57.org/features.html[defines fifteen features that cover the core capabilities of the E57 format]
-|Cell in column 3
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
+|?
+|?
+|?
+|?
 |===
 
 There are also specifications (standards) that are developed for and used by industries/domains.
