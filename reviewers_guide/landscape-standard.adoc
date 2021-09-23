@@ -188,7 +188,7 @@ __Motion Imagery Standards Board (MISB)__
 __BuildingSmart__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|IFCSite
+|IFC
 |Y
 |?
 |Y
@@ -196,7 +196,10 @@ __BuildingSmart__
 |?
 |===
 
-IfcSite and other IfCProducts permits topologic orientation, but not 6DOF.
+IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
+http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
+For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
+
 
 __ASTM__
 |===
@@ -221,22 +224,14 @@ __NASA__
 
 |SPICE
 |link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/21_fk.pdf[Frame Kernel]
-|Cell in column 3
+|
 
 |===
 
 
 Also, must create a table dedicated to IEEE Standards. What are the IEEE standards?
 
-What about ISO standards
-
-
-Here are notes about two standards that have not yet been put into the table.
+What about ISO standards?
 
 This URL is a convenient place to view many space data standards
 URL: http://spacedatastandards.org/
-
-
-From BuildingSMARTS IFC4 BIM standard there is the concept of an "IFc Site". It lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
-http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
-For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
