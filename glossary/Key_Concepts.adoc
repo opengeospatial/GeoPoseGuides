@@ -31,8 +31,9 @@ When dealing with multiple reference <<def_frame, Frames>> (specially, when they
 
 In many applications, where a large number of entities have similar Pose Chains, it is common to reorganize this structure into a Graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In Computer Graphics, this concept is the basis of the "Scene Graph", in which the Transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the Pose of each entity of the graph is calculated in a link:https://en.wikipedia.org/wiki/Depth-first_search[depth-first] manner that minimizes the number of required calculations.
 
+NOTE: The definition of GeoPose needs to say that "a GeoPose" is something that complies with the specification but a "geographically-anchored pose" is a concept which can be encoded in proprietary manners or in manner compliant with the standard
 
-| [[def_geopose]] **GeoPose** +
+| [[def_geopose]] **OGC GeoPose** +
 image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend]
 | **"A GeoPose is a <<def_pose, Pose>> in relation to a real-world object (by default, Earth), typically, via a Geographical <<Frame,Reference Frame>>."**
