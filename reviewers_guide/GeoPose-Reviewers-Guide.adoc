@@ -86,6 +86,8 @@ include::clause_4_terms_and_definitions.adoc[]
 
 include::clause_5_geopose_glossary.adoc[]
 
+include::clause_6_GeoPose_SWG_Process.adoc[]
+
 include::clause_6_1_Conceptual_Model.adoc[]
 
 include::clause_6_2_Logical_Model.adoc[]
