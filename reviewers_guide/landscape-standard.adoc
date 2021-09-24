@@ -1,114 +1,110 @@
 [[rg-landscape-standard-section]]
 == Standards that Could Reference GeoPose in Normative Clauses
 
-In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that specify <<refer to the GeoPose implementation targets in the draft spec>>[a GeoPose implementation target] as a data format. As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any implementation target.
+In this section of the reviewer's guide| we list the Standards Development Organizations (SDOs) and standards that specify <<refer to the GeoPose implementation targets in the draft spec>>[a GeoPose implementation target] as a data format. As a convention for the remainder of this section| we use the term "GeoPose" as a shorthand for any implementation target.
 
-The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.
+The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards| this section illustrates the gaps which GeoPose fills.
 
-There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
+There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: aviation| planetary sciences| maritime| robotics| autonomous driving| satellite positioning and aerospace| to name a few. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales| for different purposes| different information environment: sometimes graphical| sometimes geospatial.
 
 = Pipeline of interoperability needs
 There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
 
-On the Web, information is displayed on a plane. There is a need for a standard to get the information from the Web into the 2D display plane in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
+On the Web| information is displayed on a plane. There is a need for a standard to get the information from the Web into the 2D display plane in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
 
-In order to establish this data flow, there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. Khronos OpenXR focuses on that stage of the pipeline.
+In order to establish this data flow| there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”| the graphics systems can address those movements and changes correctly. Khronos OpenXR focuses on that stage of the pipeline.
 
-On the other side, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that’s capturing all the data about the features (e.g., objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses these needs.
+On the other side| the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that’s capturing all the data about the features (e.g.| objects) in its environment| including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement| particularly Observations & Measurements and SensorML| addresses these needs.
 
-Each of these stages in the pipeline need to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
+Each of these stages in the pipeline need to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere| into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
 
 = GeoPose in Context
-The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.
+The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed| or on predictable paths) and objects that have changeable positions and orientations such as satellites| cameras| and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation| but an incredibly appropriate foundation from which the SWG was inspired.
 
-OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
+OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation| Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams| digital exhausts| and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
 
-OGC Moving Features and GeoPose have distinct roles and are complementary. Moving Features is focused on a local, municipal scale, and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose plays.
+OGC Moving Features and GeoPose have distinct roles and are complementary. Moving Features is focused on a local| municipal scale| and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose plays.
 
 The OGC Sensor Web Enablement suite of standards deals with how to work with sensors and getting useful observations out of them.
 
 image::images/landscape-standard-ef0fe.png
-On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
+On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements| in Semantic Sensor Networks| and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards| SensorML| models the sensor process itself| from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
 
-If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
+If this is a directed sensor (e.g. camera)| orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world| although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities| e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
 
-Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user, particularly if entities are being brought into a scene from very different source contexts, and regardless of where they are in space.
+Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user| particularly if entities are being brought into a scene from very different source contexts| and regardless of where they are in space.
 
-Khronos OpenXR handles poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces (view, local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system, it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.
+Khronos OpenXR handles poses| particularly within specific spaces (frames of reference). It defines a set of reference spaces (view| local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system| it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.
 
 GeoPose can also relate the frame of reference of a Web browser window to a virtual world or the real world.
 
-Geocentric (earth-based) position and orientation are the basis for all these integrations. OGC GeoPose provides that usable common ground, both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
+Geocentric (earth-based) position and orientation are the basis for all these integrations. OGC GeoPose provides that usable common ground| both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
 
-To summarize, there are a number of well-developed standards for position and orientation. What these lack is a means for position and orientation information to be passed between them in a manner that is independent of graphical system, applications scene, frame of reference, and technology. OGC GeoPose offers portability of information between all these domains and systems.
+To summarize| there are a number of well-developed standards for position and orientation. What these lack is a means for position and orientation information to be passed between them in a manner that is independent of graphical system| applications scene| frame of reference| and technology. OGC GeoPose offers portability of information between all these domains and systems.
 
 The approaches to this issue that have been published in other standards prior to introduction of GeoPose appear in the tables below.
 
 = OGC Standards
 
-The OGC has many positioning and location standards, some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing position and orientation.
+The OGC has many positioning and location standards| some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However| these standards are not designed for sharing position and orientation.
 
-Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
+Some standards (such as OGC CDB) deal with fixed infrastructure| or with somewhat more specialized information| such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales| such as Sensor Web Enablement and Moving Features.
 
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF: as entity or attributes?|Temporality|Remark
 
-|Moving Features
-|?
-|Yes
-|Yes
-|Attributes of temporal geometry
-|Yes
+|Moving Features|?|Y|Y|Attributes of temporal geometry|Y|
 
-|Sensor Web Enablement (SWE)
-|?
-|?
-|?
-|?
-|?
+|Sensor Web Enablement (SWE)||||||
 
-|CityGML
-|Y
-|Y
-|Y
-|Y
-|Y
+|CityGML|Y|Y|Y|Y (?)|Y|
 
-|IndoorGML
-|Cell in column 2
-|Y
-|Y
-|Cell in column 5
-|Cell in column 6
+|IndoorGML||Y|Y|||
 
-|CDB (Common DataBase)
-|?
-|?
-|?
-|?
-|?
+|"CDB (Common Database)"|?|?|?|?|?|
 
-|KML
-|?
-|?
-|?
-|?
-|?
+|KML|||Y|||
 
-|3DTiles
-|Y
-|Y
-|Y
-|x,y,z+normal
-|Y
+|Observations and Measurements|?|?|?|?|?|
 
-3D Tiles is basically a binary, encapsulated glTF with georeferencing
+|SensorThings API|?|?|?|?|?|
+
+|IMDF|?|?|?|?|?|
+
+|3D Tiles|Y|Y|Y|"x,y,z+normal"|Y|"3D Tiles is basically a binary, encapsulated glTF with georeferencing. There are efforts to make glTF more ""geospatially friendly"". -> include glTF (Khronos Group) in the list."
+
+
+
 |===
 
 = Other SDOs
 
-There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
+There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24| such as the X3D standards| that encode orientation and position in graphics. In the Khronos Group| there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
+|===
 
+|Company or Open Source Project Name|Product or Service Name|Open Source?|"When this solution offers, generates or uses pose, is the pose (A) geospatially-anchored or (B) does it use an internally-defined (local) Frame of Reference?"|||Does this solution use a static spatial reference system? Can the adopter specify their SRS?||Please provide details about the spatial reference system used in this system||"In this solution, how is position represented?"|||"In this solution, how are orientation and rotation represented?"||"In this solution, is temporal information associated with poses?"|"If temporal information is associated, provide details"|Comments
+||||GeoSpatially-anchored FoR|Internally-defined (local) FoR||||||Globally (latitude and longitude)|Locally||||yes= Green||
+|Away Team Software Ltd|Web Video Map Tracks||Both are possible - either camera heading or moving object heading with camera yaw (from heading)|||Static spatial reference system||WGS84||Globally (latitude and longitude)|||Heading pitch roll|||Camera orientation is sampled periodically and intermediate values can be calculated by interpolation|
+|Magic Leap|ML1||?????|||Static spatial reference system|||||||Quaternions||||
+|HERE Technologies|LiveSight|||||Static spatial reference system||||Globally (latitude and longitude)|||"Yaw, pitch and roll"|||timestamp|
+|FlightSafety International|Professional Pilot Training|||||Static spatial reference system||WGS84||"Globally (latitude and longitude), Some positions are relative to objects that are moving (based on user controls)"|||"Yaw, pitch and roll, Quaternions, Euler Angles"||"Poses change with time, but the temporal information is not saved"||
+|Epic Games|Unreal Engine||Both : A local frame of reference which is itself geospatially anchored|||Spatial reference system is defined for each use||"Users can choose the CRS or their choice, as long as they have a WKT or EPSG code."|||||"Yaw, pitch and roll, Quaternions, Euler Angles"||||
+|Arvizio Inc.|Arvizio Immerse 3D||It could be both depending on data type and specific project|||Spatial reference system is defined for each use||The products contains extendable database of projections and geoids||Could be both|||"Yaw, pitch and roll"||May be in certain situations since the product supports animation|Using animation one can support changing of object(s) poses|
+|"Cesium, Inc."|Cesium ion and CesiumJS using 3D Tiles|||||Static spatial reference system||WGS84||"EPSG:4978 (earth-centered/earth-fixed). For precision reasons, keep both local and local-to-global transform data (location and rotation)."|||"3D Tiles data captures the information using the standard graphics approach - transform matrices. Additional options beyond transform matrices (e.g., quaternions, heading/pitch/roll) are available via the CesiumJS API to control camera position at runtime."|||"CesiumJS can display time-dynamic data provided as CZML or KML or via API. The data contains samples of position over time and CesiumJS uses interpolation to create the complete path. While CZML or KML this data can be stored in Cesium ion for convenience, Cesium ion itself doesn't provide temporal features."|
+|Hexagon|LuciadFusion 2020.1 and LuciadRIA 2020.1|||||Spatial reference system is defined for each use||"We support any spatial reference system for models. For the world, we typically use EPSG:4978 (geocentric reference)"||Globally (latitude and longitude)|||Euler Angles||||
+|Leica Geosystems AG part of Hexagon|"Leica Imaging Totalstation / Multistation, Tilted & Imaging GNSS"||Both depending on the solution ( example:for totalstation imaging camera is local )|||Static spatial reference system||ECF or Local||Globally (latitude and longitude)|||"Quaternions, Euler Angles"|||Timestamp|
+|Hexagon AB / myVR Software AS|myVR XRToolkit (SDK)|||||Spatial reference system is defined for each use||"Multiple systems depending on use case, either data dependent or application defined."||Globally (latitude and longitude)|||"Yaw, pitch and roll, Quaternions"||Application defined|Application defined|
+|Esri|Oriented Imagery|||||Spatial reference system is defined for each use||It can be any spatial reference system.||Globally (latitude and longitude)|||"Yaw, pitch and roll, Euler Angles, Euler Angles with two rotations about z axis and one about x axis in order z-x-z"|||AcquisitionDate parameter in Oriented Imagery Schema stores the temporal information|
+|Ecere|GNOSIS Cartographer||"Normally geospatially anchored, but local transformations can be anchored to those geospatial anchors"|||"Normally WGS84 is used, but we want to improve support for different epochs / realizations of WGS84, and other CRS can be converted to our internal WGS84 representation as well."||WGS84||Globally (latitude and longitude)|||"Yaw, pitch and roll, Quaternions, The question is tricky as Yaw, Pitch, Roll Euler are also called Euler angles. Wikipedia distinguishes between ""Proper Euler angles"" and ""Tait–Bryan angles"". We call YPR Euler angles: https://github.com/ecere/ecere-sdk/blob/dev/ecere/src/gfx/3D/Quaternion.ec#L309 , even though that may not be pedantically correct."||"Not currently, but there certainly is value in doing so, though it could be provided alongside the pose."||
+|Graphmetrix Inc.|Trinpod|||||Static spatial reference system||WGS84 - nested objects ultimately have an event based reference back to lat/long/elev||Events are used from start to finish to capture object state and motion using nested oriented reference frames that ultimately resolve to WGS84 at any nesting level|||Quaternions|||Events with start time/location and end time/location are used for all changes to entities|
+|Norwegian Mapping Authority|Border Go|??|The GeoPose library maintains an estimate of the geospatial position and orientation of a  real-world anchored local frame of reference.|"The local cartesian coordinate system (frame of reference) in the AR session  paralelle to the local tangent plane of the WGS84 ellipsoid and has east north up axis, in addition there is a nested frame transform that mantains a local position and orientation (pose) relative to the local frame of reference."||there is a geodesy library that allows the use of geospatial datasets using different SRS's||WGS84||"latitude, longitidue and altitude above/belove the reference ellipsoid in meters"|"two  cartesian coordinate systems, one that holds the position of the origin the earth anchored reference frame that is estimated to be at a lat,lng,alt with LTP ENU, and one that holds the position of the AR device relative to this reference frame. In addition there is a computer graphics scene graph that contains all the 3d content that is rendered by the AR application (gespatial data)"||Quaternions|||GeoPose is estimated continously based on various sensor data (sensor fusion) and a phyiscal model that realies on tampstamps of the meassurements that updates the estimate.|
+|Fantasmo|Camera Positioning Standard|??|||||||||||||||
+|"Cesium, Inc."|Cesium .js VelocityOrientationProperty|??|ECEF|local cartesian||||WGS84||"ECEF + lat,lng, alt"|local cartesian frames of reference||Quaternion|||the orientation are estimated based on a stream of points that typically are temporally arranged like a flight trajectory|Not an original account by Cesium.js developer. Based on Jan-Erik Vinje reading som of the  docs such as this: https://cesium.com/learn/cesiumjs/ref-doc/VelocityOrientationProperty.html
+|Robot Operating System (ROS)|geographic_msgs/GeoPose.msg|??|GeoPose |One can also use local cartesian frames of reference.||It can at least handle UTM and WGS84||WGS84 + UTM||"WGS84 (Lat,lng,alt) + UTM"|local cartesian frames of reference||Quaternion|||Robots are by their nature dynamic and ROS provides mechanism for GeoPose streaming|Not an original account by ROS developer or user. Based on Jan-Erik Vinje reading som of the  docs http://docs.ros.org/
+|
+
+
+|===
 
 __Khronos Group__
 |===
@@ -137,7 +133,7 @@ __Khronos Group__
 
 |===
 
-|link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor[This OpenXR Extension for Microsoft Spatial Anchors] allows an application to create a spatial anchor, an arbitrary freespace point in the user’s physical environment that will then be tracked by the runtime. The runtime should then adjust the position and orientation of that anchor’s origin over time as needed, independently of all other spaces and anchors, to ensure that it maintains its original mapping to the real world.
+|link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor[This OpenXR Extension for Microsoft Spatial Anchors] allows an application to create a spatial anchor| an arbitrary freespace point in the user’s physical environment that will then be tracked by the runtime. The runtime should then adjust the position and orientation of that anchor’s origin over time as needed| independently of all other spaces and anchors| to ensure that it maintains its original mapping to the real world.
 
 __W3C__
 |===
@@ -196,9 +192,9 @@ __BuildingSmart__
 |?
 |===
 
-IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
+IfcSite and other IfCProducts permits topologic orientation| but not 6DOF. IFCSite lets users provide the WGS84 location (lat|lng|alt) of  "the single geographic reference point for this site "
 http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
-For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
+For orientation they refer to the concept of "true north": "The world coordinate system| established at the IfcProject.RepresentationContexts| may include a definition of the true north within the XY plane of the world coordinate system| if provided| it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
 
 
 __ASTM__
@@ -229,7 +225,7 @@ __NASA__
 |===
 
 
-Also, must create a table dedicated to IEEE Standards. What are the IEEE standards?
+Also| must create a table dedicated to IEEE Standards. What are the IEEE standards?
 
 What about ISO standards?
 
