@@ -9,22 +9,33 @@ The table below documents, in a structured format, the features and functions of
 
 Since new software is being introduced to address the requirements of use cases covered by GeoPose, this section could be maintained/updated periodically. If you have information to contribute to this section, or have recommendations and questions, please create an issue in https://github.com/opengeospatial/GeoPoseGuides/issues[this repo].
 
+
+
+|===
+|Company or Open Source Project Name|Product or Service Name|Open Source?|"When this solution offers, generates or uses pose, is the pose (A) geospatially-anchored or (B) does it use an internally-defined (local) Frame of Reference?"|||Does this solution use a static spatial reference system? Can the adopter specify their SRS?||Please provide details about the spatial reference system used in this system||"In this solution, how is position represented?"|||"In this solution, how are orientation and rotation represented?"||"In this solution, is temporal information associated with poses?"|"If temporal information is associated, provide details"|Comments
+||||GeoSpatially-anchored FoR|Internally-defined (local) FoR||||||Globally (latitude and longitude)|Locally||||yes= Green||
+|Away Team Software Ltd|Web Video Map Tracks||Both are possible - either camera heading or moving object heading with camera yaw (from heading)|||Static spatial reference system||WGS84||Globally (latitude and longitude)|||Heading pitch roll|||Camera orientation is sampled periodically and intermediate values can be calculated by interpolation|
+|Magic Leap|ML1||?????|||Static spatial reference system|||||||Quaternions||||
+|HERE Technologies|LiveSight|||||Static spatial reference system||||Globally (latitude and longitude)|||"Yaw, pitch and roll"|||timestamp|
+|FlightSafety International|Professional Pilot Training|||||Static spatial reference system||WGS84||"Globally (latitude and longitude), Some positions are relative to objects that are moving (based on user controls)"|||"Yaw, pitch and roll, Quaternions, Euler Angles"||"Poses change with time, but the temporal information is not saved"||
+|Epic Games|Unreal Engine||Both : A local frame of reference which is itself geospatially anchored|||Spatial reference system is defined for each use||"Users can choose the CRS or their choice, as long as they have a WKT or EPSG code."|||||"Yaw, pitch and roll, Quaternions, Euler Angles"||||
+|Arvizio Inc.|Arvizio Immerse 3D||It could be both depending on data type and specific project|||Spatial reference system is defined for each use||The products contains extendable database of projections and geoids||Could be both|||"Yaw, pitch and roll"||May be in certain situations since the product supports animation|Using animation one can support changing of object(s) poses|
+|"Cesium, Inc."|Cesium ion and CesiumJS using 3D Tiles|||||Static spatial reference system||WGS84||"EPSG:4978 (earth-centered/earth-fixed). For precision reasons, keep both local and local-to-global transform data (location and rotation)."|||"3D Tiles data captures the information using the standard graphics approach - transform matrices. Additional options beyond transform matrices (e.g., quaternions, heading/pitch/roll) are available via the CesiumJS API to control camera position at runtime."|||"CesiumJS can display time-dynamic data provided as CZML or KML or via API. The data contains samples of position over time and CesiumJS uses interpolation to create the complete path. While CZML or KML this data can be stored in Cesium ion for convenience, Cesium ion itself doesn't provide temporal features."|
+|Hexagon|LuciadFusion 2020.1 and LuciadRIA 2020.1|||||Spatial reference system is defined for each use||"We support any spatial reference system for models. For the world, we typically use EPSG:4978 (geocentric reference)"||Globally (latitude and longitude)|||Euler Angles||||
+|Leica Geosystems AG part of Hexagon|"Leica Imaging Totalstation / Multistation, Tilted & Imaging GNSS"||Both depending on the solution ( example:for totalstation imaging camera is local )|||Static spatial reference system||ECF or Local||Globally (latitude and longitude)|||"Quaternions, Euler Angles"|||Timestamp|
+|Hexagon AB / myVR Software AS|myVR XRToolkit (SDK)|||||Spatial reference system is defined for each use||"Multiple systems depending on use case, either data dependent or application defined."||Globally (latitude and longitude)|||"Yaw, pitch and roll, Quaternions"||Application defined|Application defined|
+|Esri|Oriented Imagery|||||Spatial reference system is defined for each use||It can be any spatial reference system.||Globally (latitude and longitude)|||"Yaw, pitch and roll, Euler Angles, Euler Angles with two rotations about z axis and one about x axis in order z-x-z"|||AcquisitionDate parameter in Oriented Imagery Schema stores the temporal information|
+|Ecere|GNOSIS Cartographer||"Normally geospatially anchored, but local transformations can be anchored to those geospatial anchors"|||"Normally WGS84 is used, but we want to improve support for different epochs / realizations of WGS84, and other CRS can be converted to our internal WGS84 representation as well."||WGS84||Globally (latitude and longitude)|||"Yaw, pitch and roll, Quaternions, The question is tricky as Yaw, Pitch, Roll Euler are also called Euler angles. Wikipedia distinguishes between ""Proper Euler angles"" and ""Tait–Bryan angles"". We call YPR Euler angles: https://github.com/ecere/ecere-sdk/blob/dev/ecere/src/gfx/3D/Quaternion.ec#L309 , even though that may not be pedantically correct."||"Not currently, but there certainly is value in doing so, though it could be provided alongside the pose."||
+|Graphmetrix Inc.|Trinpod|||||Static spatial reference system||WGS84 - nested objects ultimately have an event based reference back to lat/long/elev||Events are used from start to finish to capture object state and motion using nested oriented reference frames that ultimately resolve to WGS84 at any nesting level|||Quaternions|||Events with start time/location and end time/location are used for all changes to entities|
+|Norwegian Mapping Authority|Border Go|Yes|The GeoPose library maintains an estimate of the geospatial position and orientation of a  real-world anchored local frame of reference.|"The local cartesian coordinate system (frame of reference) in the AR session  paralell to the local tangent plane of the WGS84 ellipsoid and has east north up axis, in addition there is a nested frame transform that maintains a local position and orientation (pose) relative to the local frame of reference."||there is a geodesy library that allows the use of geospatial datasets using different SRS's||WGS84||"latitude, longitude and altitude above/below the reference ellipsoid in meters"|"two  cartesian coordinate systems, one that holds the position of the origin the earth anchored reference frame that is estimated to be at a lat,lng,alt with LTP ENU, and one that holds the position of the AR device relative to this reference frame. In addition there is a computer graphics scene graph that contains all the 3d content that is rendered by the AR application (gespatial data)"||Quaternions|||GeoPose is estimated continously based on various sensor data (sensor fusion) and a phyiscal model that realies on tampstamps of the meassurements that updates the estimate.|
+|Fantasmo|Camera Positioning Standard|Proposed|||||||||||||||
+|Cesium|Cesium .js VelocityOrientationProperty|Yes|ECEF|local cartesian||||WGS84||"ECEF + lat,lng, alt"|local cartesian frames of reference||Quaternion|||the orientation are estimated based on a stream of points that typically are temporally arranged like a flight trajectory|Not an original account by Cesium.js developer. Based on Jan-Erik Vinje reading som of the  docs such as this: https://cesium.com/learn/cesiumjs/ref-doc/VelocityOrientationProperty.html
+|Robot Operating System (ROS)|geographic_msgs/GeoPose.msg|Yes|GeoPose |One can also use local cartesian frames of reference.||It can at least handle UTM and WGS84||WGS84 + UTM||"WGS84 (Lat,lng,alt) + UTM"|local cartesian frames of reference||Quaternion|||Robots are by their nature dynamic and ROS provides mechanism for GeoPose streaming|Not an original account by ROS developer or user. Based on Jan-Erik Vinje reading som of the  docs http://docs.ros.org/
+|===
+
+Below is a table of companies who publish products about which all relevant information has yet to be captured.
 |===
 |*Company* |*Product Name* |*Local and/or Geospatial Pose* |*SRS Variable or Static* |*Naming Conventions* |*Data Model Details*
-
-|6D.ai
-|Cell in column 2
-|local
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
-
-|Autodesk
-|Cell in column 2
-|local
-|Cell in column 4
-|Cell in column 5
-|Cell in column 6
 
 |Autodesk
 |Cell in column 2
@@ -40,23 +51,22 @@ Since new software is being introduced to address the requirements of use cases 
 |Cell in column 5
 |Cell in column 6
 
-|Ecere
-|link:http://ecere.ca/gnosis/[GNOSIS]
-|Geospatial Pose
-|Static WGS84 ellipsoid latitude, longitude, altitude
-|latitude, longitude, altitude + an orientation (quaternion, or yaw, pitch, roll)
-|The orientation of the camera or of geo-anchored objects are specified relative to a plane tangent to Earth at the geospatial position.
-i.e. yaw is relative to North around 'up' axis, pitch is relative to the horizon around the sideways axis and roll is relative to 'up' around the forward axis.
-
-|Esri
-|ArcGIS Runtime, ArcGISARView (built on SceneView)
+|Deeyook
+|Cell in column 2
 |Cell in column 3
 |Cell in column 4
 |Cell in column 5
 |Cell in column 6
 
 |Esri
-|Cell in column 2
+|ArcGIS Runtime
+|Cell in column 3
+|Cell in column 4
+|Cell in column 5
+|Cell in column 6
+
+|Esri
+|ArcGISARView (built on SceneView)
 |Cell in column 3
 |Cell in column 4
 |Cell in column 5
@@ -132,13 +142,6 @@ i.e. yaw is relative to North around 'up' axis, pitch is relative to the horizon
 |Cell in column 5
 |Cell in column 6
 
-|Open Robotics
-|link:http://docs.ros.org/jade/api/geographic_msgs/html/msg/GeoPose.html[Robotic Operating System (ROS)].
-|GeoSpatial "GeoPoint" is position, using the WGS 84 reference ellipsoid
-|geometry_msgs/Quaternion orientation
-|Orientation uses the East-North-Up (ENU) frame of reference
-|Cell in column 6
-
 |SPAR3D
 |Cell in column 2
 |Cell in column 3
@@ -196,7 +199,3 @@ i.e. yaw is relative to North around 'up' axis, pitch is relative to the horizon
 |Cell in column 6
 
 |===
-
-Company Name: Deeyook
-URL: https://www.deeyook.com/
-Deeyook's location technology is a patented wireless-based, firmware solution that is self-learning, ubiquitous, ultra-precise (~10 cm), passive and low power, allowing absolute indoor and outdoor position determination.
