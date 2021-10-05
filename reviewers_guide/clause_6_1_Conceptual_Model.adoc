@@ -1,5 +1,5 @@
 [[rg-conceptual-model-section]]
-=== Conceptual Model
+== Conceptual Model
 
 The GeoPose Conceptual Model consists of linked definitions of terms denoting concepts expressed in the GeoPose Logical Model and structural data unit specifications for the implementation targets.
 
