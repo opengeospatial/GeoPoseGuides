@@ -17,12 +17,12 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2021-01-15>
+|Publication Date:   <2021-11-01>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/{standard}/{m.n}
 |Internal reference number of this OGC(R) document:    YY-nnnrx
-|Version: n.n
+|Version: 0.4
 |Category: OGC(R) Engineering Guidance
-|Editor:   <Name(s) of Editor or Editors>
+|Editor:   C. Perey, J. Morley, J. Lieberman, M. Salazar, C. Smyth
 |===
 
 [cols = "^", frame = "none"]

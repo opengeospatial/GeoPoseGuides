@@ -1,8 +1,7 @@
 [[rg-geopose-swg-process]]
 
-== Insert in here the informational section in the specification
+= The GeoPose Standard
 
-How we went about identifying use cases and requirements
-It explains the structure of the specification. One picture tells allow
+This section describes the key elements of the GeoPose standard, especially the conceptual and logical models, and the implementation targets which have been derived from the logical model. The development of the standard has been led by a number of use cases and use case domains, as summarised in the diagram below.
 
-INSERT the figure and explain it here or simply point the reader of the reviewers guide to that section? 
+INSERT the figure and explain it here or simply point the reader of the reviewers guide to that section?
