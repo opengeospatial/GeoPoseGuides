@@ -1,12 +1,12 @@
 [[rg-geopose-glossary-section]]
 == GeoPose Glossary
 
-include::/glossary/introduction.adoc[]
+include::../glossary/introduction.adoc[]
 
-include::/glossary/Key_Concepts.adoc[]
+include::../glossary/Key_Concepts.adoc[]
 
-include::/glossary/Orientation_Systems.adoc[]
+include::../glossary/Orientation_Systems.adoc[]
 
-include::/glossary/Positioning_Systems.adoc[]
+include::../glossary/Positioning_Systems.adoc[]
 
-include::/glossary/Time_Related_Concepts.adoc[]
+include::../glossary/Time_Related_Concepts.adoc[]
