@@ -1,9 +1,13 @@
 [[rg-standardization-targets-section]]
 == Encodings for Implementation
 
-Implementation of GeoPoses is accomplished by following the standard's requirements for one or more of the eight data objects referred to as Standardization Targets. There are automated tests that can be used to determine whether an actual JSON-encoded GeoPose data object conforms to the standard. 
+Christine proposes we use some or all of this text (from the spec) as an introduction to this chapter.
 
-.Summary of the Eight STandardization Targets:
+The core abstraction in the OGC GeoPose Standard is the Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a location and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.
+
+Implementation of position and orientation encodings that are compliant with the OGC GeoPose standard is accomplished by following the standard's requirements for one or more of the eight data objects referred to in the specification as the "Standardization Targets".
+
+.Summary of the Eight OGC GeoPose Standardization Targets:
 * The two Basic GeoPose targets are simple and concise – no options. They satisfy most use case requirements and assume a local tangent plane ENU frame derived from WGS84.
 * An Advanced GeoPose target supports more complex use cases where the outer geographic reference frame is not LTP-ENU and/or a valid time is needed.
 Composite:
@@ -11,6 +15,22 @@ Composite:
 * The Frame Graph target supports the full structure need to represent networks of reference frames that arise with the use of multiple and linked location technologies.
 * The three (Time) Sequence targets support the packaging of fixed-length time series of GeoPoses and the payload data objects for open-ended GeoPose streams.
 
-An implementer is free to implement one or more of these targets.
+Depending on the use case and requirements, a developer can implement support for one or more of these targets.
 
-NOTE: This is where we will explain the rationale for the eight standardization targets that were chosen.
+There are automated tests that can be used to determine whether an actual JSON-encoded GeoPose data object conforms to the standard.
+
+NOTE: This is where we explain the rationale for the eight standardization targets that were chosen.
+
+In the majority of use cases, requirements are met by using either:
+
+* *Basic-Euler* GeoPose encoding when orientation is in Euler angles
+
+* *Basic-Quaternion* GeoPose encoding when orientation is in quaternion
+
+The reason that there are two versions of Basic GeoPose is that some developers prefer a human-readable encoding. In these cases, the Basic-Euler is chosen. In other use cases, orientation by quaternion is preferred.
+
+The two differences between Basic GeoPose and Advanced GeoPose is that, first, in Advanced GeoPose, the developer can specify an outer geographic reference frame other than LTP-ENU. In addition, in the Advanced GeoPose encoding, a single time stamp can be provided. The time stamp pertains only to the single encoding so one of the Composite GeoPose encodings is not needed.
+
+The three Composite GeoPose encodings are designed for when there are linked and sequential GeoPoses. The Chain GeoPose is a linear set of linked poses. The Graph GeoPose is used when there are linked poses but not necessarily in a linear sequence.
+
+For time series poses with constant time spacing, the developer will choose to use the Regular Timeseries GeoPose encoding. When there is a per-GeoPose time stamp that is not at a regular interval, the developer will choose to use the Irregular Timeseries GeoPose encoding. Finally, in use cases that do not have a pre-defined end time (also referred to as an open-ended sequence of time-stamped GeoPoses), the developer will specify the Stream GeoPose encoding.
