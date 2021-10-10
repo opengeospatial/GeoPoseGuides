@@ -1,4 +1,16 @@
 [[rg-standardization-targets-section]]
-== Standardization Targets
+== Encodings for Implementation
+
+Implementation of GeoPoses is accomplished by following the standard's requirements for one or more of the eight data objects referred to as Standardization Targets. There are automated tests that can be used to determine whether an actual JSON-encoded GeoPose data object conforms to the standard. 
+
+.Summary of the Eight STandardization Targets:
+* The two Basic GeoPose targets are simple and concise – no options. They satisfy most use case requirements and assume a local tangent plane ENU frame derived from WGS84.
+* An Advanced GeoPose target supports more complex use cases where the outer geographic reference frame is not LTP-ENU and/or a valid time is needed.
+Composite:
+* The Chain GeoPose target provides additional flexibility with multiple intermediate frames or specific coordinate reference systems as needed.
+* The Frame Graph target supports the full structure need to represent networks of reference frames that arise with the use of multiple and linked location technologies.
+* The three (Time) Sequence targets support the packaging of fixed-length time series of GeoPoses and the payload data objects for open-ended GeoPose streams.
+
+An implementer is free to implement one or more of these targets.
 
 NOTE: This is where we will explain the rationale for the eight standardization targets that were chosen.
