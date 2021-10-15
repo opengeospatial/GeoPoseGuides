@@ -1,5 +1,5 @@
 [[rg-landscape-proprietary-section]]
-== Software that Use or Generate Geospatially-anchored Position and Orientation
+=== Software that Use or Generate Geospatially-anchored Position and Orientation
 
 This section of the reviewer's guide captures information about commercial software and open source software and libraries that use or generate geospatially-anchored poses. It illustrates the diverse ways that geospatially-anchored poses are stored and represented.
 

@@ -1,15 +1,15 @@
 [[rg-landscape-standard-section]]
-= GeoPose in Context
+== OGC GeoPose in Context
 
 This section we discuss the place of GeoPose in the world - how GeoPose is situated in the landscape of standards, and the opportunities for GeoPose to standardise the interaction between standards which manage some representation of geographically anchored position and orientation.
 
 In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that specify <<refer to the GeoPose implementation targets in the draft spec>>[a GeoPose implementation target] as a data format. As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any implementation target.
 
-The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards| this section illustrates the gaps which GeoPose fills.
+The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.
 
 There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
 
-== GeoPose connects objects to their representation
+=== OGC GeoPose Connects Objects to their Representation
 There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
 
 In a standard Web browser, information is displayed on a plane. There is a need for a standard to represent information retrieved from the Web on the 2D display plane in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
@@ -20,10 +20,10 @@ On the other side, the OGC has been working on how sensor systems measure these 
 
 Each of these stages in the pipeline need to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
 
-== GeoPose in the Landscape of Standards
-The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation| but an incredibly appropriate foundation from which the SWG was inspired.
+=== OGC GeoPose in the Landscape of Standards
+The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.
 
-OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts| and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
+OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
 
 OGC Moving Features and GeoPose have distinct roles and are complementary. Moving Features is focused on a local, municipal scale, and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose plays.
 
@@ -46,9 +46,9 @@ To summarize, there are a number of well-developed standards for position and or
 
 The approaches to this issue that have been published in other standards prior to introduction of GeoPose appear in the tables below.
 
-== Standards which Could Reference GeoPose in Normative Clauses
+=== Standards which Could Reference GeoPose in Normative Clauses
 
-=== OGC Standards
+==== OGC Standards
 
 The OGC has many positioning and location standards, some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing position and orientation.
 
@@ -81,14 +81,9 @@ Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewha
 
 |===
 
-=== Other SDOs
+==== Other SDOs
 
-There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24| such as the X3D standards| that encode orientation and position in graphics. In the Khronos Group| there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
-|===
-
-
-
-|===
+There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
 
 __Khronos Group__
 |===
@@ -117,7 +112,7 @@ __Khronos Group__
 
 |===
 
-|link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor[This OpenXR Extension for Microsoft Spatial Anchors] allows an application to create a spatial anchor| an arbitrary freespace point in the user’s physical environment that will then be tracked by the runtime. The runtime should then adjust the position and orientation of that anchor’s origin over time as needed| independently of all other spaces and anchors| to ensure that it maintains its original mapping to the real world.
+link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor[This OpenXR Extension for Microsoft Spatial Anchors] allows an application to create a spatial anchor, an arbitrary freespace point in the user’s physical environment that will then be tracked by the runtime. The runtime should then adjust the position and orientation of that anchor’s origin over time as needed, independently of all other spaces and anchors, to ensure that it maintains its original mapping to the real world.
 
 __W3C__
 |===
@@ -138,14 +133,14 @@ __W3C__
 |?
 
 |Immersive Web WebXR Device API
-|?
-|?
-|?
-|?
-|?
+|No
+|Yes
+|No
+|No
+|Yes
 |===
-link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
-|An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
+From the Immersive Web WebXR Device API documentation: link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
+An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
 
 __Motion Imagery Standards Board (MISB)__
 |===
@@ -194,7 +189,7 @@ __ASTM__
 
 There are also specifications (standards) that are developed for and used by industries/domains.
 
-=== Space
+==== Space Science
 The Observation Geometry System NASA uses for Space Science Missions is called SPICE.
 A tutorial presentation about SPICE is available link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf[here].
 

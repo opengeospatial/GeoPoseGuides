@@ -1,6 +1,6 @@
 [[rg-logical-model-section]]
 
-== Logical Model
+=== Logical Model
 While the Conceptual Model outlines the component terms and relationships in the standard, the Logical Model precisely models the classes and their relationships.
 
 The Conceptual Model describes a (non-normative) domain of discourse for terms used in defining a precise Logical Model (normative) expressed as a Unified Modeling Language (UML) [ref] class diagram.

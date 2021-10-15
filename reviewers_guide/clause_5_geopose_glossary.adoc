@@ -1,5 +1,5 @@
 [[rg-geopose-glossary-section]]
-== GeoPose Glossary
+=== GeoPose Glossary
 
 include::../glossary/introduction.adoc[]
 

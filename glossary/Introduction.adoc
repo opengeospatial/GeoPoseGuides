@@ -1,5 +1,5 @@
 [[vg-introduction-section]]
-# Conceptual Overview
+== Conceptual Overview
 
 This overview was originally created to facilitate the communication between GeoPose SWG members to reach a shared understanding of concepts related to GeoPose. It has been integrated into this guide to provide readers with a better understanding of the conceptual foundations on which the standard is based.
 
