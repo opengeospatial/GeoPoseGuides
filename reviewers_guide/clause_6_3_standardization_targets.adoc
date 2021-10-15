@@ -3,14 +3,19 @@
 
 Christine proposes we use some or all of this text (from the spec) as an introduction to this chapter.
 
-The core abstraction in the OGC GeoPose Standard is the Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a location and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.
+The core abstraction in the OGC GeoPose Standard is the Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.
 
 Implementation of position and orientation encodings that are compliant with the OGC GeoPose standard is accomplished by following the standard's requirements for one or more of the eight data objects referred to in the specification as the "Standardization Targets".
 
 .Summary of the Eight OGC GeoPose Standardization Targets:
+
+Basic:
+
 * The two Basic GeoPose targets are simple and concise – no options. They satisfy most use case requirements and assume a local tangent plane ENU frame derived from WGS84.
 * An Advanced GeoPose target supports more complex use cases where the outer geographic reference frame is not LTP-ENU and/or a valid time is needed.
+
 Composite:
+
 * The Chain GeoPose target provides additional flexibility with multiple intermediate frames or specific coordinate reference systems as needed.
 * The Frame Graph target supports the full structure need to represent networks of reference frames that arise with the use of multiple and linked location technologies.
 * The three (Time) Sequence targets support the packaging of fixed-length time series of GeoPoses and the payload data objects for open-ended GeoPose streams.
