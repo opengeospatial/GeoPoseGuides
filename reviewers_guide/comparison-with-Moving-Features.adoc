@@ -1,5 +1,5 @@
 [[rg-comparison-with-moving-features-section]]
-== Comparison of GeoPose and Moving Features
+=== Comparison of GeoPose and Moving Features
 
 ISO 19141:2008 defines a method to describe the geometry of a feature that moves as a rigid body. Such movement has the following characteristics:
 

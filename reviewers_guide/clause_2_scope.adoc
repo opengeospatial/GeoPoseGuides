@@ -1,5 +1,5 @@
 [[rg_scope_section]]
-# Reviewers Guide Scope
+== Reviewers Guide Scope
 
 The GeoPose Reviewers Guide introduces the the <<vg-introduction-section, **key concepts used in GeoPose**>> to its <<rg-target-audiences-section, **target audiences**>>.
 

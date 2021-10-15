@@ -1,5 +1,5 @@
 [[rg-standardization-targets-section]]
-== Encodings for Implementation
+=== Encodings for Implementation
 
 Christine proposes we use some or all of this text (from the spec) as an introduction to this chapter.
 
