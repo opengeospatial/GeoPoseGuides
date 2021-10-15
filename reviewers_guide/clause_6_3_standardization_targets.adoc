@@ -9,7 +9,7 @@ Implementation of position and orientation encodings that are compliant with the
 
 .Summary of the Eight OGC GeoPose Standardization Targets:
 
-Basic:
+Core:
 
 * The two Basic GeoPose targets are simple and concise – no options. They satisfy most use case requirements and assume a local tangent plane ENU frame derived from WGS84.
 * An Advanced GeoPose target supports more complex use cases where the outer geographic reference frame is not LTP-ENU and/or a valid time is needed.
