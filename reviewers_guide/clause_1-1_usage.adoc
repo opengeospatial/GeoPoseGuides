@@ -1,5 +1,5 @@
 [[rg_usage_section]]
-## How To Use This Resource
+=== How To Use This Resource
 
 The GeoPose Reviewers Guide is not intended to be read from start to finish. Rather, it is a resource structured to provide quick answers to questions which a reviewer may have about the https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification]. It is provided to support professionals who need to understand OGC GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
 

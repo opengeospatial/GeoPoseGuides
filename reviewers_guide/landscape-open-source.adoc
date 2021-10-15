@@ -1,5 +1,5 @@
 [[rg-landscape-proprietary-section]]
-== Open Source Libraries and Software that Use or Generate GeoPose
+=== Open Source Libraries and Software that Use or Generate GeoPose
 
 There are Open Source projects that are or could be relevant to GeoPose.
 

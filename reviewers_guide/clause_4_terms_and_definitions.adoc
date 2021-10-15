@@ -1,5 +1,5 @@
 [[rg_terms-and-definitions_section]]
-== Terms and Definitions
+=== Terms and Definitions
 
 For the purposes of this document, the following additional terms and definitions apply.
 

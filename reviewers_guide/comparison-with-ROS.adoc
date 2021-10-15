@@ -1,5 +1,5 @@
 [[rg-comparison-with-moving-ROS-section]]
-== Comparison of GeoPose and Robotic Operating System (ROS)
+=== Comparison of GeoPose and Robotic Operating System (ROS)
 
 Robotics industry will use/need GeoPose. There is a widely used protocol that was defined over 10 years ago (2010).
 This section compares GeoPose with the ROS Rep

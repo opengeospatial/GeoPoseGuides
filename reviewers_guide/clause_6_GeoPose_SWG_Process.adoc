@@ -1,6 +1,6 @@
 [[rg-geopose-swg-process]]
 
-= The GeoPose Standard
+== The GeoPose Standard
 
 This section describes the key elements of the GeoPose standard, especially the conceptual and logical models, and the implementation targets which have been derived from the logical model. The development of the standard has been led by a number of use cases and use case domains, as summarised in the diagram below.
 
