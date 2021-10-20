@@ -54,8 +54,15 @@ The OGC has many positioning and location standards, some also express orientati
 
 Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
 
+Our assessment of the pose-related elements of other OGC standards are summarised in the table below under the following headings:
+ - Graphic/Virtual Context: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
+ - Local SRS: does the standard allow a local spatial reference system, independent of a wider geographical framework, to be used to define coordinates?
+ - Geodetic SRS: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
+ - 6DOF as entity or attributes: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the post entity and the object entity?
+ - Temporality: does the standard manage temporal information for the objects represented?
+
 |===
-|Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF: as entity or attributes?|Temporality|Remark
+|Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF as entity or attributes?|Temporality|Remark
 
 |Moving Features|?|Y|Y|Attributes of temporal geometry|Y|
 
