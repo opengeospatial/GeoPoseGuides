@@ -1,7 +1,7 @@
 [[rg-landscape-standard-section]]
 == OGC GeoPose in Context
 
-This section we discuss the place of GeoPose in the world - how GeoPose is situated in the landscape of standards, and the opportunities for GeoPose to standardise the interaction between standards which manage some representation of geographically anchored position and orientation.
+This section discusses the place of GeoPose in the world - how GeoPose is situated in the landscape of standards, and the opportunities for GeoPose to standardise the interaction between standards which manage some representation of geographically anchored position and orientation.
 
 In this section of the reviewer's guide, we list the Standards Development Organizations (SDOs) and standards that specify <<refer to the GeoPose implementation targets in the draft spec>>[a GeoPose implementation target] as a data format. As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any implementation target.
 
