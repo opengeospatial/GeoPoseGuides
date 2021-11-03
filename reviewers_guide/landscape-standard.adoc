@@ -127,50 +127,115 @@ __W3C__
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 
 |https://w3c.github.io/geolocation-api/[Geolocation API]
-|?
-|-
-|Yes
+|Virtual
+|No
+|Position & heading only
 |Attributes
 |Yes
-|Position & heading only
+|Working Draft (Nov 21)
 
 |https://www.w3.org/TR/orientation-sensor/[Orientation Sensor]
-|?
-|Yes
-|Yes
+|Virtual
+|Orientation only
+|Orientation only
 |Attributes
 |Yes
-|Working Draft (Oct 21)
+|Editor's Draft (Nov 21)
 
-|https://www.w3.org/TR/webxr/[WebXR Device API] (Immersive Web)
-|No
+|https://www.w3.org/TR/webxr/[WebXR Device API]
+|Virtual
 |Yes
 |No
-|No
+|Entity
 |Yes
-|Working Draft (Oct 21)
+|Working Draft (Nov 21)
 |===
+
+Levels of support for HTML features in current web browsers can be gauged from https://wpt.fyi/results[W3C Web Platform Test results].
+
 From the Immersive Web WebXR Device API documentation: link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
 An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
 
 __Motion Imagery Standards Board (MISB)__
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |https://www.gwg.nga.mil/misb/docs/standards/ST0601.17.pdf[MISB ST 0601]
-|?
+|Virtual
 |Sensor position & orientation relative to platform
 |Platform position & orientation
 |Attributes
-|Real world time & media presentation time
-|
+|UTC & media time
 
 |https://www.gwg.nga.mil/misb/docs/standards/ST0801.8.pdf[MISB ST 0801]
-|?
-|-
+|Virtual
+|No
 |Camera position & orientation
 |Attributes
-|Real world time & media presentation time
-|
+|UTC & media time
+|===
+
+__Third Generation Partnership Project (3GPP)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
+|Virtual
+|No
+|Yes
+|Attributes
+|Media time
+|===
+
+__MPEG Immersive Video (MIV)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://mpeg.chiariglione.org/standards/mpeg-i[MPEG-I/ISO 23090]
+|Virtual
+|No
+|Yes
+|Attributes
+|Media time
+|===
+
+__Camera & Imaging Products Association (CIPA/JEITA)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf[Exif]
+|Virtual
+|No
+|Position & heading only
+|Attributes
+|UTC
+|===
+
+=== Geospatial
+
+__International Organization for Standardization (ISO)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://www.iso.org/standard/54166.html[Spatial Reference Model (18026)]
+|Virtual
+|No
+|Position only
+|Attributes
+|UTC
+|===
+
+__Institute of Electrical and Electronics Engineers (IEEE)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|Distributed Interactive Simulation (1278)
+|?
+|?
+|?
+|?
+|?
+
+|Smart Transducer Interface (1451)
+|?
+|?
+|?
+|?
+|?
 |===
 
 __BuildingSmart__
@@ -223,7 +288,7 @@ International space data standards are documented in https://ccsds.org[Consultat
 
 __To Do__
 
-Also, must create a table dedicated to IEEE Standards. What are the IEEE standards?
+What are the IEEE standards?
 
 What about ISO standards?
 
