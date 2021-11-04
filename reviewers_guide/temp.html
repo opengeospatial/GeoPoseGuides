@@ -596,10 +596,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_ogc_standards">4.3.1. OGC Standards</a></li>
 <li><a href="#_other_sdos">4.3.2. Other SDOs</a></li>
-<li><a href="#_space_science">4.3.3. Space Science</a></li>
 </ul>
 </li>
-<li><a href="#rg-landscape-proprietary-section">4.4. Software that Use or Generate Geospatially-anchored Position and Orientation</a></li>
+<li><a href="#_geospatial">4.4. Geospatial</a>
+<ul class="sectlevel3">
+<li><a href="#_space_science">4.4.1. Space Science</a></li>
+</ul>
+</li>
+<li><a href="#rg-landscape-proprietary-section">4.5. Software that Use or Generate Geospatially-anchored Position and Orientation</a></li>
 </ul>
 </li>
 <li><a href="#_revision_history">Annex A: Revision History</a></li>
@@ -1125,12 +1129,26 @@ On the right of this figure is a schematic showing the workflows that are enable
 <p>Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.</p>
 </div>
 <div class="paragraph">
-<p>Our assessment of the pose-related elements of other OGC standards are summarised in the table below under the following headings:
- - Graphic/Virtual Context: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
- - Local SRS: does the standard allow a local spatial reference system, independent of a wider geographical framework, to be used to define coordinates?
- - Geodetic SRS: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
- - 6DOF as entity or attributes: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the post entity and the object entity?
- - Temporality: does the standard manage temporal information for the objects represented?</p>
+<p>Our assessment of the pose-related elements of other OGC standards are summarised in the table below under the following headings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Graphic/Virtual Context</strong>: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?</p>
+</li>
+<li>
+<p><strong>Local SRS</strong>: does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?</p>
+</li>
+<li>
+<p><strong>Geodetic SRS</strong>: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?</p>
+</li>
+<li>
+<p><strong>6DOF as entity or attributes</strong>: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the post entity and the object entity?</p>
+</li>
+<li>
+<p><strong>Temporality</strong>: does the standard manage temporal information for the objects represented?</p>
+</li>
+</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1309,12 +1327,13 @@ On the right of this figure is a schematic showing the workflows that are enable
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.667%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
 </colgroup>
 <thead>
 <tr>
@@ -1324,35 +1343,42 @@ On the right of this figure is a schematic showing the workflows that are enable
 <th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Geodedic CRS</strong></th>
 <th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>6DOF as entity or attribute?</strong></th>
 <th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Temporality</strong></th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Remark</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Geolocation API</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://w3c.github.io/geolocation-api/">Geolocation API</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position &amp; heading only</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Working Draft (Nov 21)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Browser Sensor Interfaces</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.w3.org/TR/orientation-sensor/">Orientation Sensor</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation only</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation only</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editor&#8217;s Draft (Nov 21)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Immersive Web WebXR Device API</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.w3.org/TR/webxr/">WebXR Device API</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Entity</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Working Draft (Nov 21)</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Levels of support for HTML features in current web browsers can be gauged from <a href="https://wpt.fyi/results">W3C Web Platform Test results</a>.</p>
+</div>
 <div class="paragraph">
 <p>From the Immersive Web WebXR Device API documentation: <a href="https://immersive-web.github.io/webxr/#xrspace-interface">XRSpace</a> and <a href="https://immersive-web.github.io/webxr/#pose">XR Pose</a>
 An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.</p>
@@ -1379,7 +1405,174 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">MISB ST 0601</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.gwg.nga.mil/misb/docs/standards/ST0601.17.pdf">MISB ST 0601</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Sensor position &amp; orientation relative to platform</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Platform position &amp; orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">UTC &amp; media time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.gwg.nga.mil/misb/docs/standards/ST0801.8.pdf">MISB ST 0801</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Camera position &amp; orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">UTC &amp; media time</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Third Generation Partnership Project (3GPP)</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Standard</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Graphic/Virtual Context</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geographically-referenced Local SRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geodedic CRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>6DOF as entity or attribute?</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441">3GP (26.244)</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Media time</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>MPEG Immersive Video (MIV)</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Standard</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Graphic/Virtual Context</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geographically-referenced Local SRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geodedic CRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>6DOF as entity or attribute?</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://mpeg.chiariglione.org/standards/mpeg-i">MPEG-I/ISO 23090</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Media time</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Camera &amp; Imaging Products Association (CIPA/JEITA)</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Standard</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Graphic/Virtual Context</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geographically-referenced Local SRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geodedic CRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>6DOF as entity or attribute?</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf">Exif</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position &amp; heading only</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">UTC</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geospatial"><a class="anchor" href="#_geospatial"></a>4.4. Geospatial</h3>
+<div class="paragraph">
+<p><em>International Organization for Standardization (ISO)</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Standard</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Graphic/Virtual Context</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geographically-referenced Local SRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geodedic CRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>6DOF as entity or attribute?</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.iso.org/standard/54166.html">Spatial Reference Model (18026)</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position only</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">UTC</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Institute of Electrical and Electronics Engineers (IEEE)</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Standard</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Graphic/Virtual Context</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geographically-referenced Local SRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Geodedic CRS</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>6DOF as entity or attribute?</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Distributed Interactive Simulation (1278)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
@@ -1387,7 +1580,7 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">MISB ST 0801.5</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Smart Transducer Interface (1451)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
@@ -1466,9 +1659,8 @@ For orientation they refer to the concept of "true north": "The world coordinate
 <div class="paragraph">
 <p>There are also specifications (standards) that are developed for and used by industries/domains.</p>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_space_science"><a class="anchor" href="#_space_science"></a>4.3.3. Space Science</h4>
+<h4 id="_space_science"><a class="anchor" href="#_space_science"></a>4.4.1. Space Science</h4>
 <div class="paragraph">
 <p>The Observation Geometry System NASA uses for Space Science Missions is called SPICE.
 A tutorial presentation about SPICE is available <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf">here</a>.</p>
@@ -1498,7 +1690,16 @@ A tutorial presentation about SPICE is available <a href="https://naif.jpl.nasa.
 </tbody>
 </table>
 <div class="paragraph">
-<p>Also| must create a table dedicated to IEEE Standards. What are the IEEE standards?</p>
+<p><em>Space Data Standards</em></p>
+</div>
+<div class="paragraph">
+<p>International space data standards are documented in <a href="https://ccsds.org">Consultative Committee for Space Data Systems (CCSDS)</a> Blue Books. Spacecraft position and orientation are described as <em>attitude</em> as described in section 5.3 of <a href="https://public.ccsds.org/Pubs/500x0g4.pdf">CCSDS Navigation Data - Definitions and Conventions</a>. Typical GeoPose use cases include antenna tracking, sun sensor, star sensor, gyro package and horizon sensor.</p>
+</div>
+<div class="paragraph">
+<p><em>To Do</em></p>
+</div>
+<div class="paragraph">
+<p>What are the IEEE standards?</p>
 </div>
 <div class="paragraph">
 <p>What about ISO standards?</p>
@@ -1510,7 +1711,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 </div>
 </div>
 <div class="sect2">
-<h3 id="rg-landscape-proprietary-section"><a class="anchor" href="#rg-landscape-proprietary-section"></a>4.4. Software that Use or Generate Geospatially-anchored Position and Orientation</h3>
+<h3 id="rg-landscape-proprietary-section"><a class="anchor" href="#rg-landscape-proprietary-section"></a>4.5. Software that Use or Generate Geospatially-anchored Position and Orientation</h3>
 <div class="paragraph">
 <p>This section of the reviewer&#8217;s guide captures information about commercial software and open source software and libraries that use or generate geospatially-anchored poses. It illustrates the diverse ways that geospatially-anchored poses are stored and represented.</p>
 </div>
