@@ -55,11 +55,12 @@ The OGC has many positioning and location standards, some also express orientati
 Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
 
 Our assessment of the pose-related elements of other OGC standards are summarised in the table below under the following headings:
- - Graphic/Virtual Context: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
- - Local SRS: does the standard allow a local spatial reference system, independent of a wider geographical framework, to be used to define coordinates?
- - Geodetic SRS: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
- - 6DOF as entity or attributes: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the post entity and the object entity?
- - Temporality: does the standard manage temporal information for the objects represented?
+
+ - *Graphic/Virtual Context*: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
+ - *Local SRS*: does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?
+ - *Geodetic SRS*: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
+ - *6DOF as entity or attributes*: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the post entity and the object entity?
+ - *Temporality*: does the standard manage temporal information for the objects represented?
 
 |===
 |Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF as entity or attributes?|Temporality|Remark
@@ -123,43 +124,113 @@ link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_
 
 __W3C__
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 
-|Geolocation API
-|?
-|?
-|?
-|?
-|?
-
-|Browser Sensor Interfaces
-|?
-|?
-|?
-|?
-|?
-
-|Immersive Web WebXR Device API
+|https://w3c.github.io/geolocation-api/[Geolocation API]
+|Virtual
 |No
+|Position & heading only
+|Attributes
+|Yes
+|Working Draft (Nov 21)
+
+|https://www.w3.org/TR/orientation-sensor/[Orientation Sensor]
+|Virtual
+|Orientation only
+|Orientation only
+|Attributes
+|Yes
+|Editor's Draft (Nov 21)
+
+|https://www.w3.org/TR/webxr/[WebXR Device API]
+|Virtual
 |Yes
 |No
-|No
+|Entity
 |Yes
+|Working Draft (Nov 21)
 |===
+
+Levels of support for HTML features in current web browsers can be gauged from https://wpt.fyi/results[W3C Web Platform Test results].
+
 From the Immersive Web WebXR Device API documentation: link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
 An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
 
 __Motion Imagery Standards Board (MISB)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|MISB ST 0601
+|https://www.gwg.nga.mil/misb/docs/standards/ST0601.17.pdf[MISB ST 0601]
+|Virtual
+|Sensor position & orientation relative to platform
+|Platform position & orientation
+|Attributes
+|UTC & media time
+
+|https://www.gwg.nga.mil/misb/docs/standards/ST0801.8.pdf[MISB ST 0801]
+|Virtual
+|No
+|Camera position & orientation
+|Attributes
+|UTC & media time
+|===
+
+__Third Generation Partnership Project (3GPP)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
+|Virtual
+|No
+|Yes
+|Attributes
+|Media time
+|===
+
+__MPEG Immersive Video (MIV)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://mpeg.chiariglione.org/standards/mpeg-i[MPEG-I/ISO 23090]
+|Virtual
+|No
+|Yes
+|Attributes
+|Media time
+|===
+
+__Camera & Imaging Products Association (CIPA/JEITA)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf[Exif]
+|Virtual
+|No
+|Position & heading only
+|Attributes
+|UTC
+|===
+
+=== Geospatial
+
+__International Organization for Standardization (ISO)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|https://www.iso.org/standard/54166.html[Spatial Reference Model (18026)]
+|Virtual
+|No
+|Position only
+|Attributes
+|UTC
+|===
+
+__Institute of Electrical and Electronics Engineers (IEEE)__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|Distributed Interactive Simulation (1278)
 |?
 |?
 |?
 |?
 |?
 
-|MISB ST 0801.5
+|Smart Transducer Interface (1451)
 |?
 |?
 |?
@@ -211,7 +282,13 @@ __NASA__
 |===
 
 
-Also| must create a table dedicated to IEEE Standards. What are the IEEE standards?
+__Space Data Standards__
+
+International space data standards are documented in https://ccsds.org[Consultative Committee for Space Data Systems (CCSDS)] Blue Books. Spacecraft position and orientation are described as _attitude_ as described in section 5.3 of https://public.ccsds.org/Pubs/500x0g4.pdf[CCSDS Navigation Data - Definitions and Conventions]. Typical GeoPose use cases include antenna tracking, sun sensor, star sensor, gyro package and horizon sensor.
+
+__To Do__
+
+What are the IEEE standards?
 
 What about ISO standards?
 
