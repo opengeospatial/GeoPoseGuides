@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <title>OGC GeoPose Reviewers Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -47,7 +47,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -62,10 +62,8 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
@@ -105,19 +103,22 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -182,7 +183,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -205,7 +206,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -215,7 +216,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
@@ -261,21 +262,20 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
 table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
@@ -284,7 +284,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -313,6 +313,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -385,7 +386,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -412,6 +413,7 @@ thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -581,29 +583,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#rg-geopose-glossary-section">2.3. GeoPose Glossary</a></li>
 </ul>
 </li>
-<li><a href="#rg-geopose-swg-process">3. The GeoPose Standard</a>
+<li><a href="#vg-introduction-section">3. Conceptual Overview</a>
 <ul class="sectlevel2">
-<li><a href="#rg-conceptual-model-section">3.1. Conceptual Model</a></li>
-<li><a href="#rg-logical-model-section">3.2. Logical Model</a></li>
-<li><a href="#rg-standardization-targets-section">3.3. Encodings for Implementation</a></li>
+<li><a href="#vg-key-concepts-section">3.1. Key Concepts</a></li>
+<li><a href="#vg-orientation-systems-section">3.2. Orientation Systems</a></li>
+<li><a href="#vg-positioning-systems-section">3.3. Positioning Systems</a></li>
+<li><a href="#vg-time-related-concepts-section">3.4. Time-related Concepts</a></li>
 </ul>
 </li>
-<li><a href="#rg-landscape-standard-section">4. OGC GeoPose in Context</a>
+<li><a href="#rg-geopose-swg-process">4. The GeoPose Standard</a>
 <ul class="sectlevel2">
-<li><a href="#_ogc_geopose_connects_objects_to_their_representation">4.1. OGC GeoPose Connects Objects to their Representation</a></li>
-<li><a href="#_ogc_geopose_in_the_landscape_of_standards">4.2. OGC GeoPose in the Landscape of Standards</a></li>
-<li><a href="#_standards_which_could_reference_geopose_in_normative_clauses">4.3. Standards which Could Reference GeoPose in Normative Clauses</a>
-<ul class="sectlevel3">
-<li><a href="#_ogc_standards">4.3.1. OGC Standards</a></li>
-<li><a href="#_other_sdos">4.3.2. Other SDOs</a></li>
+<li><a href="#rg-conceptual-model-section">4.1. Conceptual Model</a></li>
+<li><a href="#rg-logical-model-section">4.2. Logical Model</a></li>
+<li><a href="#rg-standardization-targets-section">4.3. Encodings for Implementation</a></li>
 </ul>
 </li>
-<li><a href="#_geospatial">4.4. Geospatial</a>
+<li><a href="#rg-landscape-standard-section">5. OGC GeoPose in Context</a>
+<ul class="sectlevel2">
+<li><a href="#_ogc_geopose_connects_objects_to_their_representation">5.1. OGC GeoPose Connects Objects to their Representation</a></li>
+<li><a href="#_ogc_geopose_in_the_landscape_of_standards">5.2. OGC GeoPose in the Landscape of Standards</a></li>
+<li><a href="#_standards_which_could_reference_geopose_in_normative_clauses">5.3. Standards which Could Reference GeoPose in Normative Clauses</a>
 <ul class="sectlevel3">
-<li><a href="#_space_science">4.4.1. Space Science</a></li>
+<li><a href="#_ogc_standards">5.3.1. OGC Standards</a></li>
+<li><a href="#_other_sdos">5.3.2. Other SDOs</a></li>
 </ul>
 </li>
-<li><a href="#rg-landscape-proprietary-section">4.5. Software that Use or Generate Geospatially-anchored Position and Orientation</a></li>
+<li><a href="#_geospatial">5.4. Geospatial</a>
+<ul class="sectlevel3">
+<li><a href="#_space_science">5.4.1. Space Science</a></li>
+</ul>
+</li>
+<li><a href="#rg-landscape-proprietary-section">5.5. Software that Use or Generate Geospatially-anchored Position and Orientation</a></li>
 </ul>
 </li>
 <li><a href="#_revision_history">Annex A: Revision History</a></li>
@@ -910,26 +920,222 @@ Notice that each definition has an anchor. Anchor text would also be a good idea
 </div>
 <div class="sect2">
 <h3 id="rg-geopose-glossary-section"><a class="anchor" href="#rg-geopose-glossary-section"></a>2.3. GeoPose Glossary</h3>
-<div class="paragraph">
-<p>Unresolved directive in clause_5_geopose_glossary.adoc - include::../glossary/introduction.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>Unresolved directive in clause_5_geopose_glossary.adoc - include::../glossary/Key_Concepts.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>Unresolved directive in clause_5_geopose_glossary.adoc - include::../glossary/Orientation_Systems.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>Unresolved directive in clause_5_geopose_glossary.adoc - include::../glossary/Positioning_Systems.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>Unresolved directive in clause_5_geopose_glossary.adoc - include::../glossary/Time_Related_Concepts.adoc[]</p>
-</div>
+
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="rg-geopose-swg-process"><a class="anchor" href="#rg-geopose-swg-process"></a>3. The GeoPose Standard</h2>
+<h2 id="vg-introduction-section"><a class="anchor" href="#vg-introduction-section"></a>3. Conceptual Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This overview was originally created to facilitate the communication between GeoPose SWG members to reach a shared understanding of concepts related to GeoPose. It has been integrated into this guide to provide readers with a better understanding of the conceptual foundations on which the standard is based.</p>
+</div>
+<div class="paragraph">
+<p>The definition of each term is accompanied by a visual representation of the concept, a more general explanation and examples of how it may be applied. Additionally, the text includes hyperlinks to connect the different concepts to one another and to illustrate how they are used in other standards and real world applications.</p>
+</div>
+<div class="sect2">
+<h3 id="vg-key-concepts-section"><a class="anchor" href="#vg-key-concepts-section"></a>3.1. Key Concepts</h3>
+<div class="paragraph">
+<p>The following list of terms covers the conceptual underpinnings for the GeoPose standard while offering examples of how they are actually employed in different scientific fields and industry sectors.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_frame"></a> <strong>(Reference) Frame</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/Frame.png" alt="Frame"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Frame.blend">Frame.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>As defined in <a href="https://www.iso.org/obp/ui/#iso:std:iso:19111:ed-3:v1:en">ISO 19111</a>, a reference Frame is a parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system.</strong></p>
+<p class="tableblock">Another, more practical definition <a href="https://en.wikipedia.org/wiki/Frame_of_reference">from Wikipedia</a> is: <em>"In physics, a (reference) frame consists of an abstract coordinate system and the set of physical reference points that uniquely fix (locate and orient) the coordinate system and standardize measurements within that frame."</em></p>
+<p class="tableblock">A Reference Frame can be visualized as a subspace with its own <a href="https://en.wikipedia.org/wiki/Coordinate_system">coordinate system</a> (represented with an arrow for each axis and a 2D grid to facilitate measurements) and a point of origin (represented as a sphere at the point where the arrows intersect). Generally, to simplify calculations, the associated coordinate systems are Cartesian in nature, but in the case of <a href="https://en.wikipedia.org/wiki/Non-Euclidean_geometry">non-euclidean spaces</a>, they require more advanced definitions (like the <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">geographical coordinate systems</a> used in global positioning systems).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_pose"></a> <strong>Pose</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/Pose.png" alt="Pose"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Pose.blend">Pose.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Pose determines the position and orientation of an object (or group of objects) relative to a coordinate system.”</strong></p>
+<p class="tableblock">In Robotics and Human-Computer Interaction, this concept is often referred to as <a href="https://en.wikipedia.org/wiki/Six_degrees_of_freedom">Six Degrees of Freedom (6DoF)</a> and it is used to specify the position and orientation of an object with great precision (generally, by combining a <strong>Local Positioning System</strong> for the translation and an <strong>Aircraft Principal Axes Orientation System</strong> for the rotation). In this way, it is possible to define complex <a href="https://en.wikipedia.org/wiki/Kinematics">kinematic systems</a> that allow the creation of advanced <a href="https://en.wikipedia.org/wiki/Robotic_arm">robotic arms</a> and <a href="https://en.wikipedia.org/wiki/Powered_exoskeleton">exoskeletons</a>.</p>
+<p class="tableblock">From the point of view of computer graphics, however, a Pose can be seen as a simplified version of a "Transform class" (without the <strong>Scale</strong>-related fields/properties). This direct correspondence implies that a Pose is associated to a single node of an Scene Graph (i.e., the "hand" has a Pose, the "arm" has another Pose, etc.), but, when 3D artists and engineers talk about "Poses", they are generally referring to the combined Pose data of all the components of an entity (i.e., the Pose of a dummy, as seen in the illustration). In fact, most 3D editing software solutions include a separate "Pose mode" so that artists can independently work on the geometry of the different 3D models and on their animation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_pose_chain"></a> <strong>Pose Chain</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/SceneGraph.png" alt="Pose Chain"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/SceneGraph.blend">SceneGraph.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>“A Pose Chain is a sequence of Poses that is used to determine the position and orientation of objects across multiple Frames.”</strong></p>
+<p class="tableblock">When dealing with multiple reference <a href="#def_frame">Frames</a> (specially, when they are of different types), it is necessary to perform several complex transformation operations to convert between the different <a href="https://www.w3.org/2015/spatial/wiki/Coordinate_Reference_Systems">Coordinate Reference Systems</a>. To facilitate this time-consuming process and ensuring that the operations are applied in the right order, the different poses are often organized into one-dimensional sequences of <a href="#def_pose">Poses</a> called "Chains".</p>
+<p class="tableblock">In many applications, where a large number of entities have similar Pose Chains, it is common to reorganize this structure into a Graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In Computer Graphics, this concept is the basis of the "Scene Graph", in which the Transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the Pose of each entity of the graph is calculated in a <a href="https://en.wikipedia.org/wiki/Depth-first_search">depth-first</a> manner that minimizes the number of required calculations.</p>
+<p class="tableblock">NOTE: The definition of GeoPose needs to say that "a GeoPose" is something that complies with the specification but a "geographically-anchored pose" is a concept which can be encoded in proprietary manners or in manner compliant with the standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_geopose"></a> <strong>OGC GeoPose</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/GeoPose.png" alt="GeoPose"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend">GeoPose.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A GeoPose is a <a href="#def_pose">Pose</a> in relation to a real-world object (by default, Earth), typically, via a Geographical <a href="#Frame">Reference Frame</a>."</strong></p>
+<p class="tableblock">The goal of the standardization of GeoPose is to establish a single mechanism to encode the position and orientation of an real/virtual objects within a geographical (ellipsoidal) <a href="#def_frame">Frame</a>, greatly simplifying the determination of the pose of entities relative to an astronomical object and, consequently, relative to each other.</p>
+<p class="tableblock">In practical terms, a GeoPose facilitates the application of a transformation operations to properly position and orientate modes in a <a href="#def_pose_chain">Scene Graph</a> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_bc_location"></a> <strong>Location</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"Not to be confused with the term Position, a location is a distinctive region of a space."</strong></p>
+<p class="tableblock">While a Position merely specifies a single point within a space (relative to a <a href="#def_frame">Frame</a>), a Location defines a limited region within a space (often with its very own <a href="#def_frame">Frame</a>). A location generally receives a unique name within a context (or within another location) to easily identify it among others and, if necessary, it can also have a additional semantic information to further differentiate it (e.g., "Washington D.C.", "Washington State" and "Washington City, Utah"). There are as many types of locations as there are types of spaces (e.g., "the bottom of screen", "behind the car", "Earth&#8217;s orbit", etc.), but it is specially relevant in the context of Geography, where the *Geo*location ("In which street/road/town I am?") is often much more important than the actual *Geo*position ("what are my GPS coordinates?").</p>
+<p class="tableblock">The boundaries of Locations are often defined using either dimensional properties (i.e., width, height and depth) or specific shapes (most notably, 2D projections in a geographical space called <a href="https://en.wikipedia.org/wiki/Geo-fence">Geofences</a>). However, when there are a large amount of locations or these are constantly changing, the boundaries are defined by proximity to the closest point in the <a href="https://en.wikipedia.org/wiki/Topological_skeleton">topological skeleton</a> or by the minimum number of logical connections.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="vg-orientation-systems-section"><a class="anchor" href="#vg-orientation-systems-section"></a>3.2. Orientation Systems</h3>
+<div class="paragraph">
+<p>This section covers a system to accurately describe the orientation of an object relative to the associated reference frame. As with positioning counterparts, these systems provide a vector that needs to be consistently interpreted (so that it can be converted into a rotation matrix), not only to describe the numeric values in the proper sequence, but also to note the units and to specify the type of orientation system to which the values refer.</p>
+</div>
+<div class="paragraph">
+<p>MOVE THIS REMARK TO ANOTHER PLACE: While orientation systems also have to account for inaccuracies, they are considered less important because they can generally be corrected afterwards (or recalculated using two position vectors) with relative ease.</p>
+</div>
+<div class="paragraph">
+<p>Not all applications require orientation information to define a Pose.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_euler_angles"></a> <strong>Euler Angles</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/EulerAngles.png" alt="Euler Angles"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/EulerAngles.blend">EulerAngles.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"The Euler angles are three angles introduced by Leonhard Euler to describe the orientation of a rigid body with respect to a fixed coordinate system."</strong> <a href="https://en.wikipedia.org/wiki/Euler_angles">(from Wikipedia)</a></p>
+<p class="tableblock">The angles are generally specified in degrees (in a similar way to longitude/latitude values in Global Positioning Systems), although the internal operations on computers are almost always performed in radians, one axis after another. Usually, the application order of rotation transformations is the inverse of the specification (the Z angle is applied first, then the Y on, and finally, the X one), but it might vary depending on the use case or the hand rule employed.</p>
+<p class="tableblock">It is important to note that, since the rotation operations are applied globally and linked together by the application order, if two axes are driven into a parallel configuration, it can generate a <a href="https://en.wikipedia.org/wiki/Gimbal_lock">Gimbal Lock</a>, resulting in the loss of one degree of freedom. This is usually not a problem when defining simple, discontinuous orientations, but when the use case involves overlapping or interpolating between multiple Euler angles, the result can be negatively affected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_aircraft_principled_axes"></a> <strong>Aircraft Principal Axes</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/AircraftPrincipledAxes.png" alt="Aircraft Principal Axes"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/AircraftPrincipledAxes.blend">AircraftPrincipledAxes.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"Aircraft Principal Axes define the relative (local) rotation of an object, using a plane flying in the +X axis as a reference."</strong></p>
+<p class="tableblock">This system defines the orientation of an object as a combination of rotations along the three axes of an aircraft: yaw (or normal) axis, pitch (or transverse) axis and roll (or longitudinal) axis. These axes have a direct correspondence with the X, Y and Z axis of the (right-handed) Euler system and are defined with the same units. However, since these axes are applied locally (i.e., rotating the coordinate system of the object at each step), the order of application becomes irrelevant.</p>
+<p class="tableblock">The Aircraft Principled Axes system has the advantage of being very intuitive (once the users fully understand what axis is related to the terms yaw, pitch and roll) and of not being susceptible to <a href="https://en.wikipedia.org/wiki/Gimbal_lock">Gimbal Lock</a> issues. On the other hand, this orientation system often requires additional computational power to generate the intermediate rotation matrices (one for each axis with a value different from 0) and, while the image of an airplane can be projected onto other vehicles, it might be difficult to do so with other static elements (e.g., it doesn&#8217;t make sense to define the "roll angle" of buildings or any other static structures).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_quaternions"></a> <strong>Quaternions</strong>*<br>
+<span class="image"><img src="../users_guide/figures/glossary/Quaternions.png" alt="Quaternions"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Quaternion.blend">Quaternion.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"In computer graphics, a Quaternion is 4D complex number that is used to specify orientations in a 3D space."</strong></p>
+<p class="tableblock">In essence, a Quaternion is a mathematical construct with 3 imaginary components (i, j and k) and one real component. When it is used to describe 3D orientations, each imaginary component describes the dimension of a <strong>unitary</strong> vector in a particular axis of the space (i, j and k are assigned to the X, Y and Z axis, respectively) whereas the real component expresses <strong>half</strong> of the rotation around that unitary vector, expressed in radians. However, to ensure that the resulting axial vector is unitary (i.e., its length equals one), a quaternion has to follow the fundamental formula i^2 = j^2 = k^2 = i⋅j⋅k = -1.</p>
+<p class="tableblock">Due to their mathematical construction and the possibility to interpolate them both <a href="https://en.wikipedia.org/wiki/Linear_interpolation">linearly</a> and <a href="https://en.wikipedia.org/wiki/Slerp">spherically</a>, most 3D engines use Quaternions internally to orientate and animate compound objects. However, the complex nature and the interdependence between imaginary components, make Quaternions very difficult for most human beings to understand and use, so they are rarely employed in user interfaces or human-readable documents.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_lookat_systems"></a> <strong>Look-At Systems</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/LookAtSystem.png" alt="Look-At Systems"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/LookAtSystem.blend">LookAtSystem.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Look-At system enables the definition of orientation relative to another object or position vector."</strong></p>
+<p class="tableblock">Similar to Quaternions, Look-At systems use a vector (obtained from the difference of the target position minus the current position) to determine the orientation of an object. After normalizing the vector, it is possible to use its components to create a quaternion and apply the same mathematical operations. However, to properly determine the rotation angle around the axial vector (the real component of a quaternion), it is necessary to also provide an "up" vector to serve as a pivot.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="vg-positioning-systems-section"><a class="anchor" href="#vg-positioning-systems-section"></a>3.3. Positioning Systems</h3>
+<div class="paragraph">
+<p>This section covers a system to accurately describe the position of an object relative to the associated reference frame. The position of an object is a single point in space relative to the origin point of the reference frame. This point is usually placed in the center of mass of the object and provides a simple way to perform other spatial calculations (i.e., distances between objects, travel time, collision detection/avoidance, etc.). In contrast, with a camera, the point could be its focal point.</p>
+</div>
+<div class="paragraph">
+<p>The objective of positioning systems is to provide a position vector (that is often converted into a translation matrix) as precise as possible within a reference frame. These vectors are often accompanied with an (in)accuracy value to be able to establish an uncertainty threshold for different tasks.</p>
+</div>
+<div class="paragraph">
+<p>We distinguish the concepts of position and location. Location is a broader term that can be represented in many forms, including textual forms such as the address. While it is possible to define a position using a known location (e.g., "This building is in Tokyo"), this practice often results in imprecise information.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_local_systems"></a> <strong>Local Systems</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/LocalPositioning.png" alt="Local Positioning"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/LocalPositioning.blend">LocalPositioning.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Local Positioning System defines the location of objects relative to a <strong>Frame</strong> based on <a href="https://en.wikipedia.org/wiki/Euclidean_space">Euclidean spaces</a>."</strong></p>
+<p class="tableblock">These frames are often defined with an arbitrary point of origin depending on the nature of the subspace to represent. When working with physical spaces or virtual 3D scenes, the point of origin is generally situated in the center of the space (to avoid the limitations of <a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">single-precision floating-point numbers</a>). However, when operating within 2D spaces with clear boundaries, like screens or documents, the point of origin is normally placed in the top-left corner (due to the graphic systems based on the left-to-right, top-to-bottom writing direction used in most western countries). Needless to say, this makes the transformations between the different frames (i.e., determining what 3D object has the user selected on a 2D screen) a very cumbersome process.</p>
+<p class="tableblock">In recent years, advancements in <a href="https://en.wikipedia.org/wiki/Indoor_positioning_system">Indoor Positioning Systems</a> technologies have enabled the precise tracking of real-world elements in relatively large <strong>local</strong> subspaces. Yet, when a use case has more than a single location or the curvature of the Earth becomes an important factor to take into account, using a Global Location System is generally a better option.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_global_systems"></a> <strong>Global Systems</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/GlobalPositioning.png" alt="Global Positioning"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GlobalPositioning.blend">GlobalPositioning.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Global Positioning System defines the location of objects relative to a <strong>Frame</strong> based on <a href="https://en.wikipedia.org/wiki/Spherical_geometry">spherical spaces</a>, generally associated with the planet Earth."</strong></p>
+<p class="tableblock">As its name implies, a Global Positioning System is defined by a spherical object that establishes the properties of a <strong>Frame</strong> itself (even if the astronomical body is not a perfect sphere). The resulting subspace is delimited in the two horizontal dimensions of the surface of a sphere (<strong>longitude</strong> should only have values between -180 and 180 degrees, whereas the <strong>latitude</strong> values should be within a -90 to 90 degrees) and partially delimited in the vertical dimension (<strong>altitude</strong> values should never be lower than the negative value of the radius of the sphere). As for the point of origin of this subspace, for practical reasons, it is generally placed on an arbitrary point alongside the equator of the sphere (thus, also defining an offset value for the altitude values).</p>
+<p class="tableblock">Traditionally, determining the position of an object on the surface of the Earth with any degree of accuracy required cumbersome tools and manual calculations. Fortunately, nowadays, the existence of satellite-based radio-navigation systems like <a href="https://en.wikipedia.org/wiki/Global_Positioning_System">GPS</a>, <a href="https://en.wikipedia.org/wiki/Galileo_(satellite_navigation)">Galileo</a> or <a href="https://en.wikipedia.org/wiki/Indian_Regional_Navigation_Satellite_System">NavIC</a> has greatly simplified the process and -as long as the devices can establish visual contact with three satellites- it is possible to track the position of all kinds of objects on Earth.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_universal_systems"></a> <strong>Universal Systems</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/UniversalPositioning.png" alt="Universal Positioning"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/UniversalPositioning.blend">UniversalPositioning.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Universal Positioning System defines the location of objects relative to an Inertial Frame based on <a href="https://en.wikipedia.org/wiki/Minkowski_space">Minkowski spaces</a>."</strong></p>
+<p class="tableblock">These systems aim to provide a more precise and truly unique positioning for objects relative to an inertial point in the physical Universe (generally, the barycenter of the Solar System). However, since the Minkowski spaces are defined by the rules of <a href="https://en.wikipedia.org/wiki/Special_relativy">Special Relativity</a>, the very subspaces are "curved" by <a href="https://en.wikipedia.org/wiki/Lorentz_transformation">Lorentz Transformations</a> and any traversal is limited by the <a href="https://en.wikipedia.org/wiki/Speed_of_light">Speed of Light</a>.</p>
+<p class="tableblock">Needless to say, the extremely complex calculations that these positioning systems require relegating them to applications related with interplanetary travel and communications. For example, the SPICE framework created by the NASA&#8217;s Planetary Science Division operates with both the <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/17_frames_and_coordinate_systems.pdf">J2000 and ICRF Inertial Frames</a> to calculate transfer orbits between bodies of the Solar System.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="vg-time-related-concepts-section"><a class="anchor" href="#vg-time-related-concepts-section"></a>3.4. Time-related Concepts</h3>
+<div class="paragraph">
+<p>While, by definition, a pose defines the position and orientation of an object at a particular point in time, there are many applications that require the use of temporal sequences of poses. Properly taking into account the temporal dimension requires consideration of additional factors like (moment of) inertia, mass, changes in shape and, in extreme cases, even the variations in the Earth&#8217;s gravity field.</p>
+</div>
+<div class="paragraph">
+<p>To help represent this complexity, the following list of terms is intended to offer a basic introduction to the topic.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_animation"></a> <strong>Animation</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/Animation.png" alt="Animation"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Animation.blend">Animation.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"Animation is a method to create the illusion of movement through a collection of still images."</strong></p>
+<p class="tableblock">In computer graphics, animation is generally simulated by modifying the properties of an object (including its position, rotation, scale, material colors, etc.) over a period of time (or timeline). Since complex deformations require a large number of physics calculations, most animation systems either operate with properties independently (i.e, separating position, orientation and scale) or define skeleton-based systems to alter the geometry of the object in a controllable way. In recent years, however, many 3D engines incorporate procedural subsystems to simulate advanced animations (such as explosions, wind systems, collision deformations, etc) in real-time, with relatively high degree of precision.</p>
+<p class="tableblock">Internally, each change in properties is stored into an "animation key", and when there is more than one key over time, an "animation curve" is generated to specify how to interpolate between them. A collection of curves is called an "animation clip" and can be associated to a given action or event.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_motion"></a> <strong>Motion</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/Motion.png" alt="Motion"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Motion.blend">Motion.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Motion is a type of Animation that only defines the movement (position+orientation keys) of objects."</strong></p>
+<p class="tableblock">In many use cases, it is possible to simplify complex animations by segmenting an object (generally, using a skeleton structure) and reducing the types of keys to just position and orientation (creating animation curves known as Motion Paths). This idea of only taking into consideration the movement of different parts of an object is the basis of <a href="https://en.wikipedia.org/wiki/Motion_capture">motion capture</a> techniques; a series of technologies that, nowadays, can even <a href="https://en.wikipedia.org/wiki/Facial_motion_capture">record subtle facial expressions of human beings</a>.</p>
+<p class="tableblock">Another interesting point of view is that motions can also be defined as transitions between different poses of an object. In this way, instead of having to define a single sequence of animation keys, it is possible to "jump" between different poses by merely interpolating between them whenever necessary (something especially useful when dealing with real-time camera -motion- tracking systems).</p>
+<p class="tableblock">It is important to note that a motion between two poses also generates a direction vector and an attitude (orientation relative to that direction vector).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_trajectory"></a> <strong>Trajectory</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/Trajectory.png" alt="Trajectory"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Trajectory.blend">Trajectory.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A trajectory is a precalculated Motion Path that attempts to describe the future movement of an object."</strong></p>
+<p class="tableblock">While motion paths describe the actual movements over time, in many use cases it is imperative to also be able to predict the future movement of an object (e.g., to avoid collisions or reach a location/orbit with a very specific speed and orientation). These special motion paths are called <strong>Trajectories</strong> and are usually calculated by simply taking into consideration the inertia of an object.</p>
+<p class="tableblock">This is especially important for objects placed in a stable trajectories relative to others objects (usually, astronomical bodies), because if those trajectories are entirely predictable, it is possible to create an <a href="https://en.wikipedia.org/wiki/ephemeris">Ephemeris</a> system to rapidly calculate their position at any point in time. Additionally, if a predictable trajectory is regularly repeated over time, it can also be called a stable <a href="https://en.wikipedia.org/wiki/Orbit">Orbit</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a id="def_gesture"></a> <strong>Gesture</strong><br>
+<span class="image"><img src="../users_guide/figures/glossary/Gesture.png" alt="Gesture"></span><br>
+<a href="https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Gesture.blend">Gesture.blend</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>"A Gesture is a <strong>Pose</strong> or <strong>Motion</strong> used to convey a non-vocal message."</strong></p>
+<p class="tableblock">Gestures are a form of communication that involve the positioning/movement of a part of the body in a predetermined way to express a particular concept. And although this type of communication is used by many living beings, humans have used them to develop complete sign languages or to serve as a method of identification. Some basic gestures even allow people to overcome linguistic barriers and create a culture around specific gestures.</p>
+<p class="tableblock">Nevertheless, since messages conveyed by gestures require both the issuer to be able to make the gestures and the receiver to be able to interpret them correctly, both the communication channel (the physical space) and the meaning of each gesture has to be previously defined to avoid misunderstandings.</p>
+<p class="tableblock">It is important to clarify that gestures can also be conveyed by a visual representations (e.g., the Unicode symbol U+1F44C "👌") or with robotic systems that emulate the body structure and movements of the living beings (which is one of the basis of the Animal-Robot Interaction field).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="rg-geopose-swg-process"><a class="anchor" href="#rg-geopose-swg-process"></a>4. The GeoPose Standard</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section describes the key elements of the GeoPose standard, especially the conceptual and logical models, and the implementation targets which have been derived from the logical model. The development of the standard has been led by a number of use cases and use case domains, as summarised in the diagram below.</p>
@@ -938,7 +1144,7 @@ Notice that each definition has an anchor. Anchor text would also be a good idea
 <p>INSERT the figure and explain it here or simply point the reader of the reviewers guide to that section?</p>
 </div>
 <div class="sect2">
-<h3 id="rg-conceptual-model-section"><a class="anchor" href="#rg-conceptual-model-section"></a>3.1. Conceptual Model</h3>
+<h3 id="rg-conceptual-model-section"><a class="anchor" href="#rg-conceptual-model-section"></a>4.1. Conceptual Model</h3>
 <div class="paragraph">
 <p>The GeoPose Conceptual Model consists of linked definitions of terms denoting concepts expressed in the GeoPose Logical Model and structural data unit specifications for the implementation targets.</p>
 </div>
@@ -959,7 +1165,7 @@ Change the link above to an anchor, not to the .adoc file
 </div>
 </div>
 <div class="sect2">
-<h3 id="rg-logical-model-section"><a class="anchor" href="#rg-logical-model-section"></a>3.2. Logical Model</h3>
+<h3 id="rg-logical-model-section"><a class="anchor" href="#rg-logical-model-section"></a>4.2. Logical Model</h3>
 <div class="paragraph">
 <p>While the Conceptual Model outlines the component terms and relationships in the standard, the Logical Model precisely models the classes and their relationships.</p>
 </div>
@@ -974,7 +1180,7 @@ Change the link above to an anchor, not to the .adoc file
 </div>
 </div>
 <div class="sect2">
-<h3 id="rg-standardization-targets-section"><a class="anchor" href="#rg-standardization-targets-section"></a>3.3. Encodings for Implementation</h3>
+<h3 id="rg-standardization-targets-section"><a class="anchor" href="#rg-standardization-targets-section"></a>4.3. Encodings for Implementation</h3>
 <div class="paragraph">
 <p>The core abstraction in the OGC GeoPose Standard is the Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.</p>
 </div>
@@ -1046,7 +1252,7 @@ Change the link above to an anchor, not to the .adoc file
 </div>
 </div>
 <div class="sect1">
-<h2 id="rg-landscape-standard-section"><a class="anchor" href="#rg-landscape-standard-section"></a>4. OGC GeoPose in Context</h2>
+<h2 id="rg-landscape-standard-section"><a class="anchor" href="#rg-landscape-standard-section"></a>5. OGC GeoPose in Context</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section discusses the place of GeoPose in the world - how GeoPose is situated in the landscape of standards, and the opportunities for GeoPose to standardise the interaction between standards which manage some representation of geographically anchored position and orientation.</p>
@@ -1061,7 +1267,7 @@ Change the link above to an anchor, not to the .adoc file
 <p>There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.</p>
 </div>
 <div class="sect2">
-<h3 id="_ogc_geopose_connects_objects_to_their_representation"><a class="anchor" href="#_ogc_geopose_connects_objects_to_their_representation"></a>4.1. OGC GeoPose Connects Objects to their Representation</h3>
+<h3 id="_ogc_geopose_connects_objects_to_their_representation"><a class="anchor" href="#_ogc_geopose_connects_objects_to_their_representation"></a>5.1. OGC GeoPose Connects Objects to their Representation</h3>
 <div class="paragraph">
 <p>There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.</p>
 </div>
@@ -1079,7 +1285,7 @@ Change the link above to an anchor, not to the .adoc file
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_geopose_in_the_landscape_of_standards"><a class="anchor" href="#_ogc_geopose_in_the_landscape_of_standards"></a>4.2. OGC GeoPose in the Landscape of Standards</h3>
+<h3 id="_ogc_geopose_in_the_landscape_of_standards"><a class="anchor" href="#_ogc_geopose_in_the_landscape_of_standards"></a>5.2. OGC GeoPose in the Landscape of Standards</h3>
 <div class="paragraph">
 <p>The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.</p>
 </div>
@@ -1119,9 +1325,9 @@ On the right of this figure is a schematic showing the workflows that are enable
 </div>
 </div>
 <div class="sect2">
-<h3 id="_standards_which_could_reference_geopose_in_normative_clauses"><a class="anchor" href="#_standards_which_could_reference_geopose_in_normative_clauses"></a>4.3. Standards which Could Reference GeoPose in Normative Clauses</h3>
+<h3 id="_standards_which_could_reference_geopose_in_normative_clauses"><a class="anchor" href="#_standards_which_could_reference_geopose_in_normative_clauses"></a>5.3. Standards which Could Reference GeoPose in Normative Clauses</h3>
 <div class="sect3">
-<h4 id="_ogc_standards"><a class="anchor" href="#_ogc_standards"></a>4.3.1. OGC Standards</h4>
+<h4 id="_ogc_standards"><a class="anchor" href="#_ogc_standards"></a>5.3.1. OGC Standards</h4>
 <div class="paragraph">
 <p>The OGC has many positioning and location standards, some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing position and orientation.</p>
 </div>
@@ -1266,7 +1472,7 @@ On the right of this figure is a schematic showing the workflows that are enable
 </table>
 </div>
 <div class="sect3">
-<h4 id="_other_sdos"><a class="anchor" href="#_other_sdos"></a>4.3.2. Other SDOs</h4>
+<h4 id="_other_sdos"><a class="anchor" href="#_other_sdos"></a>5.3.2. Other SDOs</h4>
 <div class="paragraph">
 <p>There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation</p>
 </div>
@@ -1518,7 +1724,7 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 </div>
 </div>
 <div class="sect2">
-<h3 id="_geospatial"><a class="anchor" href="#_geospatial"></a>4.4. Geospatial</h3>
+<h3 id="_geospatial"><a class="anchor" href="#_geospatial"></a>5.4. Geospatial</h3>
 <div class="paragraph">
 <p><em>International Organization for Standardization (ISO)</em></p>
 </div>
@@ -1660,7 +1866,7 @@ For orientation they refer to the concept of "true north": "The world coordinate
 <p>There are also specifications (standards) that are developed for and used by industries/domains.</p>
 </div>
 <div class="sect3">
-<h4 id="_space_science"><a class="anchor" href="#_space_science"></a>4.4.1. Space Science</h4>
+<h4 id="_space_science"><a class="anchor" href="#_space_science"></a>5.4.1. Space Science</h4>
 <div class="paragraph">
 <p>The Observation Geometry System NASA uses for Space Science Missions is called SPICE.
 A tutorial presentation about SPICE is available <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf">here</a>.</p>
@@ -1711,7 +1917,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 </div>
 </div>
 <div class="sect2">
-<h3 id="rg-landscape-proprietary-section"><a class="anchor" href="#rg-landscape-proprietary-section"></a>4.5. Software that Use or Generate Geospatially-anchored Position and Orientation</h3>
+<h3 id="rg-landscape-proprietary-section"><a class="anchor" href="#rg-landscape-proprietary-section"></a>5.5. Software that Use or Generate Geospatially-anchored Position and Orientation</h3>
 <div class="paragraph">
 <p>This section of the reviewer&#8217;s guide captures information about commercial software and open source software and libraries that use or generate geospatially-anchored poses. It illustrates the diverse ways that geospatially-anchored poses are stored and represented.</p>
 </div>
@@ -1786,26 +1992,1026 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Template</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Away Team Software Ltd</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Away Team Software Ltd</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Web Video Map Tracks</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both are possible - either camera heading or moving object heading with camera yaw (from heading)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS-84 Static spatial reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Heading pitch roll</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Camera orientation is sampled periodically and intermediate values can be calculated by interpolation</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Magic Leap</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>HERE Technologies</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>FlightSafety International</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Epic Games</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Arvizio Inc.</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Cesium, Inc.</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Hexagon</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Leica Geosystems AG part of Hexagon</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Hexagon AB / myVR Software AS</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Esri</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Ecere</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Graphmetrix Inc.</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Norwegian Mapping Authority</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Fantasmo</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Cesium</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Robot Operating System (ROS)</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Frame</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SRS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Orientation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Name of software</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open source or not</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether spatial frame is geospatially anchored or local.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate which SRS are possible and how designated if multiple possibilities.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate type of coordinates (Cartesion/spherical) and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate the type of representation and the units of measure.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5565%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Company or Open Source Project Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Product or Service Name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Open Source?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"When this solution offers, generates or uses pose, is the pose (A) geospatially-anchored or (B) does it use an internally-defined (local) Frame of Reference?"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Does this solution use a static spatial reference system? Can the adopter specify their SRS?</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Please provide details about the spatial reference system used in this system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"In this solution, how is position represented?"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"In this solution, how are orientation and rotation represented?"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"In this solution, is temporal information associated with poses?"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"If temporal information is associated, provide details"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Comments</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GeoSpatially-anchored FoR</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internally-defined (local) FoR</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Locally</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">yes= Green</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Magic Leap</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ML1</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?????</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Static spatial reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Quaternions</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HERE Technologies</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LiveSight</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Static spatial reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">timestamp</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">FlightSafety International</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Professional Pilot Training</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Static spatial reference system</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Globally (latitude and longitude), Some positions are relative to objects that are moving (based on user controls)"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll, Quaternions, Euler Angles"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Poses change with time, but the temporal information is not saved"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Epic Games</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Unreal Engine</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both : A local frame of reference which is itself geospatially anchored</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spatial reference system is defined for each use</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Users can choose the CRS or their choice, as long as they have a WKT or EPSG code."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll, Quaternions, Euler Angles"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Arvizio Inc.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Arvizio Immerse 3D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">It could be both depending on data type and specific project</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spatial reference system is defined for each use</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The products contains extendable database of projections and geoids</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Could be both</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">May be in certain situations since the product supports animation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Using animation one can support changing of object(s) poses</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Cesium, Inc."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cesium ion and CesiumJS using 3D Tiles</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Static spatial reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"EPSG:4978 (earth-centered/earth-fixed). For precision reasons, keep both local and local-to-global transform data (location and rotation)."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"3D Tiles data captures the information using the standard graphics approach - transform matrices. Additional options beyond transform matrices (e.g., quaternions, heading/pitch/roll) are available via the CesiumJS API to control camera position at runtime."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"CesiumJS can display time-dynamic data provided as CZML or KML or via API. The data contains samples of position over time and CesiumJS uses interpolation to create the complete path. While CZML or KML this data can be stored in Cesium ion for convenience, Cesium ion itself doesn&#8217;t provide temporal features."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hexagon</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">LuciadFusion 2020.1 and LuciadRIA 2020.1</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spatial reference system is defined for each use</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"We support any spatial reference system for models. For the world, we typically use EPSG:4978 (geocentric reference)"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Heading pitch roll</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Euler Angles</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Camera orientation is sampled periodically and intermediate values can be calculated by interpolation</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Leica Geosystems AG part of Hexagon</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Leica Imaging Totalstation / Multistation, Tilted &amp; Imaging GNSS"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both depending on the solution ( example:for totalstation imaging camera is local )</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Static spatial reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ECF or Local</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Quaternions, Euler Angles"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Timestamp</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Hexagon AB / myVR Software AS</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">myVR XRToolkit (SDK)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spatial reference system is defined for each use</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Multiple systems depending on use case, either data dependent or application defined."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll, Quaternions"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Application defined</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Application defined</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Esri</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Oriented Imagery</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spatial reference system is defined for each use</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">It can be any spatial reference system.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll, Euler Angles, Euler Angles with two rotations about z axis and one about x axis in order z-x-z"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">AcquisitionDate parameter in Oriented Imagery Schema stores the temporal information</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Ecere</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GNOSIS Cartographer</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Normally geospatially anchored, but local transformations can be anchored to those geospatial anchors"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Normally WGS84 is used, but we want to improve support for different epochs / realizations of WGS84, and other CRS can be converted to our internal WGS84 representation as well."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Globally (latitude and longitude)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll, Quaternions, The question is tricky as Yaw, Pitch, Roll Euler are also called Euler angles. Wikipedia distinguishes between ""Proper Euler angles"" and ""Tait–Bryan angles"". We call YPR Euler angles: <a href="https://github.com/ecere/ecere-sdk/blob/dev/ecere/src/gfx/3D/Quaternion.ec#L309" class="bare">https://github.com/ecere/ecere-sdk/blob/dev/ecere/src/gfx/3D/Quaternion.ec#L309</a> , even though that may not be pedantically correct."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Not currently, but there certainly is value in doing so, though it could be provided alongside the pose."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Graphmetrix Inc.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Trinpod</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Static spatial reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84 - nested objects ultimately have an event based reference back to lat/long/elev</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Events are used from start to finish to capture object state and motion using nested oriented reference frames that ultimately resolve to WGS84 at any nesting level</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Quaternions</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Events with start time/location and end time/location are used for all changes to entities</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Norwegian Mapping Authority</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Border Go</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The GeoPose library maintains an estimate of the geospatial position and orientation of a  real-world anchored local frame of reference.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"The local cartesian coordinate system (frame of reference) in the AR session  paralell to the local tangent plane of the WGS84 ellipsoid and has east north up axis, in addition there is a nested frame transform that maintains a local position and orientation (pose) relative to the local frame of reference."</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">there is a geodesy library that allows the use of geospatial datasets using different SRS&#8217;s</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"latitude, longitude and altitude above/below the reference ellipsoid in meters"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"two  cartesian coordinate systems, one that holds the position of the origin the earth anchored reference frame that is estimated to be at a lat,lng,alt with LTP ENU, and one that holds the position of the AR device relative to this reference frame. In addition there is a computer graphics scene graph that contains all the 3d content that is rendered by the AR application (gespatial data)"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Quaternions</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GeoPose is estimated continously based on various sensor data (sensor fusion) and a phyiscal model that realies on tampstamps of the meassurements that updates the estimate.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Fantasmo</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Camera Positioning Standard</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Proposed</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cesium</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cesium .js VelocityOrientationProperty</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ECEF</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">local cartesian</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"ECEF + lat,lng, alt"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">local cartesian frames of reference</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Quaternion</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">the orientation are estimated based on a stream of points that typically are temporally arranged like a flight trajectory</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Not an original account by Cesium.js developer. Based on Jan-Erik Vinje reading som of the  docs such as this: <a href="https://cesium.com/learn/cesiumjs/ref-doc/VelocityOrientationProperty.html" class="bare">https://cesium.com/learn/cesiumjs/ref-doc/VelocityOrientationProperty.html</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Robot Operating System (ROS)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">geographic_msgs/GeoPose.msg</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GeoPose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">One can also use local cartesian frames of reference.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">It can at least handle UTM and WGS84</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS84 + UTM</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"WGS84 (Lat,lng,alt) + UTM"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">local cartesian frames of reference</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Quaternion</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Robots are by their nature dynamic and ROS provides mechanism for GeoPose streaming</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Not an original account by ROS developer or user. Based on Jan-Erik Vinje reading som of the  docs <a href="http://docs.ros.org/" class="bare">http://docs.ros.org/</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5565%;">
+</colgroup>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Magic Leap</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">ML1</p></td>
@@ -2427,7 +3633,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-10-06 21:56:36 -0700
+Last updated 2021-10-21 22:35:01 -0700
 </div>
 </div>
 </body>
