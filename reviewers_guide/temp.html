@@ -1868,47 +1868,25 @@ For orientation they refer to the concept of "true north": "The world coordinate
 <div class="sect3">
 <h4 id="_space_science"><a class="anchor" href="#_space_science"></a>5.4.1. Space Science</h4>
 <div class="paragraph">
-<p>The Observation Geometry System NASA uses for Space Science Missions is called SPICE.
-A tutorial presentation about SPICE is available <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf">here</a>.</p>
+<p>The Observation Geometry System NASA uses for space science missions is called SPICE.</p>
 </div>
 <div class="paragraph">
-<p><em>NASA</em></p>
+<p>The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document as an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the <a href="https://en.wikipedia.org/wiki/Earth-centered_inertial">'J2000'</a>  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Standard</strong></th>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Relevant Section</strong></th>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><strong>Quote the Text</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SPICE</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/21_fk.pdf">Frame Kernel</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>While the SWG appreciated the full treatment of frame transformation in the SPICE system, the members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.</p>
+</div>
+<div class="paragraph">
+<p>A tutorial presentation about SPICE is available <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/21_fk.pdf">Frames Kernel</a> is the key component of SPICE to link reference frames and which in particular inspired the frame transformations in OGC GeoPose.</p>
+</div>
 <div class="paragraph">
 <p><em>Space Data Standards</em></p>
 </div>
 <div class="paragraph">
 <p>International space data standards are documented in <a href="https://ccsds.org">Consultative Committee for Space Data Systems (CCSDS)</a> Blue Books. Spacecraft position and orientation are described as <em>attitude</em> as described in section 5.3 of <a href="https://public.ccsds.org/Pubs/500x0g4.pdf">CCSDS Navigation Data - Definitions and Conventions</a>. Typical GeoPose use cases include antenna tracking, sun sensor, star sensor, gyro package and horizon sensor.</p>
-</div>
-<div class="paragraph">
-<p><em>To Do</em></p>
-</div>
-<div class="paragraph">
-<p>What are the IEEE standards?</p>
-</div>
-<div class="paragraph">
-<p>What about ISO standards?</p>
 </div>
 <div class="paragraph">
 <p>This URL is a convenient place to view many space data standards
@@ -2052,7 +2030,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Time Representation</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Web Video Map Tracks</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Trkd Video and TrkdCam</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both are possible - either camera heading or moving object heading with camera yaw (from heading)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WGS-84 Static spatial reference system</p></td>
@@ -2762,7 +2740,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Could be both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll" in degrees</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">May be in certain situations since the product supports animation</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Using animation one can support changing of object(s) poses</p></td>
@@ -3106,7 +3084,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Could be both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"Yaw, pitch and roll" in degrees</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">May be in certain situations since the product supports animation</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Using animation one can support changing of object(s) poses</p></td>
