@@ -1,7 +1,7 @@
 [[rg-landscape-standard-section]]
 == OGC GeoPose in Context
 
-In this section of the reviewer’s guide, we list the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose.   
+In this section of the reviewer’s guide, we list the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose.
 As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any of the specified forms of the OGC GeoPose standard.
 
 The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.
@@ -184,17 +184,6 @@ __Third Generation Partnership Project (3GPP)__
 |Media time
 |===
 
-__MPEG Immersive Video (MIV)__
-|===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|https://mpeg.chiariglione.org/standards/mpeg-i[MPEG-I/ISO 23090]
-|Virtual
-|No
-|Yes
-|Attributes
-|Media time
-|===
-
 __Camera & Imaging Products Association (CIPA/JEITA)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
@@ -217,6 +206,13 @@ __International Organization for Standardization (ISO)__
 |Position only
 |Attributes
 |UTC
+
+|https://mpeg.chiariglione.org/standards/mpeg-i[MPEG Immersive Video (MIV) MPEG-I (23090)]
+|Virtual
+|No
+|Yes
+|Attributes
+|Media time
 |===
 
 __Institute of Electrical and Electronics Engineers (IEEE)__
