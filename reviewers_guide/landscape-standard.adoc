@@ -58,7 +58,7 @@ Our assessment of the pose-related elements of other OGC standards are summarise
  - *Graphic/Virtual Context*: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
  - *Local SRS*: does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?
  - *Geodetic SRS*: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
- - *6DOF as entity or attributes*: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the post entity and the object entity?
+ - *6DOF as entity or attributes*: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the pose entity and the object entity?
  - *Temporality*: does the standard manage temporal information for the objects represented?
 
 |===
@@ -68,13 +68,15 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 
 |Sensor Web Enablement (SWE)||||||
 
+|GML|Virtual|Y|Y|Attributes. Direction only (no roll)|Y|v3.2.1
+
 |CityGML|Y|Y|Y|Y (?)|Y|
 
-|IndoorGML||Y|Y|||
+|IndoorGML|Virtual|Y|Y|No orientation|IndoorPOI extension|Based on GML
 
 |"CDB (Common Database)"|?|?|?|?|?|
 
-|KML|||Y|||
+|KML|Graphic|Y|Y|Entity|Y|
 
 |Observations and Measurements|?|?|?|?|?|
 
@@ -82,11 +84,13 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 
 |IMDF|?|?|?|?|?|
 
-|3D Tiles|Y|Y|Y|"x,y,z+normal"|Y|"3D Tiles is basically a binary, encapsulated glTF with georeferencing. There are efforts to make glTF more ""geospatially friendly"". -> include glTF (Khronos Group) in the list."
+|3D Tiles|Both|Y|Y|Entity|Y|Based on glTF
 
 
 
 |===
+
+Note: "3D Tiles is basically a binary, encapsulated glTF with georeferencing. There are efforts to make glTF more ""geospatially friendly"". -> include glTF (Khronos Group) in the list."
 
 ==== Other SDOs
 
@@ -97,18 +101,18 @@ __Khronos Group__
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 
 |glTF
-|?
-|?
-|?
-|?
-|?
+|Both
+|Y
+|N
+|Entity
+|Y
 
 |OpenXR
-|?
-|?
-|?
-|?
-|?
+|Virtual
+|Y
+|N
+|Entity
+|Y
 
 |OpenVX
 |?
@@ -217,8 +221,9 @@ __International Organization for Standardization (ISO)__
 
 __Institute of Electrical and Electronics Engineers (IEEE)__
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 |Distributed Interactive Simulation (1278)
+|?
 |?
 |?
 |?
@@ -226,11 +231,12 @@ __Institute of Electrical and Electronics Engineers (IEEE)__
 |?
 
 |Smart Transducer Interface (1451)
-|?
-|?
-|?
-|?
-|?
+|N
+|Y
+|Y
+|Entity
+|Y
+|Based on GML
 |===
 
 __BuildingSmart__
