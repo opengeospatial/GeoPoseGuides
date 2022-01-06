@@ -64,25 +64,25 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 |===
 |Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF as entity or attributes?|Temporality|Remark
 
-|Moving Features|?|Y|Y|Attributes of temporal geometry|Y|
+|Moving Features|Virtual|Y|Y|Attributes of temporal geometry|Y|
 
-|Sensor Web Enablement (SWE)||||||
+|Sensor Web Enablement (SWE)|Virtual|Y|N|Attributes|Y|
 
 |GML|Virtual|Y|Y|Attributes. Direction only (no roll)|Y|v3.2.1
 
-|CityGML|Y|Y|Y|Y (?)|Y|
+|CityGML|Both|Y|Y|Y (?)|Y|
 
 |IndoorGML|Virtual|Y|Y|No orientation|IndoorPOI extension|Based on GML
 
-|"CDB (Common Database)"|?|?|?|?|?|
+|"CDB (Common Database)"|Both|Y|Y|Y|Y|
 
-|KML|Graphic|Y|Y|Entity|Y|
+|KML|Both|Y|Y|Entity|Y|
 
-|Observations and Measurements|?|?|?|?|?|
+|Observations and Measurements|Virtual|Y|N|Attributes|Y|
 
-|SensorThings API|?|?|?|?|?|
+|SensorThings API|Virtual|Y|Y|Attributes|Y|
 
-|IMDF|?|?|?|?|?|
+|IMDF|Both|Yes|Yes|Attributes|Y|
 
 |3D Tiles|Both|Y|Y|Entity|Y|Based on glTF
 
@@ -113,13 +113,6 @@ __Khronos Group__
 |N
 |Entity
 |Y
-
-|OpenVX
-|?
-|?
-|?
-|?
-|?
 
 |===
 
@@ -223,12 +216,12 @@ __Institute of Electrical and Electronics Engineers (IEEE)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 |Distributed Interactive Simulation (1278)
-|?
-|?
-|?
-|?
-|?
-|?
+|Virtual
+|No
+|Position only
+|Attribute
+|Y
+|
 
 |Smart Transducer Interface (1451)
 |N
@@ -244,10 +237,10 @@ __BuildingSmart__
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |IFC
 |Y
-|?
+|Y
 |Y
 |No
-|?
+|No
 |===
 
 IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
@@ -259,16 +252,18 @@ __ASTM__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |E57
-|link:http://libe57.org/features.html[defines fifteen features that cover the core capabilities of the E57 format]
-|?
-|?
-|?
-|?
+|No
+|Y
+|Y
+|3 DOF
+|Y
 |===
 
-There are also specifications (standards) that are developed for and used by industries/domains.
+The core capabilities of the E57 format link:http://libe57.org/features.html[includes fifteen features.]
 
 ==== Space Science
+There are also specifications (standards) that are developed for and used by industries/domains.
+
 The Observation Geometry System NASA uses for space science missions is called SPICE.
 
 The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document as an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
