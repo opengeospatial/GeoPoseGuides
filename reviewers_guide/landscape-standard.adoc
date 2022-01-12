@@ -66,7 +66,7 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 
 |Moving Features|Virtual|Y|Y|Attributes of temporal geometry|Y|
 
-|Sensor Web Enablement (SWE)|Virtual|Y|N|Attributes|Y|
+|Sensor Web Enablement (SWE)|Virtual|Y|Y|Attributes|Y|
 
 |GML|Virtual|Y|Y|Attributes. Direction only (no roll)|Y|v3.2.1
 
@@ -78,19 +78,21 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 
 |KML|Both|Y|Y|Entity|Y|
 
-|Observations and Measurements|Virtual|Y|N|Attributes|Y|
+|Observations, Measurements and Samples (OMS)|Both|Y|Y|Both|Y|
 
 |SensorThings API|Virtual|Y|Y|Attributes|Y|
 
-|IMDF|Both|Yes|Yes|Attributes|Y|
+|IMDF|Both|Y|Y|Attributes|Y|
 
 |3D Tiles|Both|Y|Y|Entity|Y|Based on glTF
 
-
+|JSONFG| ? |?|?|?|?|under development, ask Josh L
 
 |===
 
-Note: "3D Tiles is basically a binary, encapsulated glTF with georeferencing. There are efforts to make glTF more ""geospatially friendly"". -> include glTF (Khronos Group) in the list."
+Note: 3D Tiles is basically a binary, encapsulated glTF with georeferencing.
+
+Note: In OMS, where location is foreseen, it is always an ISO19107 Geometry Type. Temporal information is provided both in the Observation and the Deployment, utilizing TM_Object or TM_Period. Temporal attributes are defined in ISO19108.  
 
 ==== Other SDOs
 
@@ -210,7 +212,24 @@ __International Organization for Standardization (ISO)__
 |Yes
 |Attributes
 |Media time
+
+
+|ISO19107
+|?
+|?
+|?
+|?
+|?
+
+|ISO19108
+|?
+|?
+|?
+|?
+|?
+
 |===
+
 
 __Institute of Electrical and Electronics Engineers (IEEE)__
 |===
