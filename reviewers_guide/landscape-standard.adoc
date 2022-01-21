@@ -28,7 +28,7 @@ OGC Moving Features and GeoPose have distinct roles and are complementary. Movin
 
 The OGC Sensor Web Enablement suite of standards deals with how to work with sensors and getting useful observations out of them.
 
-image::./images/landscape-standard-ef0fe.png
+image::./images/landscape-standard-ef0fe.png["GeoPose and SWE Diagram"]
 
 On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
 
