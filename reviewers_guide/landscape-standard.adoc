@@ -28,7 +28,8 @@ OGC Moving Features and GeoPose have distinct roles and are complementary. Movin
 
 The OGC Sensor Web Enablement suite of standards deals with how to work with sensors and getting useful observations out of them.
 
-image::images/landscape-standard-ef0fe.png
+image::./images/landscape-standard-ef0fe.png
+
 On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
 
 If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
@@ -70,7 +71,7 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 
 |GML|Virtual|Y|Y|Attributes. Direction only (no roll)|Y|v3.2.1
 
-|CityGML|Both|Y|Y|Y (?)|Y|
+|CityGML|Both|Y|Y|Attributes|Y|
 
 |IndoorGML|Virtual|Y|Y|No orientation|IndoorPOI extension|Based on GML
 
@@ -92,7 +93,7 @@ Our assessment of the pose-related elements of other OGC standards are summarise
 
 Note: 3D Tiles is basically a binary, encapsulated glTF with georeferencing.
 
-Note: In OMS, where location is foreseen, it is always an ISO19107 Geometry Type. Temporal information is provided both in the Observation and the Deployment, utilizing TM_Object or TM_Period. Temporal attributes are defined in ISO19108.  
+Note: In OMS, where location is foreseen, it is always an ISO19107 Geometry Type. Temporal information is provided both in the Observation and the Deployment, utilizing TM_Object or TM_Period. Temporal attributes are defined in ISO19108.
 
 ==== Other SDOs
 
@@ -178,7 +179,7 @@ __Third Generation Partnership Project (3GPP)__
 |https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
 |Virtual
 |No
-|Yes
+|Y
 |Attributes
 |Media time
 |===
@@ -194,7 +195,6 @@ __Camera & Imaging Products Association (CIPA/JEITA)__
 |UTC
 |===
 
-=== Geospatial
 
 __International Organization for Standardization (ISO)__
 |===
@@ -226,7 +226,7 @@ __International Organization for Standardization (ISO)__
 |?
 |?
 |?
-|?
+|Y
 
 |===
 
@@ -262,28 +262,30 @@ __BuildingSmart__
 |No
 |===
 
-IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for this site "
-http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm
+IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for (http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm)[this site)]"
+
 For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
 
 
 __ASTM__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|E57
+|E57 3D Imaging Data Exchange (E2807-11 (2019))
 |No
 |Y
 |Y
-|3 DOF
+|Attribute
 |Y
 |===
 
-The core capabilities of the E57 format link:http://libe57.org/features.html[includes fifteen features.]
+The core capabilities of the E57 data exchange format link:http://libe57.org/features.html[includes fifteen features.]
 
 ==== Space Science
 There are also specifications (standards) that are developed for and used by industries/domains.
 
 The Observation Geometry System NASA uses for space science missions is called SPICE.
+
+[INSERT MIKEL's FIGURE HERE]
 
 The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document as an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
 
