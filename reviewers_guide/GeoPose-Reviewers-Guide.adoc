@@ -96,7 +96,7 @@ include::clause_6_3_standardization_targets.adoc[]
 
 include::landscape-standard.adoc[]
 
-include::landscape-proprietary.adoc[]
+include::closing_clause.adoc[]
 
 include::annex-history.adoc[]
 

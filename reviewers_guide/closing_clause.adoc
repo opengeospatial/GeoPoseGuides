@@ -1,0 +1,11 @@
+== Conclusion
+
+Thank you for taking the time to read this guide for OGC GeoPose reviewers. Please visit the http://www.geopose.org[GeoPose website] for further details about implementers and other supporting tools.
+
+Any errors or omissions can be corrected upon review. If you would like to suggest changes to this guide, please create a new issue in the https://github.com/opengeospatial/GeoPoseGuides/issues[Reviewers Guide GitHub repository.]
+
+If you have questions or suggestions for the GeoPose specification, we also request that an issue be created. Issues or feedback about the standard can be created in the https://github.com/opengeospatial/GeoPose/issues[GeoPose GitHub repository.]
+
+To sign up for periodic announcements and updates about GeoPose, join our https://docs.google.com/forms/d/e/1FAIpQLSe-3e1HAL5D7jkojsIphqNrK2BqlJ5ZB-bKNTXRAFVSHOczzQ/viewform[mailing list.]
+
+If there are any other issues, our https://docs.google.com/forms/d/e/1FAIpQLSdXIYlTqCX0qYkJwE0UsxgI-L52su2zQxjoGeYIaFwlI25N0A/viewform[contact form] will reach the SWG co-chairs and members.

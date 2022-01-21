@@ -17,7 +17,7 @@ Since new software is being introduced to address the requirements of use cases 
 |===
 
 __Template__
-
+[orientation=landscape]
 |===
 
 |Name|Open Source?|Frame|SRS|Position|Orientation|Time Representation
