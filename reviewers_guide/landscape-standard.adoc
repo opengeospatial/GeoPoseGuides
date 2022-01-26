@@ -1,60 +1,60 @@
 [[rg-landscape-standard-section]]
 == OGC GeoPose in Context
 
-In this section of the reviewer’s guide, we list the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose.
-As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any of the specified forms of the OGC GeoPose standard.
+In this section of the reviewer’s guide, the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose are listed.
+As a convention for the remainder of this section, the term "GeoPose" is used as a shorthand for any of the specified forms of the OGC GeoPose standard.
 
-The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.
+The key question this section answers is where and how GeoPose fits into the current landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.
 
-There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.
+There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: Aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning, aerospace, and so forth. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment - sometimes graphical, sometimes geospatial.
 
 === OGC GeoPose Connects Objects to their Representation
-There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
+There are both conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.
 
-In a standard Web browser, information is displayed on a plane. There is a need for a standard to represent information retrieved from the Web on the 2D display plane in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.
+In a standard Web browser, information is displayed on a plane. There is a need for a standard to represent information retrieved from the Web on the 2D display plane in a manner that is sufficiently fast to provide XR experiences. https://www.w3.org/TR/webxr/[W3C WebXR] focuses on this need.
 
-In order to establish this data flow, there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. Khronos OpenXR focuses on that stage of the pipeline.
+In order to establish the data flow required for 2D to XR experiences, there is a need in graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. https://www.khronos.org/openxr/[Khronos OpenXR] focuses on that stage of the pipeline.
 
-On the other side, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that’s capturing all the data about the features (e.g. objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations & Measurements and SensorML, addresses these needs.
+In parallel, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that is capturing all the data about the features (e.g. objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly the OGC Abstract Specification Topic 20: Observations Measurements and Samples and SensorML Standards, addresses these needs.
 
-Each of these stages in the pipeline need to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
+Each of these stages in the pipeline needs to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
 
 === GeoPose for 3D Asset Formats
 
-The world of 3D asset formats is a bewildering mess that has been adding new formats to the list as new modeling  and content creation applications and 3D content distribution platforms have appeared. This problem is generating a lot of wasted costs in the 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent. Over time some notable initiatives and standardization efforts, such as the Khronos Group's glTF format that already has wide adoption as well as  the recent "Real-time Asset Creation Guidelines" from their 3D E-commerce Working Group. The Open Source USD format published by Pixar has also recently seen a lot of adoption by major players in the industry. In the spatial computing industry and in particular, for use-cases handling 3D assets with relation to the real world such as in real-world anchored AR, or 3d visualization, simulations or interactive representations of digital twins with known locations in the real world (from buildings to vehicles) there is to the knowledge of this working group not yet a standardized solution for encoding a real-world pose of 3D assets. In the glTF standards working group it has been proposed to create a GeoPose extension to the gltTF format using the OGC GeoPose standard that this document presents to reviewers.
+The world of 3D asset formats is highly complex. New formats are continuously being developed as new modeling  and content creation applications and 3D content distribution platforms have appeared. This problem is generating a lot of wasted costs in the 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent. Over time some notable initiatives and standardization efforts, such as the widely adopted Khronos Group's glTF format as well as the recent "Real-time Asset Creation Guidelines" from Khronos Group's 3D E-commerce Working Group. The Open Source USD format published by Pixar has also recently seen a lot of adoption by major players in the industry. In the spatial computing industry and in particular, for use cases handling 3D assets in real-world anchored AR there is not (to the knowledge of this working group) a standardized solution for encoding a real world pose of 3D assets. In the Khronos glTF standards working group creating a GeoPose extension to the glTF format using the OGC GeoPose standard has been proposed.
 
-In this document, we would like to point stakeholders who either work with or develop standards for 3D assets formats towards the opportunity of creating extensions to their formats that will comply with the OGC GeoPose encoding.
+In this document, stakeholders who either work with or develop standards for 3D assets formats should consider the opportunity of creating extensions to their formats that comply with the OGC GeoPose Standard.
 
 ==== The Khronos Group's glTF format and GeoPose
-The Khronos Gropu is an important standards body within the realm of computer graphics and hardware acceleration. They are perhaps most known for OpenGL and its variants for different platforms but also has a long history of defining standardized formats for exchanging different types of data such as 3d asset, textures, and even pre-trained neural net models. Recently they also succeeded in createing the OpenXR standard for the AR and VR industries.
+The Khronos Group is an important standards body on the computer graphics and hardware acceleration domain. They are perhaps best known for OpenGL and its variants for different platforms. Khronos also has a long history of defining standardized formats for exchanging different types of data such as 3D assets, textures, and even pre-trained neural net models. Recently they also succeeded in creating the OpenXR standard for the AR and VR industries.
 
-Even more recently the *Geospatial Investigatory Subcommittee*, a part of the group working on the future developments of https://www.khronos.org/gltf/[glTF] opened an https://githubplus.com/DrX3D[issue] on "Geospatial Profile" where GeoPose was mentioned as part of new high-level capabilities to support geospatial applications through extensions. From the perspective of this standards effort, an extension to support assigning GeoPose directly to a widely used 3d asset format would be an important step in the right direction for interoperability between the 3d computer graphics, and geospatial industries, and we see how it can help enable some of the use-cases mentioned by the standards document such as those related to AR.
+Even more recently the 3D Formats Working Group (which is responsible for https://www.khronos.org/gltf/[glTF]) opened an https://githubplus.com/DrX3D[issue] on "Geospatial Profile" where GeoPose was mentioned as part of new high-level capabilities to support geospatial applications through extensions. From the perspective of the GeoPose SWG, an extension to support assigning GeoPose directly to a widely used 3D asset format would be an important step for interoperability between the 3D computer graphics, and geospatial industries.
 
 ==== Pixar's open-source USD format and GeoPose
-Most people recognize Pixar as a household name in the entertainment industry, responsible for a long list of blockbuster 3d animated movies from the 1995 "Toy Story" to the 2021 "Luca". They created the whole genre of full-length 3d graphics animation movies alongside creating an impressive number of technology breakthroughs in the fields of 3d graphics rendering and animation. A few years back Pixar did a major development project to unify and standardize they way different systems used by different people inside their organization could work on the same highly complex scene without the hassle of converting two and from different file formats and importing and exporting them between different systems. They came up with the https://graphics.pixar.com/usd/release/index.html[Universal Scene Description] format or "USD". Realizing that the solution to their internal interoperability issues would potentially solve industry wide interoperability problems of 3d graphics and animation they open-sourced their code code and documentation for the format in https://graphics.pixar.com/usd/release/press_opensource_release.html[2016].  In 2018 Apple decided to use a zip-archive version of USD for 3d assets used in AR applications running on the IOS platform. In 2019 NVIDIA announced they would standardize on USD for their Omniverse platform which in itself is being adopted for a range of industries such as autonomous vehicles, robotics, digital twins and city planning.  Over the last year (2021) support for USD export and import was added to a range of 3d authoring software such as  3DS Max, Maya  and Blender.
+Most people recognize Pixar as a household name in the entertainment industry, responsible for a long list of blockbuster 3D animated movies from the 1995 "Toy Story" to the 2021 "Luca". Pixar created the whole genre of full-length 3D graphics animation movies while creating an impressive number of technology breakthroughs in the fields of 3D graphics rendering and animation. A few years back, Pixar did a major development project to unify and standardize they way different systems used by different people inside their organization could work on the same highly complex scene without the hassle of converting two and from different file formats and importing and exporting them between different systems. Pixar developers came up with the https://graphics.pixar.com/usd/release/index.html[Universal Scene Description] format (abbreviated USD). Realizing that the solution to their internal interoperability issues would potentially solve industry wide interoperability problems of 3D graphics and animation they open-sourced their code and documentation for the format in https://graphics.pixar.com/usd/release/press_opensource_release.html[2016].  In 2018 Apple decided to use a zip-archive version of USD for 3d assets used in AR applications running on the IOS platform. In 2019 NVIDIA announced they would standardize on USD for their Omniverse platform. Omniverse is being adopted for a range of industries such as autonomous vehicles, robotics, digital twins and city planning.  Over the last year (2021) support for USD export and import was added to a range of 3D authoring software such as  3DS Max, Maya  and Blender.
 
-Although USD is not specified by a traditional standards body, it is developing into a defacto standard with wide adoption across a wide range of industries, and it is possible for the wider tech world to contribute and work with Pixar through the https://github.com/PixarAnimationStudios/USD[USD repo on GitHub].
+Although USD is not specified by a traditional standards body, it is developing into a de-facto standard with wide adoption across a wide range of industries, and the wider tech world to can contribute and work with Pixar through the https://github.com/PixarAnimationStudios/USD[USD repo on GitHub].
 
-The OGC GeoPose working group has done some initial research and been in early contact with the developers of the USD format. Just like with the glTF format USD allows for the creation of extensions. One potential avenue for our working group to explore would be propose a collaboration with NVIDIA who is already experienced with creating extensions for USD and has a lot of industry customers who work in the geospatial domain who would be likely to find such an extension useful.
+The OGC GeoPose Standards Working Group has done some initial research and has been in early contact with the developers of the USD format. Just like with the glTF format, USD allows for the creation of extensions. One potential avenue for the GeoPose SWG to explore would be to propose a collaboration with NVIDIA. NVIDIA has already gained experience creating extensions for USD and has a lot of industry customers who work in the geospatial domain who would be likely to find such an extension useful.
 
 === OGC GeoPose in the Landscape of Standards
-The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.
+The primary source of inspiration for GeoPose was the NASA SPICE framework. This framework is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than required for a simple or basic implementation, but is an incredibly appropriate foundation from which GeoPose evolved.
 
-OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
+When GeoPose was designed, the OGC Moving Features Standard was considered. Although Moving Features describes object position and orientation, that standard is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. Moving Features accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.
 
 OGC Moving Features and GeoPose have distinct roles and are complementary. Moving Features is focused on a local, municipal scale, and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose plays.
 
-The OGC Sensor Web Enablement suite of standards deals with how to work with sensors and getting useful observations out of them.
+The OGC Sensor Web Enablement (SWE) suite of standards deals with how to work with sensors and requesting observations in a standard encoding.
 
 image::./images/landscape-standard-ef0fe.png["GeoPose and SWE Diagram"]
 
-On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
+On the right of the above figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
 
-If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
+If sampling from a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world. However, the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, such as cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
 
 Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user, particularly if entities are being brought into a scene from very different source contexts, and regardless of where they are in space.
 
-Khronos OpenXR handles poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces (view, local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system, it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.
+Khronos OpenXR also handles poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces (view, local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system, it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.
 
 GeoPose can also relate the frame of reference of a Web browser window to a virtual world or the real world.
 
@@ -68,44 +68,42 @@ The approaches to this issue that have been published in other standards prior t
 
 ==== OGC Standards
 
-The OGC has many positioning and location standards, some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing position and orientation.
+The OGC has many standards that express requirements for positioning and location. Some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing both position and orientation.
 
-Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
+Some OGC standards (such as CDB) deal with fixed infrastructure. Other OGC standards, such as KML and IndoorGML, deal with somewhat more specialized information. Yet other OGC standards deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
 
-Our assessment of the pose-related elements of other OGC standards are summarised in the table below under the following headings:
+The GeoPose SWG's assessment of the pose-related elements of the OGC standards is summarised in the table below with the following headings:
 
- - *Graphic/Virtual Context*: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
- - *Local SRS*: does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?
- - *Geodetic SRS*: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
- - *6DOF as entity or attributes*: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the pose entity and the object entity?
- - *Temporality*: does the standard manage temporal information for the objects represented?
+ - *Graphic/Virtual Context*: Does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
+ - *Local SRS*: Does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?
+ - *Geodetic SRS*: Does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
+ - *6DOF as entity or attributes*: If the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the pose entity and the object entity?
+ - *Temporality*: Does the standard manage temporal information for the objects represented?
 
 |===
 |Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF as entity or attributes?|Temporality|Remark
 
-|Moving Features|Virtual|Y|Y|Attributes of temporal geometry|Y|
+|link:https://www.ogc.org/standards/movingfeatures[Moving Features]|Virtual|Y|Y|Attributes of temporal geometry|Y|
 
-|Sensor Web Enablement (SWE)|Virtual|Y|Y|Attributes|Y|
+|link:https://www.ogc.org/standards/swecommon[Sensor Web Enablement (SWE)]|Virtual|Y|Y|Attributes|Y|
 
-|GML|Virtual|Y|Y|Attributes. Direction only (no roll)|Y|v3.2.1
+|link:https://www.ogc.org/standards/gml[GML] |Virtual|Y|Y|Attributes. Direction only (no roll)|Y|v3.2.1
 
-|CityGML|Both|Y|Y|Attributes|Y|
+|link:https://www.ogc.org/standards/citygml[CityGML] |Both|Y|Y|Attributes|Y|
 
-|IndoorGML|Virtual|Y|Y|No orientation|IndoorPOI extension|Based on GML
+|link:https://www.ogc.org/standards/indoorgml[IndoorGML] |Virtual|Y|Y|No orientation|IndoorPOI extension|Based on GML
 
-|"CDB (Common Database)"|Both|Y|Y|Y|Y|
+|link:https://www.ogc.org/standards/cdb[CDB] |Both|Y|Y|Y|Y|
 
-|KML|Both|Y|Y|Entity|Y|
+|link:https://www.ogc.org/standards/kml[KML] |Both|Y|Y|Entity|Y|
 
-|Observations, Measurements and Samples (OMS)|Both|Y|Y|Both|Y|
+|link:https://www.ogc.org/standards/om[Observations, Measurements and Samples (OMS)]|Both|Y|Y|Both|Y|
 
-|SensorThings API|Virtual|Y|Y|Attributes|Y|
+|link:https://www.ogc.org/standards/sensorthings[SensorThings API]|Virtual|Y|Y|Attributes|Y|
 
-|IMDF|Both|Y|Y|Attributes|Y|
+|link:https://docs.ogc.org/cs/20-094/index.html[Indoor Mapping Data Format (IMDF)]|Both|Y|Y|Attributes|Y|
 
-|3D Tiles|Both|Y|Y|Entity|Y|Based on glTF
-
-|JSONFG| ? |?|?|?|?|under development, ask Josh L
+|link:https://www.ogc.org/standards/3DTiles[3D Tiles]|Both|Y|Y|Entity|Y|Based on glTF
 
 |===
 
@@ -115,20 +113,20 @@ Note: In OMS, where location is foreseen, it is always an ISO19107 Geometry Type
 
 ==== Other SDOs
 
-There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
+There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Information on these SDOs is compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
 
 __Khronos Group__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 
-|glTF
+|link:https://www.khronos.org/gltf/[glTF]
 |Both
 |Y
 |N
 |Entity
 |Y
 
-|OpenXR
+|link:https://www.khronos.org/openxr/[OpenXR]
 |Virtual
 |Y
 |N
@@ -143,7 +141,7 @@ __W3C__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 
-|https://w3c.github.io/geolocation-api/[Geolocation API]
+|link:https://w3c.github.io/geolocation-api/[Geolocation API]
 |Virtual
 |No
 |Position & heading only
@@ -151,7 +149,7 @@ __W3C__
 |Yes
 |Working Draft (Nov 21)
 
-|https://www.w3.org/TR/orientation-sensor/[Orientation Sensor]
+|link:https://www.w3.org/TR/orientation-sensor/[Orientation Sensor]
 |Virtual
 |Orientation only
 |Orientation only
@@ -159,7 +157,7 @@ __W3C__
 |Yes
 |Editor's Draft (Nov 21)
 
-|https://www.w3.org/TR/webxr/[WebXR Device API]
+|link:https://www.w3.org/TR/webxr/[WebXR Device API]
 |Virtual
 |Yes
 |No
@@ -176,14 +174,14 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 __Motion Imagery Standards Board (MISB)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|https://www.gwg.nga.mil/misb/docs/standards/ST0601.17.pdf[MISB ST 0601]
+|link:https://www.gwg.nga.mil/misb/docs/standards/ST0601.17.pdf[MISB ST 0601]
 |Virtual
 |Sensor position & orientation relative to platform
 |Platform position & orientation
 |Attributes
 |UTC & media time
 
-|https://www.gwg.nga.mil/misb/docs/standards/ST0801.8.pdf[MISB ST 0801]
+|link:https://www.gwg.nga.mil/misb/docs/standards/ST0801.8.pdf[MISB ST 0801]
 |Virtual
 |No
 |Camera position & orientation
@@ -194,7 +192,7 @@ __Motion Imagery Standards Board (MISB)__
 __Third Generation Partnership Project (3GPP)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
+|link:https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
 |Virtual
 |No
 |Y
@@ -205,7 +203,7 @@ __Third Generation Partnership Project (3GPP)__
 __Camera & Imaging Products Association (CIPA/JEITA)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf[Exif]
+|link:https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf[Exif]
 |Virtual
 |No
 |Position & heading only
@@ -217,14 +215,14 @@ __Camera & Imaging Products Association (CIPA/JEITA)__
 __International Organization for Standardization (ISO)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|https://www.iso.org/standard/54166.html[Spatial Reference Model (18026)]
+|link:https://www.iso.org/standard/54166.html[Spatial Reference Model (18026)]
 |Virtual
 |No
 |Position only
 |Attributes
 |UTC
 
-|https://mpeg.chiariglione.org/standards/mpeg-i[MPEG Immersive Video (MIV) MPEG-I (23090)]
+|link:https://mpeg.chiariglione.org/standards/mpeg-i[MPEG Immersive Video (MIV) MPEG-I (23090)]
 |Virtual
 |No
 |Yes
@@ -252,7 +250,7 @@ __International Organization for Standardization (ISO)__
 __Institute of Electrical and Electronics Engineers (IEEE)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
-|Distributed Interactive Simulation (1278)
+|link:https://standards.ieee.org/project/1278_1.html[Distributed Interactive Simulation (1278)]
 |Virtual
 |No
 |Position only
@@ -260,7 +258,7 @@ __Institute of Electrical and Electronics Engineers (IEEE)__
 |Y
 |
 
-|Smart Transducer Interface (1451)
+|link:https://standards.ieee.org/content/dam/ieee-standards/standards/web/documents/tutorials/1451d4.pdf[Smart Transducer Interface (1451)]
 |N
 |Y
 |Y
@@ -272,7 +270,7 @@ __Institute of Electrical and Electronics Engineers (IEEE)__
 __BuildingSmart__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|IFC
+|link:https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/[Industry Foundation Classes (IFC)]
 |Y
 |Y
 |Y
@@ -288,7 +286,7 @@ For orientation they refer to the concept of "true north": "The world coordinate
 __ASTM__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|E57 3D Imaging Data Exchange (E2807-11 (2019))
+|link:https://www.astm.org/e2807-11r19.html[E57 3D Imaging Data Exchange (E2807-11 (2019))]
 |No
 |Y
 |Y
@@ -301,18 +299,17 @@ The core capabilities of the E57 data exchange format link:http://libe57.org/fea
 ==== Space Science
 There are also specifications (standards) that are developed for and used by industries/domains.
 
-The Observation Geometry System NASA uses for space science missions is called SPICE.
+The Observation Geometry System used by NASA for space science missions is called SPICE.
 
 [INSERT MIKEL's FIGURE HERE]
 
-The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document as an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
+The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document. SPICE is an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
 
-While the SWG appreciated the full treatment of frame transformation in the SPICE system, the members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.
+While the SWG appreciated the full treatment of frame transformation in the SPICE system, the OGC SWG members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.
 
 A tutorial presentation about SPICE is available link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf[here].
 
 The link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/21_fk.pdf[Frames Kernel] is the key component of SPICE to link reference frames and which in particular inspired the frame transformations in OGC GeoPose.
-
 
 __Space Data Standards__
 
