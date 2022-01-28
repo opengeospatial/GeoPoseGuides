@@ -1257,76 +1257,76 @@ Change the link above to an anchor, not to the .adoc file
 <h2 id="rg-landscape-standard-section"><a class="anchor" href="#rg-landscape-standard-section"></a>5. OGC GeoPose in Context</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this section of the reviewer’s guide, we list the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose.
-As a convention for the remainder of this section, we use the term "GeoPose" as a shorthand for any of the specified forms of the OGC GeoPose standard.</p>
+<p>In this section of the reviewer’s guide, the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose are listed.
+As a convention for the remainder of this section, the term "GeoPose" is used as a shorthand for any of the specified forms of the OGC GeoPose standard.</p>
 </div>
 <div class="paragraph">
-<p>The key question this section will answer is where and how GeoPose fits into the landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.</p>
+<p>The key question this section answers is where and how GeoPose fits into the current landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.</p>
 </div>
 <div class="paragraph">
-<p>There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning and aerospace, to name a few. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment: sometimes graphical, sometimes geospatial.</p>
+<p>There are many existing and emerging standards for position and orientation information. They have emerged from requirements defined in different industries: Aviation, planetary sciences, maritime, robotics, autonomous driving, satellite positioning, aerospace, and so forth. There is good practice in commercial and other domains for expressing the position and orientation of entities in all these fields. These existing standards cover different scales, for different purposes, different information environment - sometimes graphical, sometimes geospatial.</p>
 </div>
 <div class="sect2">
 <h3 id="_ogc_geopose_connects_objects_to_their_representation"><a class="anchor" href="#_ogc_geopose_connects_objects_to_their_representation"></a>5.1. OGC GeoPose Connects Objects to their Representation</h3>
 <div class="paragraph">
-<p>There are conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.</p>
+<p>There are both conceptual and actual data pipelines that connect the real world and the objects in it with the representations in information and graphics systems. A number of the critical standards define how those pipelines are developed and interoperate or fit together.</p>
 </div>
 <div class="paragraph">
-<p>In a standard Web browser, information is displayed on a plane. There is a need for a standard to represent information retrieved from the Web on the 2D display plane in a manner that is sufficiently fast to provide XR experiences. W3C WebXR focuses on this need.</p>
+<p>In a standard Web browser, information is displayed on a plane. There is a need for a standard to represent information retrieved from the Web on the 2D display plane in a manner that is sufficiently fast to provide XR experiences. <a href="https://www.w3.org/TR/webxr/">W3C WebXR</a> focuses on this need.</p>
 </div>
 <div class="paragraph">
-<p>In order to establish this data flow, there is a need in real graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. Khronos OpenXR focuses on that stage of the pipeline.</p>
+<p>In order to establish the data flow required for 2D to XR experiences, there is a need in graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. <a href="https://www.khronos.org/openxr/">Khronos OpenXR</a> focuses on that stage of the pipeline.</p>
 </div>
 <div class="paragraph">
-<p>On the other side, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that’s capturing all the data about the features (e.g. objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly Observations &amp; Measurements and SensorML, addresses these needs.</p>
+<p>In parallel, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that is capturing all the data about the features (e.g. objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly the OGC Abstract Specification Topic 20: Observations Measurements and Samples and SensorML Standards, addresses these needs.</p>
 </div>
 <div class="paragraph">
-<p>Each of these stages in the pipeline need to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.</p>
+<p>Each of these stages in the pipeline needs to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_geopose_for_3d_asset_formats"><a class="anchor" href="#_geopose_for_3d_asset_formats"></a>5.2. GeoPose for 3D Asset Formats</h3>
 <div class="paragraph">
-<p>The world of 3D asset formats is a bewildering mess that has been adding new formats to the list as new modeling  and content creation applications and 3D content distribution platforms have appeared. This problem is generating a lot of wasted costs in the 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent. Over time some notable initiatives and standardization efforts, such as the Khronos Group&#8217;s glTF format that already has wide adoption as well as  the recent "Real-time Asset Creation Guidelines" from their 3D E-commerce Working Group. The Open Source USD format published by Pixar has also recently seen a lot of adoption by major players in the industry. In the spatial computing industry and in particular, for use-cases handling 3D assets with relation to the real world such as in real-world anchored AR, or 3d visualization, simulations or interactive representations of digital twins with known locations in the real world (from buildings to vehicles) there is to the knowledge of this working group not yet a standardized solution for encoding a real-world pose of 3D assets. In the glTF standards working group it has been proposed to create a GeoPose extension to the gltTF format using the OGC GeoPose standard that this document presents to reviewers.</p>
+<p>The world of 3D asset formats is highly complex. New formats are continuously being developed as new modeling  and content creation applications and 3D content distribution platforms have appeared. This problem is generating a lot of wasted costs in the 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent. Over time some notable initiatives and standardization efforts, such as the widely adopted Khronos Group&#8217;s glTF format as well as the recent "Real-time Asset Creation Guidelines" from Khronos Group&#8217;s 3D E-commerce Working Group. The Open Source USD format published by Pixar has also recently seen a lot of adoption by major players in the industry. In the spatial computing industry and in particular, for use cases handling 3D assets in real-world anchored AR there is not (to the knowledge of this working group) a standardized solution for encoding a real world pose of 3D assets. In the Khronos glTF standards working group creating a GeoPose extension to the glTF format using the OGC GeoPose standard has been proposed.</p>
 </div>
 <div class="paragraph">
-<p>In this document, we would like to point stakeholders who either work with or develop standards for 3D assets formats towards the opportunity of creating extensions to their formats that will comply with the OGC GeoPose encoding.</p>
+<p>In this document, stakeholders who either work with or develop standards for 3D assets formats should consider the opportunity of creating extensions to their formats that comply with the OGC GeoPose Standard.</p>
 </div>
 <div class="sect3">
 <h4 id="_the_khronos_groups_gltf_format_and_geopose"><a class="anchor" href="#_the_khronos_groups_gltf_format_and_geopose"></a>5.2.1. The Khronos Group&#8217;s glTF format and GeoPose</h4>
 <div class="paragraph">
-<p>The Khronos Gropu is an important standards body within the realm of computer graphics and hardware acceleration. They are perhaps most known for OpenGL and its variants for different platforms but also has a long history of defining standardized formats for exchanging different types of data such as 3d asset, textures, and even pre-trained neural net models. Recently they also succeeded in createing the OpenXR standard for the AR and VR industries.</p>
+<p>The Khronos Group is an important standards body on the computer graphics and hardware acceleration domain. They are perhaps best known for OpenGL and its variants for different platforms. Khronos also has a long history of defining standardized formats for exchanging different types of data such as 3D assets, textures, and even pre-trained neural net models. Recently they also succeeded in creating the OpenXR standard for the AR and VR industries.</p>
 </div>
 <div class="paragraph">
-<p>Even more recently the <strong>Geospatial Investigatory Subcommittee</strong>, a part of the group working on the future developments of <a href="https://www.khronos.org/gltf/">glTF</a> opened an <a href="https://githubplus.com/DrX3D">issue</a> on "Geospatial Profile" where GeoPose was mentioned as part of new high-level capabilities to support geospatial applications through extensions. From the perspective of this standards effort, an extension to support assigning GeoPose directly to a widely used 3d asset format would be an important step in the right direction for interoperability between the 3d computer graphics, and geospatial industries, and we see how it can help enable some of the use-cases mentioned by the standards document such as those related to AR.</p>
+<p>Even more recently the 3D Formats Working Group (which is responsible for <a href="https://www.khronos.org/gltf/">glTF</a>) opened an <a href="https://githubplus.com/DrX3D">issue</a> on "Geospatial Profile" where GeoPose was mentioned as part of new high-level capabilities to support geospatial applications through extensions. From the perspective of the GeoPose SWG, an extension to support assigning GeoPose directly to a widely used 3D asset format would be an important step for interoperability between the 3D computer graphics, and geospatial industries.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_pixars_open_source_usd_format_and_geopose"><a class="anchor" href="#_pixars_open_source_usd_format_and_geopose"></a>5.2.2. Pixar&#8217;s open-source USD format and GeoPose</h4>
 <div class="paragraph">
-<p>Most people recognize Pixar as a household name in the entertainment industry, responsible for a long list of blockbuster 3d animated movies from the 1995 "Toy Story" to the 2021 "Luca". They created the whole genre of full-length 3d graphics animation movies alongside creating an impressive number of technology breakthroughs in the fields of 3d graphics rendering and animation. A few years back Pixar did a major development project to unify and standardize they way different systems used by different people inside their organization could work on the same highly complex scene without the hassle of converting two and from different file formats and importing and exporting them between different systems. They came up with the <a href="https://graphics.pixar.com/usd/release/index.html">Universal Scene Description</a> format or "USD". Realizing that the solution to their internal interoperability issues would potentially solve industry wide interoperability problems of 3d graphics and animation they open-sourced their code code and documentation for the format in <a href="https://graphics.pixar.com/usd/release/press_opensource_release.html">2016</a>.  In 2018 Apple decided to use a zip-archive version of USD for 3d assets used in AR applications running on the IOS platform. In 2019 NVIDIA announced they would standardize on USD for their Omniverse platform which in itself is being adopted for a range of industries such as autonomous vehicles, robotics, digital twins and city planning.  Over the last year (2021) support for USD export and import was added to a range of 3d authoring software such as  3DS Max, Maya  and Blender.</p>
+<p>Most people recognize Pixar as a household name in the entertainment industry, responsible for a long list of blockbuster 3D animated movies from the 1995 "Toy Story" to the 2021 "Luca". Pixar created the whole genre of full-length 3D graphics animation movies while creating an impressive number of technology breakthroughs in the fields of 3D graphics rendering and animation. A few years back, Pixar did a major development project to unify and standardize they way different systems used by different people inside their organization could work on the same highly complex scene without the hassle of converting two and from different file formats and importing and exporting them between different systems. Pixar developers came up with the <a href="https://graphics.pixar.com/usd/release/index.html">Universal Scene Description</a> format (abbreviated USD). Realizing that the solution to their internal interoperability issues would potentially solve industry wide interoperability problems of 3D graphics and animation they open-sourced their code and documentation for the format in <a href="https://graphics.pixar.com/usd/release/press_opensource_release.html">2016</a>.  In 2018 Apple decided to use a zip-archive version of USD for 3d assets used in AR applications running on the IOS platform. In 2019 NVIDIA announced they would standardize on USD for their Omniverse platform. Omniverse is being adopted for a range of industries such as autonomous vehicles, robotics, digital twins and city planning.  Over the last year (2021) support for USD export and import was added to a range of 3D authoring software such as  3DS Max, Maya  and Blender.</p>
 </div>
 <div class="paragraph">
-<p>Although USD is not specified by a traditional standards body, it is developing into a defacto standard with wide adoption across a wide range of industries, and it is possible for the wider tech world to contribute and work with Pixar through the <a href="https://github.com/PixarAnimationStudios/USD">USD repo on GitHub</a>.</p>
+<p>Although USD is not specified by a traditional standards body, it is developing into a de-facto standard with wide adoption across a wide range of industries, and the wider tech world to can contribute and work with Pixar through the <a href="https://github.com/PixarAnimationStudios/USD">USD repo on GitHub</a>.</p>
 </div>
 <div class="paragraph">
-<p>The OGC GeoPose working group has done some initial research and been in early contact with the developers of the USD format. Just like with the glTF format USD allows for the creation of extensions. One potential avenue for our working group to explore would be propose a collaboration with NVIDIA who is already experienced with creating extensions for USD and has a lot of industry customers who work in the geospatial domain who would be likely to find such an extension useful.</p>
+<p>The OGC GeoPose Standards Working Group has done some initial research and has been in early contact with the developers of the USD format. Just like with the glTF format, USD allows for the creation of extensions. One potential avenue for the GeoPose SWG to explore would be to propose a collaboration with NVIDIA. NVIDIA has already gained experience creating extensions for USD and has a lot of industry customers who work in the geospatial domain who would be likely to find such an extension useful.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_ogc_geopose_in_the_landscape_of_standards"><a class="anchor" href="#_ogc_geopose_in_the_landscape_of_standards"></a>5.3. OGC GeoPose in the Landscape of Standards</h3>
 <div class="paragraph">
-<p>The primary source of inspiration for GeoPose was the NASA SPICE framework because it is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than one needs for a simple or basic implementation, but an incredibly appropriate foundation from which the SWG was inspired.</p>
+<p>The primary source of inspiration for GeoPose was the NASA SPICE framework. This framework is able to cover any scale from interplanetary and interstellar to specific local objects. NASA designed SPICE to address significant challenges in looking at both ephemeris objects (fixed, or on predictable paths) and objects that have changeable positions and orientations such as satellites, cameras, and other sensors. Representing different frames for these objects and being able to transform between them is really useful. SPICE is a formalism that is much larger than required for a simple or basic implementation, but is an incredibly appropriate foundation from which GeoPose evolved.</p>
 </div>
 <div class="paragraph">
-<p>OGC Moving Features was also taken into account when GeoPose was designed. Although it describes object position and orientation, Moving Features (MF) is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. It accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.</p>
+<p>When GeoPose was designed, the OGC Moving Features Standard was considered. Although Moving Features describes object position and orientation, that standard is focused on a particular set of use cases with an emphasis on sensor streams, digital exhausts, and location information (usually GPS) coming off of vehicles in a municipal environment. Moving Features accomplishes this compactly so that the data can be easily incorporated into analytical and visual applications.</p>
 </div>
 <div class="paragraph">
 <p>OGC Moving Features and GeoPose have distinct roles and are complementary. Moving Features is focused on a local, municipal scale, and rapid streams of measurements. Getting observations in and out of municipal management and other platforms easily and efficiently is one of the roles that GeoPose plays.</p>
 </div>
 <div class="paragraph">
-<p>The OGC Sensor Web Enablement suite of standards deals with how to work with sensors and getting useful observations out of them.</p>
+<p>The OGC Sensor Web Enablement (SWE) suite of standards deals with how to work with sensors and requesting observations in a standard encoding.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1334,16 +1334,16 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 </div>
 </div>
 <div class="paragraph">
-<p>On the right of this figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.</p>
+<p>On the right of the above figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.</p>
 </div>
 <div class="paragraph">
-<p>If this is a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world, although the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, e.g. cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.</p>
+<p>If sampling from a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world. However, the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, such as cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.</p>
 </div>
 <div class="paragraph">
 <p>Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user, particularly if entities are being brought into a scene from very different source contexts, and regardless of where they are in space.</p>
 </div>
 <div class="paragraph">
-<p>Khronos OpenXR handles poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces (view, local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system, it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.</p>
+<p>Khronos OpenXR also handles poses, particularly within specific spaces (frames of reference). It defines a set of reference spaces (view, local and stage); and specifies the model in which graphics hardware can use the pose in rendering objects. Within a particular graphical system, it is effective but GeoPose adds the capability to bring in a pose from any source in any frame of reference.</p>
 </div>
 <div class="paragraph">
 <p>GeoPose can also relate the frame of reference of a Web browser window to a virtual world or the real world.</p>
@@ -1363,30 +1363,30 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <div class="sect3">
 <h4 id="_ogc_standards"><a class="anchor" href="#_ogc_standards"></a>5.4.1. OGC Standards</h4>
 <div class="paragraph">
-<p>The OGC has many positioning and location standards, some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing position and orientation.</p>
+<p>The OGC has many standards that express requirements for positioning and location. Some also express orientation. They do so in different scales and with different global and/or local coordinate reference systems. Some also deal with different time scales. However, these standards are not designed for sharing both position and orientation.</p>
 </div>
 <div class="paragraph">
-<p>Some standards (such as OGC CDB) deal with fixed infrastructure, or with somewhat more specialized information, such as KML and IndoorGML. Some deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.</p>
+<p>Some OGC standards (such as CDB) deal with fixed infrastructure. Other OGC standards, such as KML and IndoorGML, deal with somewhat more specialized information. Yet other OGC standards deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.</p>
 </div>
 <div class="paragraph">
-<p>Our assessment of the pose-related elements of other OGC standards are summarised in the table below under the following headings:</p>
+<p>The GeoPose SWG&#8217;s assessment of the pose-related elements of the OGC standards is summarised in the table below with the following headings:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Graphic/Virtual Context</strong>: does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?</p>
+<p><strong>Graphic/Virtual Context</strong>: Does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?</p>
 </li>
 <li>
-<p><strong>Local SRS</strong>: does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?</p>
+<p><strong>Local SRS</strong>: Does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?</p>
 </li>
 <li>
-<p><strong>Geodetic SRS</strong>: does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?</p>
+<p><strong>Geodetic SRS</strong>: Does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?</p>
 </li>
 <li>
-<p><strong>6DOF as entity or attributes</strong>: if the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the pose entity and the object entity?</p>
+<p><strong>6DOF as entity or attributes</strong>: If the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the pose entity and the object entity?</p>
 </li>
 <li>
-<p><strong>Temporality</strong>: does the standard manage temporal information for the objects represented?</p>
+<p><strong>Temporality</strong>: Does the standard manage temporal information for the objects represented?</p>
 </li>
 </ul>
 </div>
@@ -1413,7 +1413,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Moving Features</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/movingfeatures">Moving Features</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1422,7 +1422,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Sensor Web Enablement (SWE)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/swecommon">Sensor Web Enablement (SWE)</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1431,7 +1431,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/gml">GML</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1440,7 +1440,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">v3.2.1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">CityGML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/citygml">CityGML</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1449,7 +1449,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">IndoorGML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/indoorgml">IndoorGML</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1458,7 +1458,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Based on GML</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">"CDB (Common Database)"</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/cdb">CDB</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1467,7 +1467,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">KML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/kml">KML</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1476,7 +1476,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Observations, Measurements and Samples (OMS)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/om">Observations, Measurements and Samples (OMS)</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1485,7 +1485,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SensorThings API</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/sensorthings">SensorThings API</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1494,7 +1494,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">IMDF</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://docs.ogc.org/cs/20-094/index.html">Indoor Mapping Data Format (IMDF)</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1503,22 +1503,13 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">3D Tiles</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.ogc.org/standards/3DTiles">3D Tiles</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Entity</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Based on glTF</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSONFG</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">?</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">under development, ask Josh L</p></td>
 </tr>
 </tbody>
 </table>
@@ -1532,7 +1523,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <div class="sect3">
 <h4 id="_other_sdos"><a class="anchor" href="#_other_sdos"></a>5.4.2. Other SDOs</h4>
 <div class="paragraph">
-<p>There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. They are compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation</p>
+<p>There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Information on these SDOs is compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation</p>
 </div>
 <div class="paragraph">
 <p><em>Khronos Group</em></p>
@@ -1558,7 +1549,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">glTF</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.khronos.org/gltf/">glTF</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Both</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">N</p></td>
@@ -1566,7 +1557,7 @@ As a convention for the remainder of this section, we use the term "GeoPose" as 
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OpenXR</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.khronos.org/openxr/">OpenXR</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">N</p></td>
@@ -1819,7 +1810,7 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Remark</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Distributed Interactive Simulation (1278)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://standards.ieee.org/project/1278_1.html">Distributed Interactive Simulation (1278)</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Virtual</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position only</p></td>
@@ -1828,7 +1819,7 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Smart Transducer Interface (1451)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://standards.ieee.org/content/dam/ieee-standards/standards/web/documents/tutorials/1451d4.pdf">Smart Transducer Interface (1451)</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">N</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1860,7 +1851,7 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">IFC</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/">Industry Foundation Classes (IFC)</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1897,7 +1888,7 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Temporality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E57 3D Imaging Data Exchange (E2807-11 (2019))</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://www.astm.org/e2807-11r19.html">E57 3D Imaging Data Exchange (E2807-11 (2019))</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Y</p></td>
@@ -1916,13 +1907,13 @@ An XRSpace represents a virtual coordinate system with an origin that correspond
 <p>There are also specifications (standards) that are developed for and used by industries/domains.</p>
 </div>
 <div class="paragraph">
-<p>The Observation Geometry System NASA uses for space science missions is called SPICE.</p>
+<p>The Observation Geometry System used by NASA for space science missions is called SPICE.</p>
 </div>
 <div class="paragraph">
-<p>The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document as an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the <a href="https://en.wikipedia.org/wiki/Earth-centered_inertial">'J2000'</a>  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.</p>
+<p>The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document. SPICE is an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the <a href="https://en.wikipedia.org/wiki/Earth-centered_inertial">'J2000'</a>  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.</p>
 </div>
 <div class="paragraph">
-<p>While the SWG appreciated the full treatment of frame transformation in the SPICE system, the members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.</p>
+<p>While the SWG appreciated the full treatment of frame transformation in the SPICE system, the OGC SWG members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.</p>
 </div>
 <div class="paragraph">
 <p>A tutorial presentation about SPICE is available <a href="https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf">here</a>.</p>
