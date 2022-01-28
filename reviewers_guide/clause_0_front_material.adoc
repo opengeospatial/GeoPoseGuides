@@ -1,9 +1,9 @@
 [big]*i.     Abstract*
 
-The GeoPose Reviewers Guide is a public resource structured to provide quick answers to questions which a reviewer may have about the https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification]. It is provided to support professionals who need to understand OGC GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
+The GeoPose Reviewers Guide is a public resource structured to provide quick answers to questions which a reviewer may have about the https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[OGC GeoPose specification]. This OGC document is provided to support professionals who need to understand OGC GeoPose and/or are reviewing the GeoPose draft standard but do not wish to implement it.
 
-https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[GeoPose 1.0] 
-is an OGC Implementation Standard for exchanging the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies two Basic forms with no configuration options for common use cases, an Advanced form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
+https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[GeoPose 1.0]
+is an OGC Implementation Standard for exchanging the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo) or within other astronomical coordinate systems. The standard specifies two _Basic_ forms with no configuration options for common use cases, an _Advanced_ form with more flexibility for more complex applications, and five composite GeoPose structures that support time series plus chain and graph structures.
 
 
 [big]*ii.    Keywords*
