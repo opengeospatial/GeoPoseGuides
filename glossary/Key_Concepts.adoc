@@ -31,18 +31,18 @@ When dealing with multiple reference <<def_frame, Frames>> (specially, when they
 
 In many applications, where a large number of entities have similar Pose Chains, it is common to reorganize this structure into a Graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In Computer Graphics, this concept is the basis of the "Scene Graph", in which the Transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the Pose of each entity of the graph is calculated in a link:https://en.wikipedia.org/wiki/Depth-first_search[depth-first] manner that minimizes the number of required calculations.
 
-NOTE: The definition of GeoPose needs to say that "a GeoPose" is something that complies with the specification but a "geographically-anchored pose" is a concept which can be encoded in proprietary manners or in manner compliant with the standard
-
 | [[def_geopose]] **OGC GeoPose** +
 image:../users_guide/figures/glossary/GeoPose.png[GeoPose, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/GeoPose.blend[GeoPose.blend]
-| **"A GeoPose is a <<def_pose, Pose>> in relation to a real-world object (by default, Earth), typically, via a Geographical <<Frame,Reference Frame>>."**
+| **"A geographically-anchored pose is a <<def_pose, Pose>> defined in relation to a real-world object (by default, Earth), typically, via a Geographical <<Frame,Reference Frame>>."**
 
-The goal of the standardization of GeoPose is to establish a single mechanism to encode the position and orientation of an real/virtual objects within a geographical (ellipsoidal) <<def_frame, Frame>>, greatly simplifying the determination of the pose of entities relative to an astronomical object and, consequently, relative to each other.
+When a "GeoPose" is provided, it will be understood to mean a geographically-anchored pose that complies with the OGC GeoPose specification. The goal of the standardization of OGC GeoPose is to establish a single mechanism to encode the position and orientation of any real/virtual objects within a geographical (ellipsoidal) <<def_frame, Frame>>, greatly simplifying the determination of the pose of entities relative to an astronomical object and, consequently, relative to each other.
 
-In practical terms, a GeoPose facilitates the application of a transformation operations to properly position and orientate modes in a <<def_pose_chain, Scene Graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
+In practical terms, a GeoPose facilitates the application of one or more transformation operations to properly position and orientate modes in a <<def_pose_chain, Scene Graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
 
 | [[def_bc_location]] **Location**
+image:../users_guide/figures/glossary/location.png[Location, pdfwidth=5cm] +
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/location.blend[location.blend]
 | **"Not to be confused with the term Position, a location is a distinctive region of a space."**
 
 While a Position merely specifies a single point within a space (relative to a <<def_frame, Frame>>), a Location defines a limited region within a space (often with its very own <<def_frame, Frame>>). A location generally receives a unique name within a context (or within another location) to easily identify it among others and, if necessary, it can also have a additional semantic information to further differentiate it (e.g., "Washington D.C.", "Washington State" and "Washington City, Utah"). There are as many types of locations as there are types of spaces (e.g., "the bottom of screen", "behind the car", "Earth's orbit", etc.), but it is specially relevant in the context of Geography, where the *Geo*location ("In which street/road/town I am?") is often much more important than the actual *Geo*position ("what are my GPS coordinates?").
