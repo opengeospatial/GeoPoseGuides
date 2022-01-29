@@ -2,7 +2,7 @@
 == OGC GeoPose in Context
 
 In this section of the reviewer’s guide, the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose are listed.
-As a convention for the remainder of this section, the term "GeoPose" is used as a shorthand for any of the specified forms of the OGC GeoPose standard.
+As a convention for the remainder of this section, the term "GeoPose" is used as a shorthand for any of the specified forms of the OGC GeoPose Standard.
 
 The key question this section answers is where and how GeoPose fits into the current landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.
 
@@ -21,21 +21,23 @@ Each of these stages in the pipeline needs to exchange data between themselves. 
 
 === GeoPose for 3D Asset Formats
 
-The world of 3D asset formats is highly complex. New formats are continuously being developed as new modeling and content creation applications and 3D content distribution platforms appear. This problem increases costs in 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent. Over time some notable initiatives and standardization efforts include the widely adopted Khronos Group's glTF format To reduce developer overhead when creating 3D assets for the Web and mobile, the Khronos Group's 3D E-commerce Working Group released a set of link:https://github.com/KhronosGroup/3DC-Asset-Creation/blob/main/asset-creation-guidelines/RealtimeAssetCreationGuidelines.md[Real-time Asset Creation Guidelines.]  The Open Source USD format published by Pixar is also widely adopted.
+The world of 3D asset formats is highly complex. New formats are continuously being developed as new modeling and content creation applications and 3D content distribution platforms appear. This problem increases costs in 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent.
 
-In the spatial computing industry and, in particular, for use cases handling 3D assets in real-world anchored AR, there is not (to the knowledge of this working group) a standardized solution for encoding a real world pose of 3D assets. Stakeholders who either work with or develop proprietary 3D formats or standards for 3D asset formats, should consider creating extensions to their formats that comply with the OGC GeoPose Standard.
+Today, two complementary 3D asset formats are becoming widely adopted. The Khronos Group's glTF open standard is a transmission format to enable the efficient and reliable distribution of 3D assets to a wide variety of platforms including both Web and native applications. The open source USD format published by Pixar is an authoring format that enables teams of designers to collaborate on the creation of 3D assets.
+
+In the spatial computing industry and, in particular, for use cases handling 3D assets in real-world anchored scenes, there is not (to the knowledge of this working group) a standardized solution for encoding a real world pose of 3D assets. Stakeholders who either work with or develop proprietary 3D formats or standards for 3D asset formats, should consider creating extensions that comply with the OGC GeoPose Standard to their formats.
 
 ==== The Khronos Group's glTF format and GeoPose
-The Khronos Group is an important standards body on the computer graphics and hardware acceleration domain. They are perhaps best known for OpenGL and its variants for different platforms. Khronos also has a long history of defining standardized formats for exchanging different types of data such as 3D assets, textures, and even pre-trained neural net models. Khronos also publishes the link:https://www.khronos.org/openxr/[OpenXR standard] for the AR and VR industries.
 
-Recently, an https://githubplus.com/DrX3D[issue] about a new "Geospatial Profile" was opened on the Khronos 3D Formats Working Group (the WG responsible for https://www.khronos.org/gltf/[glTF]) GitHub repository. In the issue, GeoPose was mentioned as part of a set of new high-level capabilities to support geospatial applications through extensions.
+The Khronos Group is an important standards organization developing 3D and XR run-time APIs and 3D assets formats, including OpenGL, WebGL, Vulkan, OpenXR and glTF. glTF 2.0 enjoys support by a wide community and growing number of tools, engines and applications and has been submitted to ISO/IEC JTC 1 to become an international standard.
 
-From the perspective of the GeoPose SWG, an extension to support assigning GeoPose directly to a widely used 3D asset format would be an important step for interoperability between the 3D computer graphics, and geospatial industries.
+An extension to include GeoPose in glTF would be an important step for interoperability between the 3D computer graphics and geospatial industries.
 
-==== Pixar's Open Source USD Format and GeoPose
+==== Pixar's open-source USD format and GeoPose
+
 Pixar, the company responsible for a long list of blockbuster 3D animated movies from the 1995 "Toy Story" to the 2021 "Luca," created the whole genre of full-length 3D animated movies while creating an impressive number of technology breakthroughs in the fields of 3D graphics rendering and animation. Pixar engineers then unified and standardized the way different systems used by different people inside their organization could work on the same highly complex scene without the hassle of converting to and from different file formats and importing and exporting them between different systems. Pixar developers came up with the https://graphics.pixar.com/usd/release/index.html[Universal Scene Description] format (abbreviated USD). Realizing in 2016, that the solution to their internal interoperability issues would potentially solve industry-wide interoperability problems of 3D graphics and animation, they https://graphics.pixar.com/usd/release/press_opensource_release.html[open sourced] their code and documentation for the format.  In 2018, Apple decided to use a zip-archive version of USD for 3D assets used in AR applications running on the iOS platforms. In 2019, NVIDIA announced they would standardize on USD for their Omniverse platform. Omniverse is being adopted for a range of industries such as autonomous vehicles, robotics, digital twins and city planning.  In 2021, support for USD export and import was added to a range of 3D authoring software applications such as 3DS Max, Maya and Blender.
 
-Although USD is not specified by a traditional standards body, it is developing into a de-facto standard with wide adoption across a range of industries, and adopters can contribute through the https://github.com/PixarAnimationStudios/USD[USD repo on GitHub].
+Although USD is not specified by a traditional standards body, it is developing into a de-facto authoring standard with wide adoption across a wide range of industries, and the wider tech world can contribute through the https://github.com/PixarAnimationStudios/USD[USD repo on GitHub].
 
 Just like with the glTF format, USD allows for the creation of extensions. One potential avenue for the GeoPose SWG to explore would be to propose a collaboration with NVIDIA. NVIDIA has already gained experience creating extensions for USD and has a lot of industry customers who work in the geospatial domain who would be likely to find such an extension useful.
 

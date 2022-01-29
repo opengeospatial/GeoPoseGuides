@@ -4,6 +4,8 @@
 === What is GeoPose?
 Conceptually, when a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a "geographically-anchored pose." All physical world objects inherently have a geographically-anchored pose. Digital objects may be associated with a geographically-anchored pose (for example, in a real-world overlay or on a stage).
 
+image::./images/concepts/ConceptsWithLabelsAndLinks.png[]
+
 Specifically, the OGC GeoPose Standard defines the rules for the interoperable interchange of geographically-anchored poses. As such, the OGC GeoPose Standard defines a conceptual model, a logical model, and encodings for the position and orientation of a real or a digital object in machine-readable forms using real world coordinates.
 
 === Why is Another Standard Needed?
@@ -11,6 +13,8 @@ A new standard is required to facilitate the seamless interchange of position an
 
 === How Does OGC GeoPose Address Diverse Requirements?
 The https://github.com/opengeospatial/GeoPose/blob/main/standard/pdf/geopose_standard.pdf[**OGC GeoPose 1.0 standard**] defines data structures and rules for the interoperable exchange of the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo).  In developing this standard, the SWG sought to use a single conceptual model to address requirements ranging from common use cases that benefit from low complexity and low optionality ("without optional parameters"), to those complex use cases needing more flexibility and extensibility.
+
+
 
 In order to meet the wide range of requirements, the OGC GeoPose Standard specifies:
 
