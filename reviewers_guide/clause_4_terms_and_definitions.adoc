@@ -3,7 +3,7 @@
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-For GeoPose, specifically, the reader will consult the  <<rrg-geopose-glossary-section, **GeoPose Glossary section**>> of this Guide.
+For GeoPose, specifically, the reader will consult the  <<vg-introduction-section, **Conceptual Overview Section**>> of this Guide.
 
 [[d2d-data-definition]]
 *2D data* +

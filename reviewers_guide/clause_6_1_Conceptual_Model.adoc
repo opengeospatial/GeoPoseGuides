@@ -4,5 +4,3 @@
 The GeoPose Conceptual Model consists of linked definitions of terms denoting concepts expressed in the GeoPose Logical Model and structural data unit specifications for the implementation targets.
 
 The Conceptual Model is defined in https://data.ogc.org/geopose-swg/pdf/geopose_standard.pdf#def_direct_position[this section of the GeoPose Standard].
-
-NOTE: Change the link above to an anchor, not to the .adoc file
