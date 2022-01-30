@@ -461,13 +461,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2021-11-01&gt;</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   &lt;2022-01-30&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/EG/{standard}/{m.n}" class="bare">http://www.opengis.net/doc/EG/{standard}/{m.n}</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    YY-nnnrx</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    22-000</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.4</p></td>
@@ -476,7 +476,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Engineering Guidance</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editor:   C. Perey, J.G. Morley, J. Lieberman, M. Salazar, C. Smyth</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editor:   C. Perey, J.G. Morley, J. Lieberman, R. Smith, M. Salazar, C. Smyth</p></td>
 </tr>
 </tbody>
 </table>
@@ -499,7 +499,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Copyright notice</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright &#169; 2021 Open Geospatial Consortium</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright &#169; 2022 Open Geospatial Consortium</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">To obtain additional rights of use, visit <a href="http://www.opengeospatial.org/legal/" class="bare">http://www.opengeospatial.org/legal/</a></p></td>
@@ -602,7 +602,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_geopose_for_3d_asset_formats">5.2. GeoPose for 3D Asset Formats</a>
 <ul class="sectlevel3">
 <li><a href="#_the_khronos_groups_gltf_format_and_geopose">5.2.1. The Khronos Group&#8217;s glTF format and GeoPose</a></li>
-<li><a href="#_pixars_open_source_usd_format_and_geopose">5.2.2. Pixar&#8217;s Open Source USD Format and GeoPose</a></li>
+<li><a href="#_pixars_open_source_usd_format_and_geopose">5.2.2. Pixar&#8217;s open-source USD format and GeoPose</a></li>
 </ul>
 </li>
 <li><a href="#_ogc_geopose_in_the_landscape_of_standards">5.3. OGC GeoPose in the Landscape of Standards</a></li>
@@ -644,7 +644,7 @@ is an OGC Implementation Standard for exchanging the position and orientation of
 <p><strong class="big">iii.   Preface</strong></p>
 </div>
 <div class="paragraph">
-<p>This version of the GeoPose Reviewers Guide is limited in scope to the draft implementation specification for GeoPose 1.0. Content of this document will be updated when relevant information and feedback to the OGC GeoPose 1.0 SWG is provided and the standard finalized. The Open Geospatial Consortium shall not be held responsible for the accuracy or completeness of this reviewers guide.</p>
+<p>This version of the GeoPose Reviewers Guide is limited in scope to the specification for GeoPose 1.0. Content of this document will be updated when relevant information and feedback to the OGC GeoPose 1.0 is provided and the standard updated. The Open Geospatial Consortium shall not be held responsible for the accuracy or completeness of this reviewers guide.</p>
 </div>
 <div class="paragraph">
 <p>Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
@@ -670,6 +670,11 @@ is an OGC Implementation Standard for exchanging the position and orientation of
 <h3 id="_what_is_geopose"><a class="anchor" href="#_what_is_geopose"></a>1.1. What is GeoPose?</h3>
 <div class="paragraph">
 <p>Conceptually, when a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a "geographically-anchored pose." All physical world objects inherently have a geographically-anchored pose. Digital objects may be associated with a geographically-anchored pose (for example, in a real-world overlay or on a stage).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/concepts/ConceptsWithLabelsAndLinks.png" alt="ConceptsWithLabelsAndLinks">
+</div>
 </div>
 <div class="paragraph">
 <p>Specifically, the OGC GeoPose Standard defines the rules for the interoperable interchange of geographically-anchored poses. As such, the OGC GeoPose Standard defines a conceptual model, a logical model, and encodings for the position and orientation of a real or a digital object in machine-readable forms using real world coordinates.</p>
@@ -1106,7 +1111,7 @@ Specified on the <a href="http://www.opengis.net/def/doc-type/is">OGC Document T
 <p>The GeoPose Conceptual Model consists of linked definitions of terms denoting concepts expressed in the GeoPose Logical Model and structural data unit specifications for the implementation targets.</p>
 </div>
 <div class="paragraph">
-<p>The Conceptual Model is defined in <a href="https://github.com/opengeospatial/GeoPose/blob/main/standard/standard/models/conceptual_model.adoc">this section of the GeoPose Standard</a>.</p>
+<p>The Conceptual Model is defined in <a href="https://data.ogc.org/geopose-swg/pdf/geopose_standard.pdf#def_direct_position">this section of the GeoPose Standard</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1174,6 +1179,11 @@ Change the link above to an anchor, not to the .adoc file
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/Table_of_Eight.png" alt="Table of Eight">
+</div>
+</div>
 <div class="paragraph">
 <p>Depending on the use case and requirements, a developer can implement support for one or more of these targets.</p>
 </div>
@@ -1205,6 +1215,14 @@ Change the link above to an anchor, not to the .adoc file
 <div class="paragraph">
 <p>For time series poses with constant time spacing, the developer will choose to use the Regular Timeseries GeoPose encoding. When there is a per-GeoPose time stamp that is not at a regular interval, the developer will choose to use the Irregular Timeseries GeoPose encoding. Finally, in use cases that do not have a pre-defined end time (also referred to as an open-ended sequence of time-stamped GeoPoses), the developer will specify the Stream GeoPose encoding.</p>
 </div>
+<div class="paragraph">
+<p>In the figure velow, the dependencies between targets are illustrated.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/GeoPose_Target_Dependencies.png" alt="GeoPose Target Dependencies">
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1213,7 +1231,7 @@ Change the link above to an anchor, not to the .adoc file
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section of the reviewer’s guide, the Standards Development Organizations (SDOs) and standards that specify data objects that convey the same information as one or more of the eight forms of GeoPose are listed.
-As a convention for the remainder of this section, the term "GeoPose" is used as a shorthand for any of the specified forms of the OGC GeoPose standard.</p>
+As a convention for the remainder of this section, the term "GeoPose" is used as a shorthand for any of the specified forms of the OGC GeoPose Standard.</p>
 </div>
 <div class="paragraph">
 <p>The key question this section answers is where and how GeoPose fits into the current landscape of standards. By examining some of the relevant standards, this section illustrates the gaps which GeoPose fills.</p>
@@ -1242,30 +1260,30 @@ As a convention for the remainder of this section, the term "GeoPose" is used as
 <div class="sect2">
 <h3 id="_geopose_for_3d_asset_formats"><a class="anchor" href="#_geopose_for_3d_asset_formats"></a>5.2. GeoPose for 3D Asset Formats</h3>
 <div class="paragraph">
-<p>The world of 3D asset formats is highly complex. New formats are continuously being developed as new modeling and content creation applications and 3D content distribution platforms appear. This problem increases costs in 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent. Over time some notable initiatives and standardization efforts include the widely adopted Khronos Group&#8217;s glTF format To reduce developer overhead when creating 3D assets for the Web and mobile, the Khronos Group&#8217;s 3D E-commerce Working Group released a set of <a href="https://github.com/KhronosGroup/3DC-Asset-Creation/blob/main/asset-creation-guidelines/RealtimeAssetCreationGuidelines.md">Real-time Asset Creation Guidelines.</a>  The Open Source USD format published by Pixar is also widely adopted.</p>
+<p>The world of 3D asset formats is highly complex. New formats are continuously being developed as new modeling and content creation applications and 3D content distribution platforms appear. This problem increases costs in 3D asset pipelines as well as leaving lots of stakeholders frustrated. The need for standardization is apparent.</p>
 </div>
 <div class="paragraph">
-<p>In the spatial computing industry and, in particular, for use cases handling 3D assets in real-world anchored AR, there is not (to the knowledge of this working group) a standardized solution for encoding a real world pose of 3D assets. Stakeholders who either work with or develop proprietary 3D formats or standards for 3D asset formats, should consider creating extensions to their formats that comply with the OGC GeoPose Standard.</p>
+<p>Today, two complementary 3D asset formats are becoming widely adopted. The Khronos Group&#8217;s glTF open standard is a transmission format to enable the efficient and reliable distribution of 3D assets to a wide variety of platforms including both Web and native applications. The open source USD format published by Pixar is an authoring format that enables teams of designers to collaborate on the creation of 3D assets.</p>
+</div>
+<div class="paragraph">
+<p>In the spatial computing industry and, in particular, for use cases handling 3D assets in real-world anchored scenes, there is not (to the knowledge of this working group) a standardized solution for encoding a real world pose of 3D assets. Stakeholders who either work with or develop proprietary 3D formats or standards for 3D asset formats, should consider creating extensions that comply with the OGC GeoPose Standard to their formats.</p>
 </div>
 <div class="sect3">
 <h4 id="_the_khronos_groups_gltf_format_and_geopose"><a class="anchor" href="#_the_khronos_groups_gltf_format_and_geopose"></a>5.2.1. The Khronos Group&#8217;s glTF format and GeoPose</h4>
 <div class="paragraph">
-<p>The Khronos Group is an important standards body on the computer graphics and hardware acceleration domain. They are perhaps best known for OpenGL and its variants for different platforms. Khronos also has a long history of defining standardized formats for exchanging different types of data such as 3D assets, textures, and even pre-trained neural net models. Khronos also publishes the <a href="https://www.khronos.org/openxr/">OpenXR standard</a> for the AR and VR industries.</p>
+<p>The Khronos Group is an important standards organization developing 3D and XR run-time APIs and 3D assets formats, including OpenGL, WebGL, Vulkan, OpenXR and glTF. glTF 2.0 enjoys support by a wide community and growing number of tools, engines and applications and has been submitted to ISO/IEC JTC 1 to become an international standard.</p>
 </div>
 <div class="paragraph">
-<p>Recently, an <a href="https://githubplus.com/DrX3D">issue</a> about a new "Geospatial Profile" was opened on the Khronos 3D Formats Working Group (the WG responsible for <a href="https://www.khronos.org/gltf/">glTF</a>) GitHub repository. In the issue, GeoPose was mentioned as part of a set of new high-level capabilities to support geospatial applications through extensions.</p>
-</div>
-<div class="paragraph">
-<p>From the perspective of the GeoPose SWG, an extension to support assigning GeoPose directly to a widely used 3D asset format would be an important step for interoperability between the 3D computer graphics, and geospatial industries.</p>
+<p>An extension to include GeoPose in glTF would be an important step for interoperability between the 3D computer graphics and geospatial industries.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_pixars_open_source_usd_format_and_geopose"><a class="anchor" href="#_pixars_open_source_usd_format_and_geopose"></a>5.2.2. Pixar&#8217;s Open Source USD Format and GeoPose</h4>
+<h4 id="_pixars_open_source_usd_format_and_geopose"><a class="anchor" href="#_pixars_open_source_usd_format_and_geopose"></a>5.2.2. Pixar&#8217;s open-source USD format and GeoPose</h4>
 <div class="paragraph">
 <p>Pixar, the company responsible for a long list of blockbuster 3D animated movies from the 1995 "Toy Story" to the 2021 "Luca," created the whole genre of full-length 3D animated movies while creating an impressive number of technology breakthroughs in the fields of 3D graphics rendering and animation. Pixar engineers then unified and standardized the way different systems used by different people inside their organization could work on the same highly complex scene without the hassle of converting to and from different file formats and importing and exporting them between different systems. Pixar developers came up with the <a href="https://graphics.pixar.com/usd/release/index.html">Universal Scene Description</a> format (abbreviated USD). Realizing in 2016, that the solution to their internal interoperability issues would potentially solve industry-wide interoperability problems of 3D graphics and animation, they <a href="https://graphics.pixar.com/usd/release/press_opensource_release.html">open sourced</a> their code and documentation for the format.  In 2018, Apple decided to use a zip-archive version of USD for 3D assets used in AR applications running on the iOS platforms. In 2019, NVIDIA announced they would standardize on USD for their Omniverse platform. Omniverse is being adopted for a range of industries such as autonomous vehicles, robotics, digital twins and city planning.  In 2021, support for USD export and import was added to a range of 3D authoring software applications such as 3DS Max, Maya and Blender.</p>
 </div>
 <div class="paragraph">
-<p>Although USD is not specified by a traditional standards body, it is developing into a de-facto standard with wide adoption across a range of industries, and adopters can contribute through the <a href="https://github.com/PixarAnimationStudios/USD">USD repo on GitHub</a>.</p>
+<p>Although USD is not specified by a traditional standards body, it is developing into a de-facto authoring standard with wide adoption across a wide range of industries, and the wider tech world can contribute through the <a href="https://github.com/PixarAnimationStudios/USD">USD repo on GitHub</a>.</p>
 </div>
 <div class="paragraph">
 <p>Just like with the glTF format, USD allows for the creation of extensions. One potential avenue for the GeoPose SWG to explore would be to propose a collaboration with NVIDIA. NVIDIA has already gained experience creating extensions for USD and has a lot of industry customers who work in the geospatial domain who would be likely to find such an extension useful.</p>
@@ -2016,7 +2034,7 @@ URL: <a href="http://spacedatastandards.org/" class="bare">http://spacedatastand
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-21 08:49:00 -0800
+Last updated 2022-01-29 21:15:39 -0800
 </div>
 </div>
 </body>
