@@ -4,7 +4,7 @@
 === What is GeoPose?
 Conceptually, when a real or digital object’s pose is defined relative to a geographical frame of reference it will be called a "geographically-anchored pose." All physical world objects inherently have a geographically-anchored pose. Digital objects may be associated with a geographically-anchored pose (for example, in a real-world overlay or on a stage).
 
-image::./images/concepts/ConceptsWithLabelsAndLinks.png[]
+image::./images/concepts/ConceptsWithLabelsAndLinks.png[alt=Concepts pdfwidth=8cm]
 
 Specifically, the OGC GeoPose Standard defines the rules for the interoperable interchange of geographically-anchored poses. As such, the OGC GeoPose Standard defines a conceptual model, a logical model, and encodings for the position and orientation of a real or a digital object in machine-readable forms using real world coordinates.
 
