@@ -3,21 +3,11 @@
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-For GeoPose, specifically, there is a visual glossary of frequently used terms. To consult the visual GeoPose glossary, visit the GeoPose wiki.
-
-
-[NOTE]
-====
-Which of these boilerplate terms/definitions do we want to keep in the GeoPose Reviewer's Guide?
-====
-
-What is a reviewers guide?
-What is a users guide?
-What is a standard?
+For GeoPose, specifically, the reader will consult the  <<vg-introduction-section, **Conceptual Overview Section**>> of this Guide.
 
 [[d2d-data-definition]]
 *2D data* +
-geometry of features is represented in a two-dimensional space +
+geometry of features is represented in a two-dimensional Euclidian space +
 NOTE In other words, the geometry of 2D data is given using (X,Y) coordinates. +
 {blank}[INSPIRE D2.8.III.2, definition 1]
 
@@ -35,7 +25,6 @@ NOTE In other words, the geometry of 2D data is given using (X,Y,Z) coordinates 
 [[application-schema-definition]]
 *application schema* +
 A set of <<conceptual-schema-definition,conceptual schema>> for data required by one or more applications. An application schema contains selected parts of the base schemas presented in the ORM Information Viewpoint. Designers of application schemas may extend or restrict the types defined in the base schemas to define appropriate types for an application domain. Application schemas are information models for a specific information community. +
-{blank}OGC Definitions Register at link:http://www.opengis.net/def/glossary/term/ApplicationSchema[]
 
 [[codelist-definition]]
 *codelist* +
@@ -52,12 +41,7 @@ model that defines concepts of a universe of discourse +
 . formal description of a <<conceptual-model-definition,conceptual model>> +
 {blank}[ISO 19101-1:2014, 4.1.6]
 . base schema. Formal description of the model of any geospatial information. <<application-schema-definition,Application schemas>> are built from conceptual schemas. +
-{blank}OGC Definitions Register at link:http://www.opengis.net/def/glossary/term/ConceptualSchema[]
 
-[[implementation-specification-definition]]
-*Implementation Specification* +
-Specified on the OGC Document Types Register at link:http://www.opengis.net/def/doc-type/is[]
-
-
-
-NOTE: Notice that each definition has an anchor. Anchor text would also be a good idea which we may include latter. Terms used within a definition should be cross-linked to their definition if it is included in this document (see <<application-schema-definition,Application Schema>> for an example.
+[[implementation-standard-definition]]
+*Implementation Standard* +
+Specified on the link:http://www.opengis.net/def/doc-type/is[OGC Document Types Register].
