@@ -17,12 +17,12 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2021-11-01>
+|Publication Date:   <2022-01-30>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/{standard}/{m.n}
-|Internal reference number of this OGC(R) document:    YY-nnnrx
+|Internal reference number of this OGC(R) document:    22-000
 |Version: 0.4
 |Category: OGC(R) Engineering Guidance
-|Editor:   C. Perey, J.G. Morley, J. Lieberman, M. Salazar, C. Smyth
+|Editor:   C. Perey, J.G. Morley, J. Lieberman, R. Smith, M. Salazar, C. Smyth
 |===
 
 [cols = "^", frame = "none"]
@@ -33,7 +33,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2021 Open Geospatial Consortium
+|Copyright (C) 2022 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 

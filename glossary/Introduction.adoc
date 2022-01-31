@@ -1,6 +1,0 @@
-[[vg-introduction-section]]
-== Conceptual Overview
-
-This overview was originally created to facilitate the communication between GeoPose SWG members to reach a shared understanding of concepts related to GeoPose. It has been integrated into this guide to provide readers with a better understanding of the conceptual foundations on which the standard is based.
-
-The definition of each term is accompanied by a visual representation of the concept, a more general explanation and examples of how it may be applied. Additionally, the text includes hyperlinks to connect the different concepts to one another and to illustrate how they are used in other standards and real world applications.
