@@ -1,5 +1,5 @@
 [[vg-time-related-concepts-section]]
-=== Time-related Concepts
+==== Time-related Concepts
 
 While, by definition, a pose defines the position and orientation of an object at a particular point in time, there are many applications that require the use of temporal sequences of poses. Properly taking into account the temporal dimension requires consideration of additional factors like (moment of) inertia, mass, changes in shape and, in extreme cases, even the variations in the Earth's gravity field.
 

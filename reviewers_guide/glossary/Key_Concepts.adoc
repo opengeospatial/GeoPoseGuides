@@ -1,5 +1,5 @@
 [[vg-key-concepts-section]]
-=== Key Concepts
+==== Key Concepts
 
 The following list of terms covers the conceptual underpinnings for the GeoPose standard while offering examples of how they are actually employed in different scientific fields and industry sectors.
 
@@ -41,8 +41,13 @@ When a "GeoPose" is provided, it will be understood to mean a geographically-anc
 In practical terms, a GeoPose facilitates the application of one or more transformation operations to properly position and orientate modes in a <<def_pose_chain, Scene Graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
 
 | [[def_bc_location]] **Location**
+<<<<<<< HEAD:reviewers_guide/glossary/Key_Concepts.adoc
+image:../users_guide/figures/glossary/Location.png[GeoPose, pdfwidth=5cm] +
+link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/Location.blend[GeoPose.blend]
+=======
 image:../users_guide/figures/glossary/location.png[Location, pdfwidth=5cm] +
 link:https://github.com/opengeospatial/GeoPoseGuides/blob/main/users_guide/figures/glossary/location.blend[location.blend]
+>>>>>>> a3e9a0b5249d818048ded12ba4a9901285452fc5:glossary/Key_Concepts.adoc
 | **"Not to be confused with the term Position, a location is a distinctive region of a space."**
 
 While a Position merely specifies a single point within a space (relative to a <<def_frame, Frame>>), a Location defines a limited region within a space (often with its very own <<def_frame, Frame>>). A location generally receives a unique name within a context (or within another location) to easily identify it among others and, if necessary, it can also have a additional semantic information to further differentiate it (e.g., "Washington D.C.", "Washington State" and "Washington City, Utah"). There are as many types of locations as there are types of spaces (e.g., "the bottom of screen", "behind the car", "Earth's orbit", etc.), but it is specially relevant in the context of Geography, where the *Geo*location ("In which street/road/town I am?") is often much more important than the actual *Geo*position ("what are my GPS coordinates?").
