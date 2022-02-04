@@ -9,7 +9,7 @@
 :numbered:
 :sectanchors:
 :sectnums:
-= {Title}
+
 <<<
 [cols = ">",frame = "none",grid = "none"]
 |===
