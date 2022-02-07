@@ -50,7 +50,8 @@ OGC Moving Features and GeoPose have distinct roles and are complementary. Movin
 
 The OGC Sensor Web Enablement (SWE) suite of standards deals with how to work with sensors and requesting observations in a standard encoding.
 
-image::./images/landscape-standard-ef0fe.png["GeoPose and SWE Diagram"]
+.OGC GeoPose and Sensor Web Enablement
+image::./images/landscape-standard-ef0fe.png["GeoPose and SWE"  pdfwidth="14cm"]
 
 On the right of the above figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
 
@@ -141,6 +142,8 @@ __Khronos Group__
 |===
 
 link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor[This OpenXR Extension for Microsoft Spatial Anchors] allows an application to create a spatial anchor, an arbitrary freespace point in the user’s physical environment that will then be tracked by the runtime. The runtime should then adjust the position and orientation of that anchor’s origin over time as needed, independently of all other spaces and anchors, to ensure that it maintains its original mapping to the real world.
+
+NOTE: I would like to force the W3C heading from bottom of previous page to top of this page (how do I insert a page break?)
 
 __W3C__
 |===
