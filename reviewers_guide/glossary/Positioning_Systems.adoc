@@ -1,5 +1,5 @@
 [[vg-positioning-systems-section]]
-==== Positioning Systems
+=== Positioning Systems
 
 This section covers a system to accurately describe the position of an object relative to the associated reference frame. The position of an object is a single point in space relative to the origin point of the reference frame. This point is usually placed in the center of mass of the object and provides a simple way to perform other spatial calculations (i.e., distances between objects, travel time, collision detection/avoidance, etc.). In contrast, with a camera, the point could be its focal point.
 

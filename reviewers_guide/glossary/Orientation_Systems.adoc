@@ -1,9 +1,9 @@
 [[vg-orientation-systems-section]]
-==== Orientation Systems
+=== Orientation Systems
 
 This section covers a system to accurately describe the orientation of an object relative to the associated reference frame. As with positioning counterparts, these systems provide a vector that needs to be consistently interpreted (so that it can be converted into a rotation matrix), not only to describe the numeric values in the proper sequence, but also to note the units and to specify the type of orientation system to which the values refer.
 
-MOVE THIS REMARK TO ANOTHER PLACE: While orientation systems also have to account for inaccuracies, they are considered less important because they can generally be corrected afterwards (or recalculated using two position vectors) with relative ease.
+NOTE: MOVE THIS REMARK TO ANOTHER PLACE: While orientation systems also have to account for inaccuracies, they are considered less important because they can generally be corrected afterwards (or recalculated using two position vectors) with relative ease.
 
 Not all applications require orientation information to define a Pose.
 
