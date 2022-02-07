@@ -18,6 +18,14 @@ Composite:
 * The Frame Graph target supports the full structure need to represent networks of reference frames that arise with the use of multiple and linked location technologies.
 * The three (Time) Sequence targets support the packaging of fixed-length time series of GeoPoses and the payload data objects for open-ended GeoPose streams.
 
+In the figure below, the dependencies between targets are illustrated.
+
+.GeoPose Target Dependencies
+image::./images/GeoPose_Target_Dependencies.png[]
+
+The target names and short descriptions appear in the table below.
+
+.Table of Eight OGC GeoPose Implementation Targets
 image::./images/Table_of_Eight.png[]
 
 Depending on the use case and requirements, a developer can implement support for one or more of these targets.
@@ -37,7 +45,3 @@ The two differences between Basic GeoPose and Advanced GeoPose is that, first, i
 The three Composite GeoPose encodings are designed for when there are linked and sequential GeoPoses. The Chain GeoPose is a linear set of linked poses. The Graph GeoPose is used when there are linked poses but not necessarily in a linear sequence.
 
 For time series poses with constant time spacing, the developer will choose to use the Regular Timeseries GeoPose encoding. When there is a per-GeoPose time stamp that is not at a regular interval, the developer will choose to use the Irregular Timeseries GeoPose encoding. Finally, in use cases that do not have a pre-defined end time (also referred to as an open-ended sequence of time-stamped GeoPoses), the developer will specify the Stream GeoPose encoding.
-
-In the figure velow, the dependencies between targets are illustrated.
-
-image::./images/GeoPose_Target_Dependencies.png[]
