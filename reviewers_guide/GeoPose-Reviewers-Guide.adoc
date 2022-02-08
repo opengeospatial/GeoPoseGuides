@@ -1,5 +1,5 @@
 :Title: OGC GeoPose Reviewers Guide
-:titletext: {Title}
+:titletext: {OGC GeoPose Reviewers Guide}
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -10,7 +10,8 @@
 :sectanchors:
 :sectnums:
 
-= {Title}
+= {OGC GeoPose Reviewers Guide}
+:notitle:
 
 <<<
 [cols = ">",frame = "none",grid = "none"]
