@@ -10,7 +10,7 @@
 :sectanchors:
 :sectnums:
 
-= {OGC GeoPose Reviewers Guide}
+= OGC GeoPose Reviewers Guide
 :notitle:
 
 <<<

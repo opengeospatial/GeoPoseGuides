@@ -7,18 +7,18 @@ For GeoPose, specifically, the reader will consult the  <<vg-introduction-sectio
 
 [[d2d-data-definition]]
 *2D data* +
-geometry of features is represented in a two-dimensional Euclidian space +
+Geometry of features is represented in a two-dimensional Euclidian space +
 NOTE In other words, the geometry of 2D data is given using (X,Y) coordinates. +
 {blank}[INSPIRE D2.8.III.2, definition 1]
 
 [[d2d-geo-data-definition]]
 *2D geographical data* +
-geometry of features is represented in a two-dimensional geographical  +
-(i.e, ellipsoidal) space using (Longitude,Latitude) coordinates. +
+Geometry of features is represented in a two-dimensional geographical  +
+(i.e, ellipsoidal) space using (Longitude, Latitude) coordinates. +
 
 [[d2-5d-data-definition]]
 *2.5D data* +
-geometry of features is represented in a three-dimensional space with the constraint that, for each (X,Y) position, there is only one Z +
+Geometry of features is represented in a three-dimensional space with the constraint that, for each (X,Y) position, there is only one Z +
 {blank}[INSPIRE D2.8.III.2, definition 2]
 
 [[d3d-data-definition]]
@@ -38,15 +38,14 @@ A value domain including a code for each permissible value.
 
 [[conceptual-model-definition]]
 *conceptual model* +
-model that defines concepts of a universe of discourse +
+Model that defines concepts of a universe of discourse +
 {blank}[ISO 19101-1:2014, 4.1.5]
 
 [[conceptual-schema-definition]]
 *conceptual schema*
-
-. formal description of a <<conceptual-model-definition,conceptual model>> +
+. Formal description of a <<conceptual-model-definition,conceptual model>> +
 {blank}[ISO 19101-1:2014, 4.1.6]
-. base schema. Formal description of the model of any geospatial information. <<application-schema-definition,Application schemas>> are built from conceptual schemas. +
+. Base schema. Formal description of the model of any geospatial information. <<application-schema-definition,Application schemas>> are built from conceptual schemas. +
 
 [[implementation-standard-definition]]
 *Implementation Standard* +
