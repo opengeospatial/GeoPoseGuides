@@ -1,5 +1,5 @@
 :Title: OGC GeoPose Reviewers Guide
-:titletext: {OGC GeoPose Reviewers Guide}
+:titletext: OGC GeoPose Reviewers Guide
 :doctype: book
 :encoding: utf-8
 :lang: en

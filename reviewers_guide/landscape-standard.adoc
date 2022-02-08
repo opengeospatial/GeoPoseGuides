@@ -309,11 +309,12 @@ There are also specifications (standards) that are developed for and used by ind
 
 The Observation Geometry System used by NASA for space science missions is called SPICE.
 
-[INSERT MIKEL's FIGURE HERE]
-
 The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document. SPICE is an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
 
 While the SWG appreciated the full treatment of frame transformation in the SPICE system, the OGC SWG members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.
+
+.NASA SPICE
+image::./images/NASA-SPICE.png["NASA SPICE"  pdfwidth="14cm"]
 
 A tutorial presentation about SPICE is available link:https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/03_spice_overview.pdf[here].
 
