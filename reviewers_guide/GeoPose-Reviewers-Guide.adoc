@@ -102,5 +102,3 @@ include::landscape-standard.adoc[]
 include::closing_clause.adoc[]
 
 include::annex-history.adoc[]
-
-include::annex-bibliography.adoc[]

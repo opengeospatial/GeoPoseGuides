@@ -275,6 +275,7 @@ __Institute of Electrical and Electronics Engineers (IEEE)__
 |Based on GML
 |===
 
+<<<
 __BuildingSmart__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*

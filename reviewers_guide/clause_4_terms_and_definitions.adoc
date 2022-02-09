@@ -27,14 +27,9 @@ Geometry of features is represented in a three-dimensional space. +
 NOTE In other words, the geometry of 2D data is given using (X,Y,Z) coordinates without any constraints. +
 {blank}[INSPIRE D2.8.III.2, definition 3]
 
-
 [[application-schema-definition]]
 *application schema* +
-A set of <<conceptual-schema-definition,conceptual schema>> for data required by one or more applications. An application schema contains selected parts of the base schemas presented in the ORM Information Viewpoint. Designers of application schemas may extend or restrict the types defined in the base schemas to define appropriate types for an application domain. Application schemas are information models for a specific information community. +
-
-[[codelist-definition]]
-*codelist* +
-A value domain including a code for each permissible value.
+A set of <<conceptual-schema-definition,conceptual schema>> for data required by one or more applications. An application schema contains selected parts of the base schemas presented in the link:https://en.wikipedia.org/wiki/Object-role_modeling[Object Role Model Information Viewpoint]. Designers of application schemas may extend or restrict the types defined in the base schemas to define appropriate types for an application domain. Application schemas are information models for a specific information community. +
 
 [[conceptual-model-definition]]
 *conceptual model* +
@@ -43,7 +38,7 @@ Model that defines concepts of a universe of discourse +
 
 [[conceptual-schema-definition]]
 *conceptual schema*
-. Formal description of a <<conceptual-model-definition,conceptual model>> +
+. Formal description of a conceptual model +
 {blank}[ISO 19101-1:2014, 4.1.6]
 . Base schema. Formal description of the model of any geospatial information. <<application-schema-definition,Application schemas>> are built from conceptual schemas. +
 
