@@ -9,4 +9,4 @@ include::./glossary/Orientation_Systems.adoc[Orientation Systems]
 
 include::./glossary/Positioning_Systems.adoc[Positioning Systems]
 
-include::./glossary/Time_Related_Concepts.adoc[Related Concepts]
+include::./glossary/Time_Related_Concepts.adoc[Time-Related Concepts]

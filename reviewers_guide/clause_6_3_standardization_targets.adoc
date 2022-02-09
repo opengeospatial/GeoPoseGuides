@@ -1,9 +1,9 @@
 [[rg-standardization-targets-section]]
 === Encodings for Implementation
 
-The core of the OGC GeoPose Standard is the abstract Frame Transform. This is a representation of the transformation taking an Outer Frame coordinate system to an Inner Frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose Frame Transform is a pair of Reference Frames, Outer and Inner, each defined by a Frame Specification.
+The core of the OGC GeoPose Standard is the abstract frame transform. This is a representation of the transformation taking an outer frame coordinate system to an inner frame coordinate system. This abstraction is constrained in GeoPose v 1.0 to only allow transformations involving translation and rotation. The intention is to match the usual concept of a pose as a position and orientation. The formalism that expresses a GeoPose frame transform is a pair of reference frames, outer and inner, each defined by a frame specification.
 
-Conformant implementation of the Standard (position and orientation) is accomplished by implementing one or more of the eight Conformance Classes. The requirements for each conformance class are documented in eight requirements classes. Each requirements class has a one-to-one correspondence with one of the eight standardization targets defined in the Standard.
+Conformant implementation of the Standard (position and orientation) is accomplished by implementing one or more of the eight conformance classes. The requirements for each conformance class are documented in eight requirements classes. Each requirements class has a one-to-one correspondence with one of the eight standardization targets defined in the Standard.
 
 .Summary of the Eight OGC GeoPose Standardization Targets:
 
