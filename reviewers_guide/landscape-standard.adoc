@@ -178,6 +178,17 @@ Levels of support for HTML features in current web browsers can be gauged from h
 From the Immersive Web WebXR Device API documentation: link:https://immersive-web.github.io/webxr/#xrspace-interface[XRSpace] and link:https://immersive-web.github.io/webxr/#pose[XR Pose]
 An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
 
+__Web 3D Consortium__
+|===
+|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|link:https://doc.x3dom.org/author/Geospatial/GeoTransform.html[X3D Geo Component]
+|Both
+|Y
+|Y
+|Attributes
+|Y
+|===
+
 __Motion Imagery Standards Board (MISB)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
@@ -207,7 +218,6 @@ __Third Generation Partnership Project (3GPP)__
 |Media time
 |===
 
-<<<
 __Camera & Imaging Products Association (CIPA/JEITA)__
 |===
 |*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
@@ -308,9 +318,7 @@ The core capabilities of the E57 data exchange format link:http://libe57.org/fea
 ==== Space Science
 There are also specifications (standards) that are developed for and used by industries/domains.
 
-The Observation Geometry System used by NASA for space science missions is called SPICE.
-
-The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document. SPICE is an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
+The Observation Geometry System used by NASA for space science missions is called SPICE. The OGC GeoPose SWG has chosen to make reference particularly to SPICE in this document. SPICE is an elegant system which ties together ephemeris information (including position and orientation data) in contexts ranging from the Earth system through to spacecraft, solar system (with the link:https://en.wikipedia.org/wiki/Earth-centered_inertial['J2000']  fundamental inertial reference system) and planetary bodies. The SWG members were inspired by some of the concepts, particularly the ideas of frame of reference transformations and of satellites, constellations of satellites and other objects in orbit around the Earth. SPICE handles complex situations such as the relative pointing of spacecraft in motion around other bodies in the Solar System - this flexibility points to a complete and elegant solution.
 
 While the SWG appreciated the full treatment of frame transformation in the SPICE system, the OGC SWG members took the approach of reducing the scope to Earth-based systems in version 1 of the GeoPose standard. The intention has been to permit later extension to a wider solar system viewpoint.
 
@@ -325,5 +333,4 @@ __Space Data Standards__
 
 International space data standards are documented in https://ccsds.org[Consultative Committee for Space Data Systems (CCSDS)] Blue Books. Spacecraft position and orientation are described as _attitude_ as described in section 5.3 of https://public.ccsds.org/Pubs/500x0g4.pdf[CCSDS Navigation Data - Definitions and Conventions]. Typical GeoPose use cases include antenna tracking, sun sensor, star sensor, gyro package and horizon sensor.
 
-This URL is a convenient place to view many space data standards
-URL: http://spacedatastandards.org/
+Beyond those mentioned in this section, there are other link:http://spacedatastandards.org/[space data standards] with which the reviewer may wish to be acquainted.
