@@ -1,10 +1,8 @@
 [[rg_references_section]]
 == References
 
-The following documents contain provisions that, through reference in this text, constitute provisions of this Reviewers Guide.
+The following documents contain provisions that, through reference in this text, constitute provisions of this reviewers guide.
 
-* [[rfc2045,RFC 2045]] IETF: RFC 2045 & 2046, Multipurpose Internet Mail Extensions (MIME). (November 1996),
-* [[rfc3986,RFC 3986]] IETF: RFC 3986, Uniform Resource Identifier (URI): Generic Syntax. (January 2005)
 * [[inspirebu,INSPIRE: D2.8.III.2]] INSPIRE: D2.8.III.2 Data Specification on Buildings – Technical Guidelines. European Commission Joint Research Centre.
 * [[iso19101,ISO 19101-1:2014]] ISO: ISO 19101-1:2014, Geographic information - Reference model - Part 1: Fundamentals
 * [[iso19111,ISO 19111-3]] link:https://www.iso.org/obp/ui/#iso:std:iso:19111:ed-3:v1:en[ISO: ISO 19111-3 v1] Geographic information — Referencing by coordinates (2019)

@@ -81,12 +81,13 @@ The GeoPose SWG's assessment of the pose-related elements of the OGC standards i
 
  - *Graphic/Virtual Context*: Does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
  - *Local SRS*: Does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?
- - *Geodetic SRS*: Does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
+ - *Geodetic CRS*: Does the standard allow a spatial reference system connected to the shape of the Earth or its gravity field as the basis for coordinates?
  - *6DOF as entity or attributes*: If the standard stores position and orientation for objects, is this information stored as attributes of the objects or does it use a pose entity in the data model with an association between the pose entity and the object entity?
  - *Temporality*: Does the standard manage temporal information for the objects represented?
 
+[%header,cols="3,2,1,2,2,2,2"]
 |===
-|Standard|Graphic/Virtual Context|Local SRS|Geodetic SRS|6DOF as entity or attributes?|Temporality|Remark
+|Standard|Graphic/Virtual Context|Local SRS|Geodetic CRS|6DOF as entity or attributes?|Temporality|Remark
 
 |link:https://www.ogc.org/standards/movingfeatures[Moving Features]|Virtual|Y|Y|Attributes of temporal geometry|Y|
 
@@ -110,7 +111,7 @@ The GeoPose SWG's assessment of the pose-related elements of the OGC standards i
 
 |link:https://www.ogc.org/standards/3DTiles[3D Tiles]|Both|Y|Y|Entity|Y|Based on glTF
 
-|JSON-FG|Virtual|Y|Y|Attributes (Geometry, Where)|Y|
+|JSON-FG|Virtual|Y|Y|Attributes (Geometry, Where)|Y|Under Development|
 |===
 
 Note: 3D Tiles is basically a binary, encapsulated glTF with georeferencing.
@@ -122,8 +123,9 @@ Note: In OMS, where location is foreseen, it is always an ISO19107 Geometry Type
 There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Information on these SDOs is compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
 
 __Khronos Group__
+[%header,cols="2,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 
 |link:https://www.khronos.org/gltf/[glTF]
 |Both
@@ -145,8 +147,9 @@ link:https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_
 
 <<<
 __W3C__
+[%header,cols="3,2,1,2,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 
 |link:https://w3c.github.io/geolocation-api/[Geolocation API]
 |Virtual
@@ -179,8 +182,9 @@ From the Immersive Web WebXR Device API documentation: link:https://immersive-we
 An XRSpace represents a virtual coordinate system with an origin that corresponds to a physical location. Spatial data that is requested from the API or given to the API is always expressed in relation to a specific XRSpace at the time of a specific XRFrame. Numeric values such as pose positions are coordinates in that space relative to its origin. The interface is intentionally opaque.
 
 __Web 3D Consortium__
+[%header,cols="3,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |link:https://doc.x3dom.org/author/Geospatial/GeoTransform.html[X3D Geo Component]
 |Both
 |Y
@@ -190,8 +194,9 @@ __Web 3D Consortium__
 |===
 
 __Motion Imagery Standards Board (MISB)__
+[%header,cols="3,2,2,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |link:https://www.gwg.nga.mil/misb/docs/standards/ST0601.17.pdf[MISB ST 0601]
 |Virtual
 |Sensor position & orientation relative to platform
@@ -207,10 +212,12 @@ __Motion Imagery Standards Board (MISB)__
 |UTC & media time
 |===
 
+<<<
 __Third Generation Partnership Project (3GPP)__
+[%header,cols="3,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
-|link:https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |
+link:https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441[3GP (26.244)]
 |Virtual
 |No
 |Y
@@ -219,8 +226,9 @@ __Third Generation Partnership Project (3GPP)__
 |===
 
 __Camera & Imaging Products Association (CIPA/JEITA)__
+[%header,cols="3,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |link:https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf[Exif]
 |Virtual
 |No
@@ -231,8 +239,9 @@ __Camera & Imaging Products Association (CIPA/JEITA)__
 
 
 __International Organization for Standardization (ISO)__
+[%header,cols="3,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |link:https://www.iso.org/standard/54166.html[Spatial Reference Model (18026)]
 |Virtual
 |No
@@ -264,10 +273,10 @@ __International Organization for Standardization (ISO)__
 
 |===
 
-
 __Institute of Electrical and Electronics Engineers (IEEE)__
+[%header,cols="3,2,1,2,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality* |*Remark*
 |link:https://standards.ieee.org/project/1278_1.html[Distributed Interactive Simulation (1278)]
 |Virtual
 |No
@@ -285,10 +294,10 @@ __Institute of Electrical and Electronics Engineers (IEEE)__
 |Based on GML
 |===
 
-<<<
 __BuildingSmart__
+[%header,cols="3,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |link:https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/[Industry Foundation Classes (IFC)]
 |Y
 |Y
@@ -303,8 +312,9 @@ For orientation they refer to the concept of "true north": "The world coordinate
 
 
 __ASTM__
+[%header,cols="3,2,1,2,2,2"]
 |===
-|*Standard* |*Graphic/Virtual Context* |*Geographically-referenced Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
 |link:https://www.astm.org/e2807-11r19.html[E57 3D Imaging Data Exchange (E2807-11 (2019))]
 |No
 |Y
