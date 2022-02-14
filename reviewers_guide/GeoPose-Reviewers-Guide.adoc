@@ -9,6 +9,7 @@
 :numbered:
 :sectanchors:
 :sectnums:
+:imagesdir: images/
 
 = OGC GeoPose Reviewers Guide
 :notitle:
