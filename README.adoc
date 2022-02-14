@@ -17,3 +17,23 @@ For this guide, the term "users" will mean people with software engineering skil
 . Data publishers who will include GeoPose in their offerings.
 
 If you wish to contribute to the guides, or have recommendations and questions, please create an issue in this relevant repo.
+
+## Requirements
+
+To compile the AsciiDoctor (*.adoc) files to HTML and PDF files, it is required to install the Ruby language form its website (https://www.ruby-lang.org/).
+
+AsciiDoctor can be installed as a Gem using the following command:
+
+	gem install asciidoctor
+
+To be able to generate the PDF files, the asciidoctor-pdf gem is also required:
+
+	gem install asciidoctor-pdf
+
+## Building Process
+
+To generate the Reviewers Guide HTML (updating the image links and applying a CSS style):
+    asciidoctor -o GeoPose-Reviewers-Guide.html -a imagesdir=reviewers_guide/images -a stylesheet=styles/GeoPose-theme.css reviewers_guide/GeoPose-Reviewers-Guide.adoc  
+
+To generate the Reviewers Guide PDF (applying the custom theme):
+    asciidoctor-pdf --trace -a pdf-style=reviewers_guide/styles/GeoPose-theme.yml -o ./GeoPose-Reviewers-Guide.pdf reviewers_guide/GeoPose-Reviewers-Guide.adoc
