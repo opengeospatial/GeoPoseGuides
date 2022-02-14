@@ -1,0 +1,42 @@
+extends:
+  - default-with-fallback-font
+title-page:
+  align: left
+page:
+  layout: portrait
+  size: Letter  
+  margin: [0.6in, 0.5in, 0.6in, 0.5in]
+base:
+  line-height-length: 20
+heading:
+  font-family: Helvetica
+  font-color: #00B1FF
+  font-size: 12
+  line-height: 1.2
+link:
+  font-color: #0580DA
+running-content:
+   start-at: 5
+header:
+  height: 0.6in
+  line-height: 1
+  recto:
+    right:
+      content: '{document-title}'
+  verso:
+    left:
+      content: '{document-title}'
+footer:
+  height: 0.6in
+  line-height: 1
+  recto:
+    right:
+      content: '{chapter-title} | *{page-number}*'
+  verso:
+    left:
+      content: '*{page-number}* | {chapter-title}'
+image:
+  align: center
+caption:
+  align: center
+  font-size: 10

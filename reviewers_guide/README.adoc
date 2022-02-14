@@ -16,8 +16,8 @@ This folder contains the text for the GeoPose Reviewers Guide. It provides engin
 
 ## Building
 
-To produce the HTML of the Reviewers Guide run `asciidoctor --safe -a data-uri -o
-GeoPose-Reviewers-Guide.html GeoPose-Reviewers-Guide.adoc`
+To produce the HTML of the Reviewers Guide run 
+`asciidoctor --safe -a data-uri -o ./html/GeoPose-Reviewers-Guide.html GeoPose-Reviewers-Guide.adoc`
 
-To produce the PDF of the Reviewers Guide run `asciidoctor-pdf --safe -o
-GeoPose-Reviewers-Guide.pdf GeoPose-Reviewers-Guide.adoc`
+To produce the PDF of the Reviewers Guide run 
+`asciidoctor-pdf -a pdf-style=./styles/GeoPose-theme.yml -o ./pdf/GeoPose-Reviewers-Guide.pdf GeoPose-Reviewers-Guide.adoc`
