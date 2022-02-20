@@ -325,6 +325,25 @@ __ASTM__
 
 The core capabilities of the E57 data exchange format link:http://libe57.org/features.html[includes fifteen features.]
 
+__Schema.org__
+[%header,cols="3,2,1,2,2,2"]
+|===
+|*Standard* |*Graphic/Virtual Context* |*Local SRS* |*Geodedic CRS* |*6DOF as entity or attribute?* |*Temporality*
+|link:https://schema.org/Place[Place]
+|No
+|N
+|Y
+|3DOF
+|N
+
+|link:https://schema.org/GeoCoordinates[GeoCoordinates]
+|No
+|N
+|Y
+|3DOF
+|N
+|===
+
 ==== Space Science
 There are also specifications (standards) that are developed for and used by industries/domains.
 
