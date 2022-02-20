@@ -21,10 +21,10 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2022-02-11>
+|Publication Date:   <2022-02-20>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/{standard}/{m.n}
 |Internal reference number of this OGC(R) document:    22-000
-|Version: 0.9
+|Version: 0.95
 |Category: OGC(R) Engineering Guidance
 |Editors:   C. Perey, J.G. Morley, J. Lieberman, R. Smith, M. Salazar, C. Smyth
 |===
