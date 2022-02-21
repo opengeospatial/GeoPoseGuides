@@ -6,7 +6,7 @@ The core of the OGC GeoPose Standard is the abstract frame transform. This is a 
 Conformant implementation of the Standard (position and orientation) is accomplished by implementing one or more of the eight conformance classes. The requirements for each conformance class are documented in eight requirements classes. Each requirements class has a one-to-one correspondence with one of the eight standardization targets defined in the Standard.
 
 .Table of Eight OGC GeoPose Implementation Targets
-image::StandardizationTargets.svg["Summary of the Eight OGC GeoPose Standardization Targets"]
+image::Table_of_Eight_StandardizationTargets.svg["Summary of the Eight OGC GeoPose Standardization Targets"]
 
 Core:
 
