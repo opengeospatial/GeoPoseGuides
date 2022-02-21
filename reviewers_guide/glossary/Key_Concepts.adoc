@@ -39,7 +39,7 @@ When a "GeoPose" is provided, it will be understood to mean a geographically-anc
 In practical terms, a GeoPose facilitates the application of one or more transformation operations to properly position and orientate modes in a <<def_pose_chain, scene graph>> (generally, the root one) on a realistic 3D map and/or in an Augmented/Mixed Reality environment.
 
 | [[def_bc_location]] **Location** +
-image:glossary/location.png[Location, pdfwidth=5cm]
+image:glossary/Location.png[Location, pdfwidth=5cm]
 | **"Not to be confused with the term position, a location is a distinctive region of a space."**
 
 While a position merely specifies a single point within a space (relative to a <<def_frame, frame>>), a location defines a limited region within a space (often with its very own <<def_frame, frame>>). A location generally receives a unique name within a context (or within another location) to easily identify it from others and, if necessary, it can also have a additional semantic information to further differentiate it (e.g., "Washington D.C.", "Washington State" and "Washington City, Utah"). There are as many types of locations as there are types of spaces (e.g., "the bottom of screen", "behind the car", "Earth's orbit", etc.), but it is specially relevant in the context of geography, where the *geo*location ("In which street/road/town I am?") is often much more important than the actual *geo*position ("what are my GPS coordinates?").
