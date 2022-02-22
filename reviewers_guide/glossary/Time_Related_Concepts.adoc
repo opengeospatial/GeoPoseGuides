@@ -5,11 +5,11 @@ While, by definition, a pose defines the position and orientation of an object a
 
 To help represent this complexity, the following list of terms is intended to offer a basic introduction to the topic.
 
-[cols="2,5"]
+[cols="3,5"]
 |===
 
 | [[def_animation]] **Animation** +
-image:glossary/Animation.png[Animation, pdfwidth=5cm] 
+image:glossary/Animation.png[Animation, pdfwidth=5cm]
 | **"Animation is a method to create the illusion of movement through a collection of still images."**
 
 In computer graphics, animation is generally simulated by modifying the properties of an object (including its position, rotation, scale, material colors, etc.) over a period of time (or timeline). Since complex deformations require a large number of physics calculations, most animation systems either operate with properties independently (i.e, separating position, orientation and scale) or define skeleton-based systems to alter the geometry of the object in a controllable way. In recent years, however, many 3D engines incorporate procedural subsystems to simulate advanced animations (such as explosions, wind systems, collision deformations, etc) in real-time, with relatively high degree of precision.
