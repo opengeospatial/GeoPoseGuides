@@ -7,7 +7,7 @@ The objective of positioning systems is to provide a position vector (that is of
 
 We distinguish the concepts of position and location. Location is a broader term that can be represented in many forms, including textual forms such as the address. While it is possible to define a position using a known location (e.g., "This building is in Tokyo"), this practice often results in imprecise information.
 
-[cols="2,5"]
+[cols="3,5"]
 |===
 
 | [[def_local_systems]] **Local Systems** +

@@ -22,10 +22,9 @@
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
 |Publication Date:   <2022-02-21>
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/EG/{standard}/{m.n}
+|External identifier of this OGC(R) document: http://www.opengis.net/doc/UG/geopose-reviewers
 |Internal reference number of this OGC(R) document:    22-000
-|Version: 0.95
-|Category: OGC(R) Engineering Guidance
+|Category: OGC(R) User Guide
 |Editors:   C. Perey, J.G. Morley, J. Lieberman, R. Smith, M. Salazar, C. Smyth
 |===
 
@@ -50,7 +49,7 @@ This document provides guidance for reviewers of the OGC GeoPose Standard. This 
 
 [width = "50%", grid = "none"]
 |===
-|Document type:   	OGC®Engineering Guidance
+|Document type:   	OGC® User Guide
 |Document subtype:
 |Document stage:   	Draft
 |Document language: 	English

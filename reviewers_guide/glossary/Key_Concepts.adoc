@@ -3,11 +3,11 @@
 
 The following list of terms covers the conceptual underpinnings for the GeoPose standard while offering examples of how they are actually employed in different scientific fields and industry sectors.
 
-[cols="2,5"]
+[cols="3,5"]
 |===
 
 | [[def_frame]] **(Reference) Frame** +
-image:glossary/Frame.png[Frame, pdfwidth=5cm] 
+image:glossary/Frame.png[Frame, pdfwidth=5cm]
 | **As defined in link:https://www.iso.org/obp/ui/#iso:std:iso:19111:ed-3:v1:en[ISO 19111], a reference frame is a parameter or set of parameters that realize the position of the origin, the scale, and the orientation of a coordinate system.**
 
 Another, more practical definition link:https://en.wikipedia.org/wiki/Frame_of_reference[from Wikipedia] is: _"In physics, a (reference) frame consists of an abstract coordinate system and the set of physical reference points that uniquely fix (locate and orient) the coordinate system and standardize measurements within that frame."_
@@ -22,13 +22,13 @@ In robotics and human-computer interaction, this concept is often referred to as
 
 From the point of view of computer graphics, however, a pose can be seen as a simplified version of a "transform class" (without the *scale*-related fields/properties). This direct correspondence implies that a pose is associated to a single node of an scene graph (i.e., the "hand" has a pose, the "arm" has another pose, etc.), but, when 3D artists and engineers talk about "poses", they are generally referring to the combined pose data of all the components of an entity (i.e., the pose of a dummy, as seen in the illustration). In fact, most 3D editing software solutions include a separate "pose mode" so that artists can independently work on the geometry of the different 3D models and on their animation.
 
-| [[def_pose_chain]] **Pose Chain** + 
+| [[def_pose_chain]] **Pose Chain** +
 image:glossary/SceneGraph.png[Pose Chain, pdfwidth=5cm]
 | **“A pose chain is a sequence of poses that is used to determine the position and orientation of objects across multiple frames.”**
 
 When dealing with multiple reference <<def_frame, frames>> (specially, when they are of different types), it is necessary to perform several complex transformation operations to convert between the different link:https://www.w3.org/2015/spatial/wiki/Coordinate_Reference_Systems[Coordinate Reference Systems]. To facilitate this time-consuming process and to ensure that the operations are applied in the right order, the different poses are often organized into one-dimensional sequences of <<def_pose, poses>> called "chains".
 
-In many applications, where a large number of entities have similar pose chains, it is common to reorganize this structure into a graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In computer graphics, this concept is the basis of the "scene graph", in which the transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the pose of each entity of the graph is calculated in a link:https://en.wikipedia.org/wiki/Depth-first_search[depth-first] manner that minimizes the number of required calculations. 
+In many applications, where a large number of entities have similar pose chains, it is common to reorganize this structure into a graph, so that it is possible to more effectively apply the transformation operations (by storing the result of the repeated operations). In computer graphics, this concept is the basis of the "scene graph", in which the transform class instances of the different entities are connected together using a hierarchical graph through (single) parent-children relationships. In this way, the pose of each entity of the graph is calculated in a link:https://en.wikipedia.org/wiki/Depth-first_search[depth-first] manner that minimizes the number of required calculations.
 
 | [[def_geopose]] **OGC GeoPose** +
 image:glossary/GeoPose.png[GeoPose, pdfwidth=5cm]
@@ -42,7 +42,7 @@ In practical terms, a GeoPose facilitates the application of one or more transfo
 image:glossary/Location.png[Location, pdfwidth=5cm]
 | **"Not to be confused with the term position, a location is a distinctive region of a space."**
 
-While a position merely specifies a single point within a space (relative to a <<def_frame, frame>>), a location defines a limited region within a space (often with its very own <<def_frame, frame>>). A location generally receives a unique name within a context (or within another location) to easily identify it from others and, if necessary, it can also have a additional semantic information to further differentiate it (e.g., "Washington D.C.", "Washington State" and "Washington City, Utah"). There are as many types of locations as there are types of spaces (e.g., "the bottom of screen", "behind the car", "Earth's orbit", etc.), but it is specially relevant in the context of geography, where the *geo*location ("In which street/road/town I am?") is often much more important than the actual *geo*position ("what are my GPS coordinates?").
+While a position merely specifies a single point within a space (relative to a <<def_frame, frame>>), a location defines a limited region within a space (often with its very own <<def_frame, frame>>). A location generally receives a unique name within a context (or within another location) to easily identify it from others and, if necessary, it can also have a additional semantic information to further differentiate it (e.g., "Washington D.C.", "Washington State" and "Washington City, Utah"). There are as many types of locations as there are types of spaces (e.g., "the bottom of screen", "behind the car", "Earth's orbit", etc.), but it is specially relevant in the context of geography, where the **geo**location ("In which street/road/town I am?") is often much more important than the actual **geo**position ("what are my GPS coordinates?").
 
 The boundaries of locations are often defined using either dimensional properties (i.e., width, height and depth) or specific shapes (most notably, 2D projections in a geographical space called link:https://en.wikipedia.org/wiki/Geo-fence[geofences]). However, when there are a large number of locations or these are constantly changing, the boundaries are defined by proximity to the closest point in the link:https://en.wikipedia.org/wiki/Topological_skeleton[topological skeleton] or by the minimum number of logical connections.
 
