@@ -63,7 +63,7 @@ Khronos OpenXR also handles poses, particularly within specific spaces (frames o
 
 GeoPose can also relate the frame of reference of a Web browser window to a virtual world or the real world.
 
-Geocentric (earth-based) position and orientation are the basis for all these integrations. OGC GeoPose provides that usable common ground, both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
+Geocentric (Earth-based) position and orientation are the basis for all these integrations. OGC GeoPose provides that usable common ground, both the geospatial expertise that OGC has cultivated for many years and digital representation of physical space as the most common denominator among all these systems and representations.
 
 To summarize, there are a number of well-developed standards for position and orientation. What these lack is a means for position and orientation information to be passed between them in a manner that is independent of graphical system, applications scene, frame of reference, and technology. OGC GeoPose offers portability of information between all these domains and systems.
 
@@ -306,7 +306,7 @@ __BuildingSmart__
 |No
 |===
 
-IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for (http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm)[this site)]"
+IfcSite and other IfCProducts permits topologic orientation, but not 6DOF. IFCSite lets users provide the WGS84 location (lat,lng,alt) of  "the single geographic reference point for (http://standards.buildingsmart.org/MVD/RELEASE/IFC4/ADD2_TC1/RV1_2/HTML/schema/ifcproductextension/lexical/ifcsite.htm)[this site])"
 
 For orientation they refer to the concept of "true north": "The world coordinate system, established at the IfcProject.RepresentationContexts, may include a definition of the true north within the XY plane of the world coordinate system, if provided, it can be obtained at IfcGeometricRepresentationContext.TrueNorth."
 
