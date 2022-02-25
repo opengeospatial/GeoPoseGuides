@@ -9,11 +9,11 @@ image::concepts/ConceptsWithLabelsAndLinks.png["Concepts" pdfwidth="12cm"]
 
 Specifically, the OGC GeoPose Standard defines the rules for the interoperable interchange of geographically-anchored poses. As such, the OGC GeoPose Standard defines a conceptual model, a logical model, and encodings for the position and orientation of a real or a digital object in machine-readable forms using real world coordinates.
 
-=== Why is Another Standard Needed?
+=== Why Is Another Standard Needed?
 A new standard is required to facilitate the seamless interchange of position and orientation information between proprietary systems and any systems that implement to existing standards. The <<rg-landscape-standard-section, **review of standards related to GeoPose**>> demonstrates that there are many relevant specifications and standards that could use GeoPose, but do not, themselves, provide the elements and rules necessary to share poses.
 
 === How Does OGC GeoPose Address Diverse Requirements?
-The https://data.ogc.org/geopose-swg/pdf/geopose_standard.pdf[**OGC GeoPose 1.0 standard**] defines data structures and rules for the interoperable exchange of the position and orientation of real or virtual geometric objects (Poses) within reference frames anchored to the earth's surface (Geo).  In developing this standard, the SWG sought to use a single conceptual model to address requirements ranging from common use cases that benefit from low complexity and low optionality ("without optional parameters"), to those complex use cases needing more flexibility and extensibility.
+The https://data.ogc.org/geopose-swg/pdf/geopose_standard.pdf[**OGC GeoPose 1.0 standard**] defines data structures and rules for the interoperable exchange of the position and orientation (Poses) of real or virtual geometric objects within reference frames anchored to the Earth's surface (Geo).  In developing this standard, the SWG sought to use a single conceptual model to address requirements ranging from common use cases that benefit from low complexity and low optionality ("without optional parameters"), to those complex use cases needing more flexibility and extensibility.
 
 In order to meet the wide range of requirements, the OGC GeoPose Standard specifies:
 
@@ -25,9 +25,9 @@ OGC GeoPose 1.0 is the link:https://www.ogc.org/standards/specifications/list[OG
 
 === How Was the OGC GeoPose v 1.0 Scope Defined?
 
-While the earth is the focus of the GeoPose 1.0, the standard could also be used in conjunction with other astronomical bodies than the earth.
+While the Earth is the focus of the GeoPose 1.0, the standard could also be used in conjunction with astronomical bodies other than the Earth.
 
-In the course of developing GeoPose v1.0 --and in order to focus on the key objectives of the standard - the SWG members decided that the following considerations would be out of scope for the v1.0:
+In the course of developing GeoPose v1.0, and in order to focus on the key objectives of the standard, the SWG members decided that the following considerations would be out of scope for the v1.0:
 
 - Details of any frame transformations (e.g., the radius of the Earth),
 - Differential properties (i.e., acceleration and velocity) and other physical properties of objects that could be associated with a GeoPose,
