@@ -12,4 +12,5 @@
 |2022-02-10 |0.8 |C.Perey |7.4 |draft final version
 |2022-02-11 |0.9 |C.Perey |7.4 |draft final version
 |2022-02-20 |0.95 |C.Perey |7.4 |draft final version
+|2022-02-25 |1.0 |C.Perey | misc |final version
 |===

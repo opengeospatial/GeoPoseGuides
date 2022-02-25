@@ -21,7 +21,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <2022-02-21>
+|Publication Date:   <2022-02-25>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/UG/geopose-reviewers
 |Internal reference number of this OGC(R) document:    22-000
 |Category: OGC(R) User Guide
