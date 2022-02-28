@@ -5,7 +5,7 @@ While, by definition, a pose defines the position and orientation of an object a
 
 To help represent this complexity, the following list of terms is intended to offer a basic introduction to the topic.
 
-[cols="3,5"]
+[cols="4,9"]
 |===
 
 | [[def_animation]] **Animation** +
@@ -15,7 +15,6 @@ image:glossary/Animation.png[Animation, pdfwidth=5cm]
 In computer graphics, animation is generally simulated by modifying the properties of an object (including its position, rotation, scale, material colors, etc.) over a period of time (or timeline). Since complex deformations require a large number of physics calculations, most animation systems either operate with properties independently (i.e, separating position, orientation and scale) or define skeleton-based systems to alter the geometry of the object in a controllable way. In recent years, however, many 3D engines incorporate procedural subsystems to simulate advanced animations (such as explosions, wind systems, collision deformations, etc) in real-time, with relatively high degree of precision.
 
 Internally, each change in properties is stored into an "animation key," and when there is more than one key over time, an "animation curve" is generated to specify how to interpolate between them. A collection of curves is called an "animation clip" and can be associated to a given action or event.
-
 
 | [[def_motion]] **Motion** +
 image:glossary/Motion.png[Motion, pdfwidth=5cm]
@@ -27,7 +26,6 @@ In addition, motions can also be defined as transitions between different poses 
 
 It is important to note that a motion between two poses also generates a direction vector and an attitude (orientation relative to that direction vector).
 
-
 | [[def_trajectory]] **Trajectory** +
 image:glossary/Trajectory.png[Trajectory, pdfwidth=5cm]
 | **"A trajectory is a precalculated motion path that attempts to describe the future movement of an object."**
@@ -35,7 +33,6 @@ image:glossary/Trajectory.png[Trajectory, pdfwidth=5cm]
 While motion paths describe the actual movements over time, in many use cases it is imperative to also be able to predict the future movement of an object (e.g., to avoid collisions or reach a location/orbit with a very specific speed and orientation). These special motion paths are called *trajectories* and are usually calculated by simply taking into consideration the inertia of an object.
 
 This is especially important for objects placed in stable trajectories relative to others objects (usually, astronomical bodies), because if those trajectories are entirely predictable, it is possible to create an link:https://en.wikipedia.org/wiki/ephemeris[Ephemeris] system to rapidly calculate their position at any point in time. Additionally, if a predictable trajectory is regularly repeated over time, it can also be called a stable link:https://en.wikipedia.org/wiki/Orbit[orbit].
-
 
 | [[def_gesture]] **Gesture** +
 image:glossary/Gesture.png[Gesture, pdfwidth=5cm]

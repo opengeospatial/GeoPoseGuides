@@ -3,7 +3,7 @@
 
 The following list of terms covers the conceptual underpinnings for the GeoPose standard while offering examples of how they are actually employed in different scientific fields and industry sectors.
 
-[cols="3,5"]
+[cols="4,9"]
 |===
 
 | [[def_frame]] **(Reference) Frame** +
