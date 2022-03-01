@@ -19,8 +19,8 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <yyyy-mm-dd>
-|Approval Date:   <yyyy-mm-dd>
+|Submission Date: <2022-02-25>
+|Approval Date:   <2022-02-25>
 |Publication Date:   <2022-02-25>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/UG/geopose-reviewers
 |Internal reference number of this OGC(R) document:    22-000
@@ -45,7 +45,7 @@
 |*Warning*
 |===
 
-This document provides guidance for reviewers of the OGC GeoPose Candidate Standard. Throughout this document anywhere that there is a reference to the GeoPose Standard v 1.0, the reader should understand that until the OGC membership votes to approve the final standard, the GeoPose specification is a Candidate Standard. 
+This document provides guidance for reviewers of the OGC GeoPose Candidate Standard. Throughout this document anywhere that there is a reference to the GeoPose Standard v 1.0, the reader should understand that until the OGC membership votes to approve the final standard, the GeoPose specification is a Candidate Standard.
 
 This document is a non-normative resource and not an official position of the OGC membership. It is subject to change without notice and may not be referred to as an OGC Standard. In addition to this guide, developers, implementers and reviewers may wish to study the OGC GeoPose Users Guide. The guidance provided in this document is not to be referenced as required or mandatory technology in procurements.
 
