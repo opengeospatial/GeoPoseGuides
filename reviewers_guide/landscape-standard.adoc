@@ -15,7 +15,7 @@ In a standard Web browser, information is displayed on a plane. There is a need 
 
 In order to establish the data flow required for 2D to XR experiences, there is a need in graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. https://www.khronos.org/openxr/[Khronos OpenXR] focuses on that stage of the pipeline.
 
-In parallel, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that is capturing all the data about the features (e.g. objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly the OGC Abstract Specification Topic 20: Observations Measurements and Samples and SensorML Standards, addresses these needs.
+In parallel, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that is capturing all the data about the features (e.g., objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly the OGC Abstract Specification Topic 20: Observations Measurements and Samples and SensorML Standards, addresses these needs.
 
 Each of these stages in the pipeline needs to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.
 
@@ -55,7 +55,7 @@ image::landscape-standard-ef0fe.png["GeoPose and SWE"  pdfwidth="14cm"]
 
 On the right of the above figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.
 
-If sampling from a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world. However, the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, such as cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
+If sampling from a directed sensor (e.g., camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world. However, the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, such as cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.
 
 Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user, particularly if entities are being brought into a scene from very different source contexts, and regardless of where they are in space.
 
@@ -77,7 +77,7 @@ The OGC has many standards that express requirements for positioning and locatio
 
 Some OGC standards (such as CDB) deal with fixed infrastructure. Other OGC standards, such as KML and IndoorGML, deal with somewhat more specialized information. Yet other OGC standards deal with expressing location and orientation in very dynamic and real time scales, such as Sensor Web Enablement and Moving Features.
 
-The GeoPose SWG's assessment of the pose-related elements of the OGC standards is summarised in the table below with the following headings:
+The GeoPose SWG's assessment of the pose-related elements of the OGC standards is summarized in the table below with the following headings:
 
  - *Graphic/Virtual Context*: Does the standard relate only to a computer graphics context, abstracted from the outside world, or does the standard deal with virtual models of the real world?
  - *Local SRS*: Does the standard allow a local spatial reference system (SRS), independent of a wider geographical framework, to be used to define coordinates?
@@ -120,7 +120,7 @@ Note: In OMS, where location is foreseen, it is always an ISO19107 Geometry Type
 
 ==== Other SDOs
 
-There are other standards development organizations (SDO’s) that deal with location and orientation for graphics. Information on these SDOs is compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
+There are other standards development organizations (SDOs) that deal with location and orientation for graphics. Information on these SDOs is compiled in the tables below. Work done in the W3C defines how systems express location and orientation for browsers. The Motion Imagery Standards Board (MISB) has standards for moving cameras. ISO also has sections of its standards in SC 24, such as the X3D standards, that encode orientation and position in graphics. In the Khronos Group, there are standards such as OpenXR and glTF that specify how to form digital assets that encode position and orientation
 
 __Khronos Group__
 [%header,cols="2,2,1,2,2,2"]
