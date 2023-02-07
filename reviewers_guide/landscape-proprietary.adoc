@@ -22,7 +22,7 @@ __Template__
 
 |Name|Open Source?|Frame|SRS|Position|Orientation|Time Representation
 
-|Name of software|Open source or not|Indicate whether spatial frame is geospatially anchored or local.|Indicate which SRS are possible and how designated if multiple possibilities.|Indicate type of coordinates (Cartesion/spherical) and the units of measure.|Indicate the type of representation and the units of measure.|Indicate whether and how time info can be associated with poses, i8ncluding time reference system and unit of measure.|
+|Name of software|Open source or not|Indicate whether spatial frame is geospatially anchored or local.|Indicate which SRS are possible and how designated if multiple possibilities.|Indicate type of coordinates (Cartesion/spherical) and the units of measure.|Indicate the type of representation and the units of measure.|Indicate whether and how time info can be associated with poses, including time reference system and unit of measure.|
 
 |===
 

@@ -14,7 +14,7 @@ NOTE In other words, the geometry of 2D data is given using (X,Y) coordinates. +
 [[d2d-geo-data-definition]]
 *2D geographical data* +
 Geometry of features is represented in a two-dimensional geographical  +
-(i.e. ellipsoidal) space using (Longitude, Latitude) coordinates. +
+(i.e., ellipsoidal) space using (Longitude, Latitude) coordinates. +
 
 [[d2-5d-data-definition]]
 *2.5D data* +

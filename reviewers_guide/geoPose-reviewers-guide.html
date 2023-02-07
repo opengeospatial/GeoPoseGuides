@@ -798,7 +798,7 @@ NOTE In other words, the geometry of 2D data is given using (X,Y) coordinates.<b
 <div id="d2d-geo-data-definition" class="paragraph">
 <p><strong>2D geographical data</strong><br>
 Geometry of features is represented in a two-dimensional geographical <br>
-(i.e. ellipsoidal) space using (Longitude, Latitude) coordinates.<br></p>
+(i.e., ellipsoidal) space using (Longitude, Latitude) coordinates.<br></p>
 </div>
 <div id="d2-5d-data-definition" class="paragraph">
 <p><strong>2.5D data</strong><br>
@@ -1156,7 +1156,7 @@ As a convention for the remainder of this section, the term "GeoPose" is used as
 <p>In order to establish the data flow required for 2D to XR experiences, there is a need in graphics systems to locate those objects within a 3D local stage (or scene) so that when the user’s head or perceived objects move within that “stage”, the graphics systems can address those movements and changes correctly. <a href="https://www.khronos.org/openxr/">Khronos OpenXR</a> focuses on that stage of the pipeline.</p>
 </div>
 <div class="paragraph">
-<p>In parallel, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that is capturing all the data about the features (e.g. objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly the OGC Abstract Specification Topic 20: Observations Measurements and Samples and SensorML Standards, addresses these needs.</p>
+<p>In parallel, the OGC has been working on how sensor systems measure these changes in position and orientation. How does a system model the sensor that is capturing all the data about the features (e.g., objects) in its environment, including where they are and how the system represents them in a local 2D or 3D environment? OGC Sensor Web Enablement, particularly the OGC Abstract Specification Topic 20: Observations Measurements and Samples and SensorML Standards, addresses these needs.</p>
 </div>
 <div class="paragraph">
 <p>Each of these stages in the pipeline needs to exchange data between themselves. How do you get the position and orientation of anything from anywhere to anywhere, into and out of these interactive environments? That’s where GeoPose comes in. GeoPose defines the data structure(s) to pass position and orientation information between elements in the pipeline.</p>
@@ -1219,7 +1219,7 @@ As a convention for the remainder of this section, the term "GeoPose" is used as
 <p>On the right of the above figure is a schematic showing the workflows that are enabled in Observations and Measurements, in Semantic Sensor Networks, and with encodings such as SWE Common that enable transport of sensor outputs (observations). Another important part of these standards, SensorML, models the sensor process itself, from an initial environmental stimulus to how a measurement is recorded as an observation and recognized as an observed property of a real world object.</p>
 </div>
 <div class="paragraph">
-<p>If sampling from a directed sensor (e.g. camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world. However, the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, such as cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.</p>
+<p>If sampling from a directed sensor (e.g., camera), orientation is an essential aspect of the sensor model. The result potentially includes the positions and orientations of both the sensor / platform and any observed entities in the world. However, the sensor position and orientation may be secondary to the primary objective of observing the positions and orientations of these observed entities, such as cars. GeoPose permits systems to get the position and orientation in and out of SWE-compliant platforms or devices without losing any resolution or introducing delays.</p>
 </div>
 <div class="paragraph">
 <p>Pose is essential for combining physical and digital entities in visual scenes for them to be used by a service or a user, particularly if entities are being brought into a scene from very different source contexts, and regardless of where they are in space.</p>

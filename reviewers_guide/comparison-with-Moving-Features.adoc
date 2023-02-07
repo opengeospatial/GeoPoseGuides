@@ -7,9 +7,9 @@ ISO 19141:2008 defines a method to describe the geometry of a feature that moves
 * The feature may move along a planned route, but it may deviate from the planned route.
 * Motion may be influenced by physical forces, such as orbital, gravitational, or inertial forces.
 ** Motion of a feature may influence or be influenced by other features, for example:
-* The moving feature might follow a predefined route (e.g. road), perhaps part of a network, and might change routes at known points (e.g. bus stops, waypoints).
-* Two or more moving features may be “pulled” together or pushed apart (e.g. an airplane will be refuelled during flight, a predator detects and tracks a prey, refugee groups join forces).
-* Two or more moving features may be constrained to maintain a given spatial relationship for some period (e.g. tractor and trailer, convoy).
+* The moving feature might follow a predefined route (e.g., road), perhaps part of a network, and might change routes at known points (e.g., bus stops, waypoints).
+* Two or more moving features may be “pulled” together or pushed apart (e.g., an airplane will be refuelled during flight, a predator detects and tracks a prey, refugee groups join forces).
+* Two or more moving features may be constrained to maintain a given spatial relationship for some period (e.g., tractor and trailer, convoy).
 
 The ISO 19141:2008 schema specifies mechanisms to describe motion consisting of translation and/or rotation of the feature, but not including deformation of the feature.
 

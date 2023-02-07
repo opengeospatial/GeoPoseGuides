@@ -19,11 +19,11 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <2022-02-25>
-|Approval Date:   <2022-02-25>
-|Publication Date:   <2023-01-13>
+|Submission Date: <2023-01-12>
+|Approval Date:   <2023-01-12>
+|Publication Date:   <YYYY-MM-DD>
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/UG/geopose-reviewers
-|Internal reference number of this OGC(R) document:    22-000
+|Internal reference number of this OGC(R) document:    22-000r1
 |Category: OGC(R) User Guide
 |Editors:   C. Perey, J.G. Morley, J. Lieberman, R. Smith, M. Salazar, C. Smyth
 |===
@@ -53,7 +53,7 @@ This document is a non-normative resource and not an official position of the OG
 |===
 |Document type:   	OGC® User Guide
 |Document subtype:
-|Document stage:   	Final
+|Document stage:   	Approved
 |Document language: 	English
 |===
 

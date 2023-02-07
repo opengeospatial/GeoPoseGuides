@@ -223,7 +223,7 @@ The network of physical objects--“things”--that are embedded with sensors, s
 
 [[Length-section]]
 *Length* +
-The measure of distance as an integral, i.e. the limit of an infinite sum of distances between points on a curve. +
+The measure of distance as an integral, i.e., the limit of an infinite sum of distances between points on a curve. +
 {blank}[<<iso19103>>]
 
 [[Measure-section]]
